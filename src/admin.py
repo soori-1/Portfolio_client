@@ -18,6 +18,15 @@ CONFIG  = ROOT / "data" / "config"
 RETURNS = ROOT / "data" / "returns"
 COMMENTARY = ROOT / "data" / "commentary"
 
+# Ensure repo root is in sys.path so src package is importable
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+import os
+os.makedirs(str(CONFIG), exist_ok=True)
+os.makedirs(str(RETURNS), exist_ok=True)
+os.makedirs(str(COMMENTARY), exist_ok=True)
+
 # Debug: print paths on startup
 import os
 os.makedirs(str(CONFIG), exist_ok=True)
@@ -181,13 +190,14 @@ def month_label(m):
 def run_generate(skip_fetch=False):
     """Run generate_report.py as a subprocess and stream output."""
     import os
+    # Ensure ROOT is in PYTHONPATH so src package is importable
     env = {**os.environ, "PYTHONPATH": str(ROOT)}
     cmd = [sys.executable, "-m", "src.generate_report"]
     if skip_fetch:
         cmd.append("--skip-fetch")
-    result = subprocess.run(
-        cmd, capture_output=True, text=True, cwd=str(ROOT), env=env
-    )
+    # Always run from repo root so src/ is found
+    cwd = str(ROOT)
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=cwd, env=env)
     return result.returncode, result.stdout, result.stderr
 
 # ── Main ──────────────────────────────────────────────────────────────────────
