@@ -434,7 +434,6 @@ def main():
                     issuer,status = "Unknown","⚡ Auto-discover"
                 rows.append({"Ticker":tk,"ETF Name":nm[:42],"Weight":wt,"Issuer":issuer,"Status":status})
             st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
-            st.dataframe(src_df, use_container_width=True, hide_index=True)
 
     # ══════════════════════════════════════════════════════
     # TAB 3 — Generate Report
