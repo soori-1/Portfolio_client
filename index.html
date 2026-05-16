@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RH Momentum Global Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#F5ECD7;--surf:#FFFFFF;--surf2:#EDE2C8;
+  --m:#8B1A1A;--m-dk:#6B1010;--g:#C8922A;--g-lt:#E8C97A;
+  --tx:#2C1810;--mu:#8B6A4A;--bd:rgba(139,26,26,0.12);
+  --gr:#2E7D32;--rd:#C0392B;
+  --sans:'IBM Plex Sans','Inter','Segoe UI',sans-serif;
+  --mono:'IBM Plex Mono','SFMono-Regular',monospace;
+}
+body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1400px;margin:0 auto;padding:0 48px}
+
+/* Login */
+#login{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:1000}
+.login-box{width:380px;padding:48px 40px;background:var(--surf);border:1px solid var(--bd)}
+.l-logo{display:flex;align-items:center;gap:10px;margin-bottom:28px}
+.l-mark{width:30px;height:30px;background:var(--m);display:flex;align-items:center;justify-content:center;color:#F5ECD7;font-size:11px;font-weight:600}
+.l-brand{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--m)}
+.l-title{font-size:20px;font-weight:600;color:var(--tx);margin-bottom:4px;letter-spacing:-.01em}
+.l-sub{font-size:13px;color:var(--mu);margin-bottom:28px}
+.l-lbl{font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--mu);display:block;margin-bottom:6px}
+.l-input{width:100%;padding:11px 14px;border:1px solid var(--bd);background:var(--bg);font-family:var(--sans);font-size:14px;color:var(--tx);outline:none;transition:border .15s}
+.l-input:focus{border-color:var(--m)}
+.l-btn{width:100%;margin-top:14px;padding:12px;background:var(--m);color:#F5ECD7;border:none;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .15s}
+.l-btn:hover{background:var(--m-dk)}
+.l-err{font-size:12px;color:var(--rd);margin-top:8px;display:none}
+
+/* Header */
+.hdr{padding:36px 0 0}
+.hdr-brand{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.h-mark{width:28px;height:28px;background:var(--m);display:flex;align-items:center;justify-content:center;color:#F5ECD7;font-size:11px;font-weight:600;flex-shrink:0}
+.h-brand{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--m)}
+.hdr-main{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:20px}
+.fund-name{font-family:var(--sans);font-size:38px;font-weight:600;color:var(--tx);letter-spacing:-.025em;line-height:1.05;max-width:760px}
+.fund-sub{font-size:13px;color:var(--mu);margin-top:8px;letter-spacing:.02em}
+.hdr-ytd{text-align:right;padding-top:6px}
+.ytd-val{font-family:var(--mono);font-size:52px;font-weight:500;letter-spacing:-.03em;line-height:1}
+.ytd-lbl{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);margin-top:6px}
+.ytd-bench{font-size:13px;color:var(--mu);margin-top:3px}
+
+/* KPI strip */
+.kpi-strip{display:flex;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);padding:18px 0;margin:0}
+.kpi{flex:1;padding-right:28px;margin-right:28px;border-right:1px solid var(--bd)}
+.kpi:last-child{border-right:none;padding-right:0;margin-right:0}
+.kpi-lbl{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);margin-bottom:5px}
+.kpi-v{font-family:var(--mono);font-size:24px;font-weight:500;line-height:1;color:var(--tx)}
+.kpi-v.pos{color:var(--gr)}.kpi-v.neg{color:var(--rd)}
+.kpi-m{font-size:12px;color:var(--mu);margin-top:4px}
+
+/* Nav */
+.nav{background:var(--surf2);border-bottom:1px solid var(--bd);position:sticky;top:0;z-index:100}
+.nav-inner{display:flex}
+.nav-tab{font-size:13px;font-weight:500;letter-spacing:.04em;color:var(--mu);padding:15px 22px;cursor:pointer;border:none;border-bottom:2px solid transparent;background:none;font-family:var(--sans);transition:all .15s;white-space:nowrap}
+.nav-tab:hover{color:var(--tx)}
+.nav-tab.active{color:var(--m);border-bottom-color:var(--m);font-weight:600}
+
+/* Panes */
+.pane{display:none;padding:44px 0 64px}
+.pane.active{display:block}
+
+/* Section heads */
+.sh{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--m);padding-bottom:10px;border-bottom:1px solid var(--bd);margin-bottom:20px;margin-top:40px}
+.sh:first-child{margin-top:0}
+
+/* Two-col */
+.two-col{display:grid;grid-template-columns:320px 1fr;gap:52px}
+
+/* Key facts */
+.kf{width:100%;border-collapse:collapse}
+.kf tr{border-bottom:1px solid rgba(139,26,26,.07)}
+.kf td{padding:10px 0;font-size:14px;vertical-align:top}
+.kf .kl{color:var(--mu)}
+.kf .kv{color:var(--tx);font-weight:600;text-align:right;font-family:var(--mono);font-size:13px}
+
+/* Commentary */
+.comm{border-left:2px solid var(--g);padding:2px 0 2px 20px}
+.ci{display:flex;gap:10px;font-size:14px;line-height:1.7;color:var(--tx);margin-bottom:13px}
+.ci:last-child{margin-bottom:0}
+.cd{color:var(--g);font-size:10px;padding-top:6px;flex-shrink:0}
+
+/* Line chart */
+.chart-wrap{position:relative;width:100%;height:280px}
+.chart-wrap svg{width:100%;height:100%;overflow:visible}
+
+/* Bar chart */
+.bar-wrap{display:flex;align-items:flex-end;gap:16px;height:220px;padding-bottom:28px;border-bottom:1px solid var(--bd)}
+
+/* Performance table */
+.pt{width:100%;border-collapse:collapse;font-size:14px}
+.pt thead tr{border-bottom:2px solid var(--m)}
+.pt th{padding:10px 14px 10px 0;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);text-align:right}
+.pt th:first-child{text-align:left}
+.pt td{padding:10px 14px 10px 0;text-align:right;border-bottom:1px solid rgba(139,26,26,.07);font-family:var(--mono);font-size:13px}
+.pt td:first-child{text-align:left;font-family:var(--sans);color:var(--mu);font-size:14px}
+.pt tr.ytd td{border-top:2px solid var(--g);border-bottom:none;font-weight:600}
+.pt tr.ytd td:first-child{color:var(--tx)}
+.pos{color:var(--gr)}.neg{color:var(--rd)}
+
+/* Holdings */
+.ht{width:100%;border-collapse:collapse}
+.ht thead tr{border-bottom:2px solid var(--m)}
+.ht th{padding:10px 12px 10px 0;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);text-align:left}
+.ht td{padding:10px 12px 10px 0;border-bottom:1px solid rgba(139,26,26,.07);font-size:14px}
+.ht .tk{font-family:var(--mono);font-weight:600;color:var(--m);font-size:13px}
+.ht .sc{color:var(--mu);font-size:12px}
+.ht .wt{text-align:right;font-family:var(--mono);font-weight:500}
+.ht tr.tot td{border-top:1px solid rgba(139,26,26,.2);border-bottom:none;font-weight:600}
+
+/* Alloc table */
+.at{width:100%;border-collapse:collapse}
+.at thead tr{border-bottom:2px solid var(--m)}
+.at th{padding:10px 0;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--mu);text-align:left}
+.at td{padding:7px 0;border-bottom:1px solid rgba(139,26,26,.07);vertical-align:middle}
+.at .an{color:var(--tx);width:38%;font-size:14px}
+.at .ab{width:44%;padding-right:14px}
+.bar-bg{background:rgba(139,26,26,.09);height:5px}
+.bar-fill{background:var(--m);height:5px}
+.bar-fill.gd{background:var(--g)}
+.at .aw{text-align:right;font-family:var(--mono);font-weight:500;font-size:13px;width:18%}
+
+/* Best/worst */
+.bw-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.bw-lbl{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);padding-bottom:9px;border-bottom:1px solid var(--bd);margin-bottom:4px}
+.bw-row{display:flex;align-items:baseline;padding:9px 0;border-bottom:1px solid rgba(139,26,26,.06)}
+.bw-row:last-child{border-bottom:none}
+.bw-tk{font-family:var(--mono);font-weight:600;color:var(--m);min-width:56px;font-size:14px}
+.bw-nm{flex:1;color:var(--mu);font-size:13px;padding:0 12px}
+.bw-ret{font-family:var(--mono);font-weight:500;font-size:14px}
+
+/* Framework */
+.fw-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:8px}
+.fw-box{border:1px solid rgba(200,146,42,.35);padding:22px 20px 18px;background:var(--surf)}
+.fw-type{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);margin-bottom:4px}
+.fw-range{font-family:var(--mono);font-size:26px;font-weight:500;color:var(--m);margin-bottom:14px;line-height:1}
+.fw-sub{font-size:14px;font-weight:600;color:var(--tx);margin-bottom:10px}
+.fw-body{font-size:13px;color:var(--mu);line-height:1.65}
+.fw-tag{display:inline-block;margin-top:16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--g);border:1px solid rgba(200,146,42,.4);padding:4px 12px}
+
+/* Cycle */
+.cycle{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:8px}
+.cy-phase{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin-bottom:10px;text-align:center}
+.cy-box{border:1px solid rgba(200,146,42,.35);padding:14px 10px;background:var(--surf);font-size:13px;font-weight:500;color:var(--tx);line-height:1.5;text-align:center}
+
+/* Document row */
+.doc-row{display:flex;align-items:center;padding:18px 0;border-bottom:1px solid var(--bd);gap:16px}
+.doc-icon{font-size:24px;flex-shrink:0}
+.doc-info{flex:1}
+.doc-name{font-size:15px;font-weight:600;color:var(--tx)}
+.doc-meta{font-size:12px;color:var(--mu);margin-top:2px}
+.doc-dl{font-size:12px;color:var(--m);font-weight:500;letter-spacing:.06em;border:1px solid var(--bd);padding:8px 20px;background:none;font-family:var(--sans);cursor:pointer;transition:all .15s;text-decoration:none;display:inline-block}
+.doc-dl:hover{background:var(--m);color:#F5ECD7;border-color:var(--m)}
+.disc{font-size:12px;color:var(--mu);line-height:1.7;border-top:1px solid var(--bd);padding-top:20px;margin-top:32px}
+
+/* Legend dots */
+.leg{display:flex;gap:20px;margin-top:10px;margin-bottom:32px}
+.leg-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mu)}
+.leg-dot{width:12px;height:3px}
+</style>
+</head>
+<body>
+
+<div id="login">
+  <div class="login-box">
+    <div class="l-logo">
+      <div class="l-mark">RH</div>
+      <span class="l-brand">Right Horizons</span>
+    </div>
+    <div class="l-title">Momentum Global Portfolio</div>
+    <div class="l-sub">Client Dashboard &middot; Restricted Access</div>
+    <label class="l-lbl">Password</label>
+    <input class="l-input" type="password" id="pwd" placeholder="Enter password">
+    <div class="l-err" id="err">Incorrect password. Please try again.</div>
+    <button class="l-btn" onclick="doLogin()">Sign In</button>
+  </div>
+</div>
+
+<div id="app" style="display:none">
+
+<div class="wrap">
+  <div class="hdr">
+    <div class="hdr-brand">
+      <div class="h-mark">RH</div>
+      <span class="h-brand">Right Horizons Wealth Management</span>
+    </div>
+    <div class="hdr-main">
+      <div>
+        <div class="fund-name" id="h-name">—</div>
+        <div class="fund-sub" id="h-sub">—</div>
+      </div>
+      <div class="hdr-ytd">
+        <div class="ytd-val" id="h-ytd">—</div>
+        <div class="ytd-lbl">YTD Return</div>
+        <div class="ytd-bench" id="h-bench-line">—</div>
+      </div>
+    </div>
+    <div class="kpi-strip" id="kpi-strip"></div>
+  </div>
+</div>
+
+<div class="nav">
+  <div class="wrap">
+    <div class="nav-inner">
+      <button class="nav-tab active" onclick="showTab('overview',this)">Overview</button>
+      <button class="nav-tab" onclick="showTab('performance',this)">Performance</button>
+      <button class="nav-tab" onclick="showTab('portfolio',this)">Portfolio</button>
+      <button class="nav-tab" onclick="showTab('strategy',this)">Strategy</button>
+      <button class="nav-tab" onclick="showTab('documents',this)">Documents</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+<div id="overview" class="pane active">
+  <div class="two-col">
+    <div>
+      <div class="sh">Key Facts</div>
+      <table class="kf" id="kf-table"></table>
+      <div class="sh" style="margin-top:36px">Portfolio Highlights</div>
+      <div class="comm" id="commentary"></div>
+    </div>
+    <div>
+      <div class="sh">Cumulative YTD Performance</div>
+      <div style="font-size:12px;color:var(--mu);margin-bottom:12px" id="chart-sub">—</div>
+      <div class="chart-wrap"><svg id="ytd-svg" viewBox="0 0 680 260"></svg></div>
+      <div class="sh" style="margin-top:36px" id="bw-title">Best &amp; Worst Performers</div>
+      <div class="bw-grid" id="bw-grid"></div>
+    </div>
+  </div>
+</div>
+
+<div id="performance" class="pane">
+  <div class="sh">Monthly Returns vs Benchmark</div>
+  <div style="font-size:12px;color:var(--mu);margin-bottom:16px" id="bar-sub">—</div>
+  <div class="bar-wrap" id="bar-wrap"></div>
+  <div class="leg">
+    <div class="leg-item"><div class="leg-dot" style="background:var(--m)"></div>Portfolio</div>
+    <div class="leg-item"><div class="leg-dot" style="background:var(--g)"></div><span id="bench-leg">Benchmark</span></div>
+  </div>
+  <div class="sh">Returns Table</div>
+  <table class="pt"><thead><tr><th>Month</th><th>Portfolio %</th><th id="bench-col-hdr">Benchmark %</th><th>Outperformance</th></tr></thead><tbody id="perf-tbody"></tbody></table>
+</div>
+
+<div id="portfolio" class="pane">
+  <div class="sh">Top 10 Holdings</div>
+  <table class="ht"><thead><tr><th style="width:28px">#</th><th>Ticker</th><th>Security Name</th><th>Sector</th><th>Country</th><th style="text-align:right">Weight</th></tr></thead><tbody id="hold-tbody"></tbody></table>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-top:48px">
+    <div><div class="sh">Sector Allocation</div><table class="at" id="sec-tbl"></table></div>
+    <div><div class="sh">Country Allocation</div><table class="at" id="cty-tbl"></table></div>
+    <div><div class="sh">Market Classification</div><table class="at" id="mkt-tbl"></table></div>
+  </div>
+</div>
+
+<div id="strategy" class="pane">
+  <div class="sh">Portfolio Framework</div>
+  <div class="fw-grid">
+    <div class="fw-box"><div class="fw-type">Core</div><div class="fw-range">30 &ndash; 50%</div><div class="fw-sub">Consistency &amp; Risk Control</div><div class="fw-body">Focus towards diverse global equity. High-quality fixed income and low-volatility strategies. Stability anchor across all market regimes.</div><div class="fw-tag">Stability Anchor</div></div>
+    <div class="fw-box"><div class="fw-type">Momentum</div><div class="fw-range">30 &ndash; 50%</div><div class="fw-sub">Tactical Alpha &amp; Cycle Capture</div><div class="fw-body">Trend-following, sector rotation, factor tilts. Actively rebalanced with macro regime signals to capture alpha across market cycles.</div><div class="fw-tag">Alpha Engine</div></div>
+    <div class="fw-box"><div class="fw-type">Aggressive</div><div class="fw-range">0 &ndash; 30%</div><div class="fw-sub">High-Conviction Outperformance</div><div class="fw-body">Concentrated high-upside positions. Growth equities, satellite alternatives, special situations. Sized dynamically with market conviction.</div><div class="fw-tag">Return Booster</div></div>
+  </div>
+  <div class="sh" style="margin-top:48px">Allocation Strategy &mdash; Market Cycle</div>
+  <div style="font-size:13px;color:var(--mu);margin-bottom:16px">Dynamic allocation across market cycles &mdash; Early Expansion through Contraction</div>
+  <div class="cycle">
+    <div><div class="cy-phase">Early Expansion</div><div class="cy-box">Momentum<br>+ Aggressive</div></div>
+    <div><div class="cy-phase">Mid Cycle</div><div class="cy-box">Balanced</div></div>
+    <div><div class="cy-phase">Late Cycle</div><div class="cy-box">Core +<br>Momentum</div></div>
+    <div><div class="cy-phase">Contraction</div><div class="cy-box">Increase Core<br>+ Increase Cash</div></div>
+  </div>
+  <div style="height:2px;background:linear-gradient(90deg,rgba(139,26,26,.3),rgba(200,146,42,.35),rgba(139,26,26,.1));margin:14px 0 6px"></div>
+  <div style="display:flex;justify-content:space-between;font-size:11px;color:var(--mu);letter-spacing:.08em"><span>&larr; More Aggressive</span><span>More Defensive &rarr;</span></div>
+  <div class="sh" style="margin-top:48px">Current ETF Allocation</div>
+  <table class="at" id="etf-tbl"></table>
+</div>
+
+<div id="documents" class="pane">
+  <div class="sh">Fund Documents</div>
+  <div class="doc-row">
+    <div class="doc-icon">📄</div>
+    <div class="doc-info">
+      <div class="doc-name" id="doc-name">Monthly Factsheet</div>
+      <div class="doc-meta" id="doc-meta">—</div>
+    </div>
+    <a class="doc-dl" id="doc-link" href="#">Download PDF</a>
+  </div>
+  <div class="disc">
+    <strong>Disclaimer</strong><br>
+    This dashboard is prepared for informational purposes only and does not constitute investment advice, a solicitation, or an offer to buy or sell any security. Past performance is not indicative of future results. Investments are subject to market risks including the possible loss of principal. Right Horizons Wealth Management &middot; Guiding you in achieving your goals.
+  </div>
+</div>
+
+</div></div>
+
+<script>
+const PWD = 'rh2026';
+let D = null;
+
+document.getElementById('pwd').addEventListener('keydown', e => { if(e.key==='Enter') doLogin(); });
+
+function doLogin() {
+  const v = document.getElementById('pwd').value;
+  if (v === PWD) {
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('app').style.display = 'block';
+    loadData();
+  } else {
+    document.getElementById('err').style.display = 'block';
+  }
+}
+
+function showTab(id, btn) {
+  document.querySelectorAll('.pane').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+
+async function loadData() {
+  try {
+    const r = await fetch('dashboard_data.json');
+    D = await r.json();
+  } catch(e) {
+    console.warn('dashboard_data.json not found, using sample data');
+    D = getSampleData();
+  }
+  render();
+}
+
+function sfmt(v) {
+  const s = v>=0?'+':'', cls = v>=0?'pos':'neg';
+  return `<span class="${cls}">${s}${v.toFixed(2)}%</span>`;
+}
+
+function render() {
+  const m = D.month || '—', bn = D.benchmark_name || 'MSCI ACWI';
+  const yp = D.ytd_port || 0, yb = D.ytd_bench || 0, al = D.alpha || 0;
+
+  // Header
+  document.getElementById('h-name').textContent = D.portfolio_name || 'Momentum Global ETF Portfolio';
+  document.getElementById('h-sub').textContent = `Monthly Report · ${m} · 13 ETF Holdings · Benchmark: ${bn}`;
+  const ytdEl = document.getElementById('h-ytd');
+  ytdEl.textContent = (yp>=0?'+':'') + yp.toFixed(2) + '%';
+  ytdEl.style.color = yp>=0?'var(--gr)':'var(--rd)';
+  document.getElementById('h-bench-line').textContent = `vs ${bn} ${yb>=0?'+':''}${yb.toFixed(2)}% · Alpha ${al>=0?'+':''}${al.toFixed(2)}%`;
+
+  // KPI strip
+  const kpis = [
+    {l:'YTD Return', v:(yp>=0?'+':'')+yp.toFixed(2)+'%', cls:yp>=0?'pos':'neg', m:`As of ${m}`},
+    {l:`${bn} YTD`, v:(yb>=0?'+':'')+yb.toFixed(2)+'%', cls:yb>=0?'pos':'neg', m:'Benchmark'},
+    {l:'Alpha', v:(al>=0?'+':'')+al.toFixed(2)+'%', cls:al>=0?'pos':'neg', m:`vs ${bn}`},
+    {l:'Holdings', v:'13 ETFs', cls:'', m:'Global Equity'},
+    {l:'Emerging Mkts', v:(D.market_exposure?.by_market?.find(x=>x.name.includes('Emerging'))?.weight||41)+'%', cls:'', m:'Allocation'},
+    {l:'Developed Mkts', v:(D.market_exposure?.by_market?.find(x=>x.name.includes('Developed'))?.weight||54)+'%', cls:'', m:'Allocation'},
+  ];
+  document.getElementById('kpi-strip').innerHTML = kpis.map(k=>
+    `<div class="kpi"><div class="kpi-lbl">${k.l}</div><div class="kpi-v ${k.cls}">${k.v}</div><div class="kpi-m">${k.m}</div></div>`
+  ).join('');
+
+  // Key facts
+  const em = D.market_exposure?.by_market?.find(x=>x.name.includes('Emerging'))?.weight||'—';
+  const dm = D.market_exposure?.by_market?.find(x=>x.name.includes('Developed'))?.weight||'—';
+  const cm = D.market_exposure?.by_market?.find(x=>x.name.includes('Commodity'))?.weight||'—';
+  const eq = D.market_exposure?.by_type?.find(x=>x.name.includes('Equity'))?.weight||'—';
+  const rows = [
+    ['Reference Date', m],['Number of Holdings','13 ETFs'],['Benchmark',bn],
+    ['Emerging Markets',em+'%'],['Developed Markets',dm+'%'],['Commodity',cm+'%'],
+    ['Equity ETFs',eq+'%'],
+  ];
+  if (D.sector_allocation?.[0]) rows.push(['Top Sector', D.sector_allocation[0].name+' '+D.sector_allocation[0].weight+'%']);
+  if (D.country_allocation?.[0]) rows.push(['Top Country', D.country_allocation[0].name+' '+D.country_allocation[0].weight+'%']);
+  document.getElementById('kf-table').innerHTML = rows.map(([l,v])=>
+    `<tr><td class="kl">${l}</td><td class="kv">${v}</td></tr>`).join('');
+
+  // Commentary
+  const bullets = D.commentary || [];
+  document.getElementById('commentary').innerHTML = bullets.map(b=>
+    `<div class="ci"><span class="cd">▪</span><span>${b}</span></div>`).join('');
+
+  // Charts
+  document.getElementById('chart-sub').textContent = `${D.portfolio_name} vs ${bn} · ${D.monthly_returns?.[0]?.label||''} – ${D.monthly_returns?.slice(-1)[0]?.label||''}`;
+  document.getElementById('bw-title').textContent = `Best & Worst Performers — ${m}`;
+  document.getElementById('bar-sub').textContent = `Portfolio % vs ${bn} % · ${D.monthly_returns?.[0]?.label||''} – ${D.monthly_returns?.slice(-1)[0]?.label||''}`;
+  document.getElementById('bench-leg').textContent = bn;
+  document.getElementById('bench-col-hdr').textContent = bn + ' %';
+
+  buildYTD();
+  buildBars();
+  buildPerfTable();
+  buildHoldings();
+  buildAllocTable('sec-tbl', D.sector_allocation||[], 'Sector');
+  buildAllocTable('cty-tbl', D.country_allocation||[], 'Country');
+  buildAllocTable('mkt-tbl', (D.market_exposure?.by_market||[]).concat(D.market_exposure?.by_type||[]), 'Classification', true);
+  buildETFAlloc();
+  buildBW();
+
+  // Documents
+  document.getElementById('doc-name').textContent = `${D.portfolio_name} — Monthly Factsheet`;
+  document.getElementById('doc-meta').textContent = `${m} · PDF · 4 pages · ${D.company_name}`;
+}
+
+function buildYTD() {
+  const data = D.monthly_returns || [];
+  if (!data.length) return;
+  const svg = document.getElementById('ytd-svg');
+  const W=680, H=260, PL=44, PR=64, PT=16, PB=32;
+  const cW=W-PL-PR, cH=H-PT-PB;
+  const pts=[{x:0,p:0,b:0}];
+  data.forEach((r,i)=>pts.push({x:(i+1)/data.length,p:r.cum_port,b:r.cum_bench,lbl:r.label.split(' ')[0]}));
+  const allV=pts.flatMap(p=>[p.p,p.b]);
+  const mn=Math.min(...allV)-2, mx=Math.max(...allV)+2;
+  const xS=x=>PL+x*cW, yS=y=>PT+cH-((y-mn)/(mx-mn))*cH;
+  let h='';
+  [-5,0,5,10,15,20].filter(v=>v>=mn&&v<=mx).forEach(v=>{
+    const y=yS(v);
+    h+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="rgba(139,26,26,0.07)" stroke-width="1"/>`;
+    h+=`<text x="${PL-6}" y="${y+4}" text-anchor="end" font-size="10" fill="#8B6A4A" font-family="IBM Plex Mono">${v}%</text>`;
+  });
+  h+=`<line x1="${PL}" y1="${yS(0)}" x2="${W-PR}" y2="${yS(0)}" stroke="rgba(139,26,26,0.18)" stroke-width="1"/>`;
+  const bPath=pts.map((p,i)=>`${i===0?'M':'L'}${xS(p.x)} ${yS(p.b)}`).join(' ');
+  h+=`<path d="${bPath}" fill="none" stroke="#C8922A" stroke-width="2" stroke-dasharray="5,4" opacity="0.85"/>`;
+  const pPath=pts.map((p,i)=>`${i===0?'M':'L'}${xS(p.x)} ${yS(p.p)}`).join(' ');
+  h+=`<path d="${pPath+` L${xS(1)} ${yS(mn)} L${xS(0)} ${yS(mn)} Z`}" fill="rgba(139,26,26,0.06)"/>`;
+  h+=`<path d="${pPath}" fill="none" stroke="#8B1A1A" stroke-width="2.5"/>`;
+  const lp=pts[pts.length-1];
+  h+=`<text x="${xS(1)+8}" y="${yS(lp.p)+4}" font-size="12" font-weight="600" fill="#8B1A1A" font-family="IBM Plex Mono">${lp.p>=0?'+':''}${lp.p.toFixed(2)}%</text>`;
+  h+=`<text x="${xS(1)+8}" y="${yS(lp.b)+4}" font-size="12" font-weight="600" fill="#C8922A" font-family="IBM Plex Mono">${lp.b>=0?'+':''}${lp.b.toFixed(2)}%</text>`;
+  pts.slice(1).forEach(p=>{h+=`<text x="${xS(p.x)}" y="${H-4}" text-anchor="middle" font-size="10" fill="#8B6A4A" font-family="IBM Plex Mono">${p.lbl}</text>`;});
+  h+=`<rect x="${PL}" y="4" width="14" height="3" fill="#8B1A1A"/>`;
+  h+=`<text x="${PL+18}" y="11" font-size="11" fill="#8B6A4A" font-family="IBM Plex Sans">Portfolio</text>`;
+  h+=`<line x1="${PL+84}" y1="5.5" x2="${PL+98}" y2="5.5" stroke="#C8922A" stroke-width="2" stroke-dasharray="4,3"/>`;
+  h+=`<text x="${PL+102}" y="11" font-size="11" fill="#8B6A4A" font-family="IBM Plex Sans">${D.benchmark_name||'Benchmark'}</text>`;
+  svg.innerHTML=h;
+}
+
+function buildBars() {
+  const data = D.monthly_returns||[];
+  if (!data.length) return;
+  const H=192, maxV=Math.max(...data.flatMap(r=>[Math.abs(r.port),Math.abs(r.bench)]));
+  document.getElementById('bar-wrap').innerHTML = data.map(r=>{
+    const pH=(Math.abs(r.port)/maxV*H).toFixed(1);
+    const bH=(Math.abs(r.bench)/maxV*H).toFixed(1);
+    return `<div style="flex:1;display:flex;flex-direction:column;align-items:center">
+      <div style="display:flex;gap:4px;align-items:flex-end;height:${H}px;width:100%">
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
+          <div style="font-size:10px;color:var(--m);font-family:var(--mono);margin-bottom:3px">${r.port>=0?'+':''}${r.port.toFixed(1)}%</div>
+          <div style="width:100%;background:var(--m);height:${pH}px"></div>
+        </div>
+        <div style="flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end">
+          <div style="font-size:10px;color:var(--g);font-family:var(--mono);margin-bottom:3px">${r.bench>=0?'+':''}${r.bench.toFixed(1)}%</div>
+          <div style="width:100%;background:var(--g);height:${bH}px;opacity:.85"></div>
+        </div>
+      </div>
+      <div style="font-size:10px;color:var(--mu);font-family:var(--mono);margin-top:6px;text-align:center">${r.label.split(' ')[0]}</div>
+    </div>`;
+  }).join('');
+}
+
+function buildPerfTable() {
+  const data = D.monthly_returns||[];
+  if (!data.length) return;
+  const yp=data[data.length-1].cum_port, yb=data[data.length-1].cum_bench;
+  document.getElementById('perf-tbody').innerHTML =
+    data.map(r=>`<tr><td>${r.label}</td><td>${sfmt(r.port)}</td><td>${sfmt(r.bench)}</td><td>${sfmt(r.port-r.bench)}</td></tr>`).join('') +
+    `<tr class="ytd"><td><strong>YTD Cumulative</strong></td><td>${sfmt(yp)}</td><td>${sfmt(yb)}</td><td>${sfmt(yp-yb)}</td></tr>`;
+}
+
+function buildHoldings() {
+  const data = D.top_holdings||[];
+  if (!data.length) { document.getElementById('hold-tbody').innerHTML='<tr><td colspan="6" style="color:var(--mu);padding:20px 0">Run generate_report to populate holdings data.</td></tr>'; return; }
+  const total = data.reduce((s,h)=>s+h.weight,0);
+  document.getElementById('hold-tbody').innerHTML =
+    data.map(h=>`<tr><td style="color:var(--mu);font-size:12px;font-family:var(--mono)">${h.rank}</td><td class="tk">${h.ticker}</td><td>${h.name}</td><td class="sc">${h.sector}</td><td class="sc">${h.country}</td><td class="wt">${h.weight.toFixed(2)}%</td></tr>`).join('') +
+    `<tr class="tot"><td colspan="5" style="text-align:right;font-size:12px;color:var(--mu)">Top 10 Total</td><td class="wt">${total.toFixed(2)}%</td></tr>`;
+}
+
+function buildAllocTable(id, data, col, useGold=false) {
+  if (!data.length) { document.getElementById(id).innerHTML=`<tbody><tr><td style="color:var(--mu);padding:20px 0;font-size:13px">No data available.</td></tr></tbody>`; return; }
+  const maxW=Math.max(...data.map(d=>d.weight));
+  document.getElementById(id).innerHTML =
+    `<thead><tr><th>${col}</th><th></th><th style="text-align:right">Weight</th></tr></thead><tbody>` +
+    data.map(d=>{const pct=(d.weight/maxW*100).toFixed(1); return `<tr><td class="an">${d.name}</td><td class="ab"><div class="bar-bg"><div class="bar-fill${useGold?' gd':''}" style="width:${pct}%"></div></div></td><td class="aw">${d.weight.toFixed(1)}%</td></tr>`;}).join('') +
+    '</tbody>';
+}
+
+function buildETFAlloc() {
+  const data = D.portfolio_weights||[];
+  if (!data.length) return;
+  const maxW=Math.max(...data.map(e=>e.weight));
+  document.getElementById('etf-tbl').innerHTML =
+    `<thead><tr><th style="width:72px">Ticker</th><th>ETF Name</th><th></th><th style="text-align:right;width:72px">Weight</th></tr></thead><tbody>` +
+    data.map(e=>{const pct=(e.weight/maxW*100).toFixed(1); return `<tr><td style="font-family:var(--mono);font-weight:600;color:var(--m);font-size:13px">${e.ticker}</td><td style="font-size:14px">${e.name}</td><td style="width:40%;padding-right:14px"><div class="bar-bg"><div class="bar-fill" style="width:${pct}%"></div></div></td><td style="text-align:right;font-family:var(--mono);font-weight:500;font-size:13px">${e.weight.toFixed(1)}%</td></tr>`;}).join('') +
+    '</tbody>';
+}
+
+function buildBW() {
+  const data = D.etf_performance||[];
+  if (!data.length) return;
+  const sorted=[...data].sort((a,b)=>b.ret-a.ret);
+  const top3=sorted.slice(0,3), bot3=sorted.slice(-3).reverse();
+  function rows(arr){ return arr.map(e=>`<div class="bw-row"><span class="bw-tk">${e.ticker}</span><span class="bw-nm">${(e.name||'').substring(0,40)}</span><span class="bw-ret ${e.ret>=0?'pos':'neg'}">(${e.ret>=0?'+':''}${e.ret.toFixed(2)}%)</span></div>`).join(''); }
+  document.getElementById('bw-grid').innerHTML =
+    `<div><div class="bw-lbl">Top Gainers</div>${rows(top3)}</div><div><div class="bw-lbl">Laggards</div>${rows(bot3)}</div>`;
+}
+
+function getSampleData() {
+  return {
+    portfolio_name:"Momentum Global ETF Portfolio",benchmark_name:"MSCI ACWI",
+    company_name:"Right Horizons Wealth Management",month:"May 2026",
+    ytd_port:18.84,ytd_bench:7.64,alpha:11.20,
+    monthly_returns:[
+      {month:"2026-01",label:"Jan 2026",port:8.79,bench:2.83,cum_port:8.79,cum_bench:2.83},
+      {month:"2026-02",label:"Feb 2026",port:6.14,bench:1.29,cum_port:15.47,cum_bench:4.16},
+      {month:"2026-03",label:"Mar 2026",port:-2.58,bench:-6.11,cum_port:12.49,cum_bench:-2.19},
+      {month:"2026-04",label:"Apr 2026",port:4.60,bench:9.52,cum_port:17.66,cum_bench:7.13},
+      {month:"2026-05",label:"May 2026",port:1.00,bench:0.50,cum_port:18.84,cum_bench:7.64},
+    ],
+    etf_performance:[
+      {ticker:"EWT",name:"iShares MSCI Taiwan ETF",ret:26.73},
+      {ticker:"HYDR",name:"Global X Hydrogen ETF",ret:21.67},
+      {ticker:"DTCR",name:"Global X Data Center ETF",ret:20.37},
+      {ticker:"EWZ",name:"iShares MSCI Brazil ETF",ret:3.41},
+      {ticker:"MCHI",name:"iShares MSCI China ETF",ret:2.47},
+      {ticker:"IAU",name:"iShares Gold Trust",ret:-1.49},
+    ],
+    top_holdings:[],sector_allocation:[],country_allocation:[],
+    market_exposure:{
+      by_market:[{name:"Developed Markets",weight:54},{name:"Emerging Markets",weight:41},{name:"Commodity",weight:5}],
+      by_type:[{name:"Equity ETFs",weight:95},{name:"Commodity ETFs",weight:5}]
+    },
+    portfolio_weights:[
+      {ticker:"EEM",name:"iShares MSCI Emerging Markets ETF",weight:15},
+      {ticker:"VT",name:"Vanguard Total World Stock ETF",weight:15},
+      {ticker:"ARTY",name:"iShares Future AI & Tech ETF",weight:10},
+      {ticker:"IYZ",name:"iShares U.S. Telecommunications ETF",weight:7},
+      {ticker:"EPOL",name:"iShares MSCI Poland ETF",weight:7},
+      {ticker:"EWT",name:"iShares MSCI Taiwan ETF",weight:7},
+      {ticker:"EWZ",name:"iShares MSCI Brazil ETF",weight:7},
+      {ticker:"EWA",name:"iShares MSCI Australia ETF",weight:7},
+      {ticker:"MCHI",name:"iShares MSCI China ETF",weight:5},
+      {ticker:"DTCR",name:"Global X Data Center ETF",weight:5},
+      {ticker:"LIT",name:"Global X Lithium & Battery Tech ETF",weight:5},
+      {ticker:"HYDR",name:"Global X Hydrogen ETF",weight:5},
+      {ticker:"IAU",name:"iShares Gold Trust",weight:5},
+    ],
+    commentary:[
+      "The Strait of Hormuz crisis defined market direction, producing a sharp drawdown followed by an equally sharp recovery to near-record highs.",
+      "Emerging markets outperformed developed markets globally. The portfolio's EM allocation (EEM, EWZ, EWT, MCHI) captured this rotation effectively.",
+      "Polish equities (EPOL) were the single largest contributor, supported by EU defence spending, NATO commitment uplift, and EUR strength.",
+      "Brazil (EWZ) and Taiwan (EWT) added further alpha through Selic rate cuts and TSMC-driven semiconductor demand respectively.",
+      "European exposure remained the principal area of weakness, reflecting energy vulnerability and limited technology participation.",
+    ]
+  };
+}
+</script>
+</body>
+</html>

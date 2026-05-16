@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+
+# Cached holdings — re-fetchable, no point versioning
+data/holdings/cache/
+
+# Secrets
+auth/*.yaml
+!auth/clients.example.yaml
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Streamlit
+.streamlit/secrets.toml
