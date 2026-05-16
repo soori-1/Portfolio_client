@@ -409,36 +409,32 @@ def main():
                 unsafe_allow_html=True)
 
         st.markdown('<div class="sh">Auto-Discovery Status</div>', unsafe_allow_html=True)
-        src_path = CONFIG / "etf_sources.xlsx"
-        src_df = pd.read_excel(src_path) if src_path.exists() else pd.DataFrame(columns=["Ticker","Issuer","Product URL"])
-        known_tickers = set(src_df["Ticker"].astype(str).str.strip().tolist()) if not src_df.empty else set()
-
+        ISHARES  = {"EEM","ARTY","IYZ","EPOL","EWT","EWZ","EWA","MCHI","IAU","SLV"}
+        GLOBALX  = {"DTCR","LIT","HYDR","COPX","AIQ"}
+        INVESCO  = {"TAN","QQQ","RSP"}
+        VANGUARD = {"VT","VTI","VOO","VEA","VWO"}
+        COMMODITY= {"IAU","SLV","GLD","CPER","PPLT"}
         if not weights.empty:
-            status_rows = []
-            issuer_map = {}
-            if not src_df.empty:
-                for _, sr in src_df.iterrows():
-                    issuer_map[str(sr["Ticker"]).strip()] = str(sr["Issuer"]).strip()
-
+            rows = []
             for _, r in weights.iterrows():
-                tk = str(r["ETF Ticker"]).strip()
-                issuer = issuer_map.get(tk, "auto")
-                if issuer.lower() == "manual":
-                    status = "📁 Manual CSV"
-                elif issuer.lower() == "auto" or tk not in known_tickers:
-                    status = "⚡ Auto-discover"
+                tk = str(r["ETF Ticker"]).strip().upper()
+                nm = str(r.get("ETF Name",""))
+                wt = str(r["Portfolio Weight (%)"]) + "%"
+                if tk in COMMODITY:
+                    issuer,status = "iShares","🥇 Synthetic (commodity trust)"
+                elif tk in ISHARES:
+                    issuer,status = "iShares","✓ iShares — direct fetch"
+                elif tk in GLOBALX:
+                    issuer,status = "GlobalX","✓ GlobalX — direct fetch"
+                elif tk in INVESCO:
+                    issuer,status = "Invesco","✓ Invesco — direct fetch"
+                elif tk in VANGUARD:
+                    issuer,status = "Vanguard","📁 Manual CSV required"
                 else:
-                    status = "✓  " + issuer
-                status_rows.append({
-                    "Ticker": tk,
-                    "ETF Name": str(r.get("ETF Name","")),
-                    "Weight (%)": str(r["Portfolio Weight (%)"]) + "%",
-                    "Issuer": issuer if tk in known_tickers else "auto",
-                    "Fetch Status": status,
-                })
-            st.dataframe(pd.DataFrame(status_rows), use_container_width=True, hide_index=True)
-
-        st.markdown('<div class="sh">ETF Sources Config</div>', unsafe_allow_html=True)
+                    issuer,status = "Unknown","⚡ Auto-discover"
+                rows.append({"Ticker":tk,"ETF Name":nm[:42],"Weight":wt,"Issuer":issuer,"Status":status})
+            st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
+            st.markdown('<div class="status-info"><strong>To add a new ETF:</strong> add a row to <code>data/config/portfolio_weights.xlsx</code> with ticker, name and weight. The system detects the issuer and fetches holdings automatically — no other config needed.</div>', unsafe_allow_html=True)
         if not src_df.empty:
             st.dataframe(src_df, use_container_width=True, hide_index=True)
 
