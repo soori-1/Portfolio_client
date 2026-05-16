@@ -25,13 +25,11 @@ try:
     from .fetchers import fetch_all_holdings
     from .lookthrough import run_lookthrough
     from .performance import run_performance
-    from .reports.pdf_factsheet import generate_factsheet
     from .export_dashboard_data import export as export_dashboard
 except ImportError:
     from src.fetchers import fetch_all_holdings
     from src.lookthrough import run_lookthrough
     from src.performance import run_performance
-    from src.reports.pdf_factsheet import generate_factsheet
     from src.export_dashboard_data import export as export_dashboard
 
 ROOT    = Path(__file__).resolve().parent.parent
@@ -40,7 +38,6 @@ CACHE   = ROOT / "data" / "holdings" / "cache"
 MANUAL  = ROOT / "data" / "holdings" / "manual"
 RETURNS = ROOT / "data" / "returns"
 OUTPUTS = ROOT / "outputs" / "snapshots"
-
 
 def main():
     parser = argparse.ArgumentParser()
@@ -139,13 +136,11 @@ def main():
     print(f"  PDF:  {pdf_path}")
     print(f"{'='*60}\n")
 
-
 def _load_opt(path):
     if not path.exists():
         return None
     df = pd.read_excel(path)
     return df if not df.empty else None
-
 
 if __name__ == "__main__":
     main()
