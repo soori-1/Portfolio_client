@@ -17,6 +17,8 @@ import pandas as pd
 from .ishares import fetch_ishares
 from .vanguard import fetch_vanguard
 from .globalx import fetch_globalx
+from .invesco import fetch_invesco
+from .autodiscover import autodiscover_and_fetch
 
 log = logging.getLogger(__name__)
 
@@ -24,6 +26,7 @@ FETCHERS = {
     "ishares": fetch_ishares,
     "vanguard": fetch_vanguard,
     "globalx": fetch_globalx,
+    "invesco": fetch_invesco,
 }
 
 
@@ -40,6 +43,20 @@ def fetch_all_holdings(
     cache_dir = _find_or_create_cache_dir(cache_root, as_of, force_refresh)
 
     sources = pd.read_excel(config_path)
+
+    # Also load portfolio_weights to catch ETFs not yet in etf_sources
+    weights_path = config_path.parent / "portfolio_weights.xlsx"
+    if weights_path.exists():
+        wdf = pd.read_excel(weights_path).dropna(subset=["ETF Ticker"])
+        wdf = wdf[~wdf["ETF Ticker"].astype(str).str.strip().isin(["TOTAL",""])]
+        known_tickers = set(sources["Ticker"].astype(str).str.strip().tolist())
+        for _, wr in wdf.iterrows():
+            tk = str(wr["ETF Ticker"]).strip()
+            if tk not in known_tickers:
+                new_row = pd.DataFrame([[tk, "auto", ""]], columns=["Ticker","Issuer","Product URL"])
+                sources = pd.concat([sources, new_row], ignore_index=True)
+                print(f"       {tk}: not in etf_sources, using auto-discovery")
+
     results: dict[str, pd.DataFrame] = {}
     errors:  dict[str, str] = {}
 
@@ -142,12 +159,28 @@ def _fetch_one(ticker, issuer, product_url, cache_dir, manual_root):
                 df = _load_standardized(manual)
                 df.to_csv(cached, index=False)
                 return df
-            raise RuntimeError(f"fetch error: {e}") from e
+            # Try auto-discovery before giving up
+            print(f"       trying auto-discovery...")
+            try:
+                df = autodiscover_and_fetch(ticker)
+                df = _standardize(df)
+                df.to_csv(cached, index=False)
+                return df
+            except Exception as e2:
+                raise RuntimeError(f"fetch error: {e} | autodiscover: {e2}") from e
 
     if manual.exists():
         return _load_standardized(manual)
 
-    raise RuntimeError(f"unknown issuer '{issuer}', no manual at {manual}")
+    # Unknown issuer — try auto-discovery
+    print(f"       unknown issuer '{issuer}', trying auto-discovery...")
+    try:
+        df = autodiscover_and_fetch(ticker)
+        df = _standardize(df)
+        df.to_csv(cached, index=False)
+        return df
+    except Exception as e:
+        raise RuntimeError(f"auto-discovery failed for {ticker}: {e}") from e
 
 
 REQUIRED_COLS = ["Ticker", "Security Name", "Weight (%)"]
