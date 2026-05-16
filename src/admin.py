@@ -18,6 +18,12 @@ CONFIG  = ROOT / "data" / "config"
 RETURNS = ROOT / "data" / "returns"
 COMMENTARY = ROOT / "data" / "commentary"
 
+# Debug: print paths on startup
+import os
+os.makedirs(str(CONFIG), exist_ok=True)
+os.makedirs(str(RETURNS), exist_ok=True)
+os.makedirs(str(COMMENTARY), exist_ok=True)
+
 st.set_page_config(
     page_title="RH Admin — Portfolio Reporting",
     page_icon="⚙️",
@@ -140,6 +146,14 @@ def check_auth():
 def load_portfolio_weights():
     p = CONFIG / "portfolio_weights.xlsx"
     if not p.exists():
+        # Try common alternative locations
+        for alt in [
+            Path.cwd() / "data" / "config" / "portfolio_weights.xlsx",
+            Path(__file__).resolve().parent / "data" / "config" / "portfolio_weights.xlsx",
+        ]:
+            if alt.exists():
+                df = pd.read_excel(alt).dropna(subset=["ETF Ticker"])
+                return df[~df["ETF Ticker"].astype(str).str.strip().isin(["TOTAL",""])]
         return pd.DataFrame()
     df = pd.read_excel(p).dropna(subset=["ETF Ticker"])
     return df[~df["ETF Ticker"].astype(str).str.strip().isin(["TOTAL",""])]
@@ -371,7 +385,9 @@ def main():
 
         weights = load_portfolio_weights()
         if weights.empty:
-            st.warning("portfolio_weights.xlsx not found.")
+            st.warning(f"portfolio_weights.xlsx not found. Looking in: {CONFIG}")
+            st.info(f"Current working directory: {Path.cwd()}")
+            st.info(f"admin.py location: {ROOT}")
         else:
             total = weights["Portfolio Weight (%)"].sum()
             col1, col2, col3 = st.columns(3)
