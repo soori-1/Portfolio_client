@@ -9,16 +9,30 @@ from __future__ import annotations
 
 import argparse
 import shutil
+import sys
 from datetime import date
 from pathlib import Path
 
 import pandas as pd
 
-from .fetchers import fetch_all_holdings
-from .lookthrough import run_lookthrough
-from .performance import run_performance
-from .reports.pdf_factsheet import generate_factsheet
-from .export_dashboard_data import export as export_dashboard
+# Make imports work both as module (python -m src.generate_report)
+# and as script (python src/generate_report.py)
+_ROOT = Path(__file__).resolve().parent.parent
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+try:
+    from .fetchers import fetch_all_holdings
+    from .lookthrough import run_lookthrough
+    from .performance import run_performance
+    from .reports.pdf_factsheet import generate_factsheet
+    from .export_dashboard_data import export as export_dashboard
+except ImportError:
+    from src.fetchers import fetch_all_holdings
+    from src.lookthrough import run_lookthrough
+    from src.performance import run_performance
+    from src.reports.pdf_factsheet import generate_factsheet
+    from src.export_dashboard_data import export as export_dashboard
 
 ROOT    = Path(__file__).resolve().parent.parent
 CONFIG  = ROOT / "data" / "config"
