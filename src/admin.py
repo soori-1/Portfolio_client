@@ -180,11 +180,11 @@ def month_label(m):
 
 def run_generate(skip_fetch=False):
     """Run generate_report.py as a subprocess and stream output."""
-    script = ROOT / "src" / "generate_report.py"
-    cmd = [sys.executable, str(script)]
+    import os
+    env = {**os.environ, "PYTHONPATH": str(ROOT)}
+    cmd = [sys.executable, "-m", "src.generate_report"]
     if skip_fetch:
         cmd.append("--skip-fetch")
-    env = {**__import__("os").environ, "PYTHONPATH": str(ROOT)}
     result = subprocess.run(
         cmd, capture_output=True, text=True, cwd=str(ROOT), env=env
     )
