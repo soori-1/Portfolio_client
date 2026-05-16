@@ -66,7 +66,7 @@ def main():
     force_refresh = not args.skip_fetch
 
     holdings = fetch_all_holdings(
-        config_path=CONFIG / "etf_sources.xlsx",
+        config_path=CONFIG / "portfolio_weights.xlsx",
         cache_root=CACHE,
         manual_root=MANUAL,
         as_of=today,
