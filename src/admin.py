@@ -466,11 +466,10 @@ def main():
         st.markdown("""
         <div class="status-info">
             Clicking Generate will:<br>
-            1. Fetch latest holdings for all ETFs (iShares, Vanguard, Global X)<br>
+            1. Fetch latest ETF holdings (iShares, Vanguard, Global X)<br>
             2. Run look-through analytics (sector, country, stock-level exposure)<br>
-            3. Compute performance metrics<br>
-            4. Generate the 4-page PDF factsheet<br>
-            5. Export <code>dashboard_data.json</code> for the live website
+            3. Compute performance metrics (YTD, alpha, best/worst)<br>
+            4. Export <code>dashboard_data.json</code> for the live website
         </div>
         """, unsafe_allow_html=True)
 
@@ -484,17 +483,12 @@ def main():
         with c1:
             generate = st.button("⚡  Generate Report", key="gen_btn")
 
-        if is_streamlit_cloud():
+        if generate and is_streamlit_cloud():
             st.markdown('''<div class="status-info">
-                <strong>⚠ Running on Streamlit Cloud</strong><br><br>
-                The Generate Report pipeline cannot run on Streamlit Cloud because it needs to:<br>
-                &nbsp;&nbsp;• Fetch holdings from iShares/GlobalX (blocked by cloud firewalls)<br>
-                &nbsp;&nbsp;• Write files to disk (read-only on Streamlit Cloud)<br>
-                &nbsp;&nbsp;• Run heavy Python dependencies (ReportLab, matplotlib)<br><br>
-                <strong>To generate the report, run this on your local machine:</strong><br>
+                <strong>⚠ Running on Streamlit Cloud — run locally instead</strong><br><br>
                 <code>cd rh-portfolio-reporting-phase1</code><br>
                 <code>python -m src.generate_report --skip-fetch</code><br><br>
-                Then upload the generated <code>dashboard_data.json</code> to GitHub via the Publish tab.
+                Then upload <code>dashboard_data.json</code> to GitHub via the Publish tab.
             </div>''', unsafe_allow_html=True)
         elif generate:
             with st.spinner("Running pipeline... this takes 2-4 minutes"):
