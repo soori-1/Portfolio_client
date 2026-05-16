@@ -19,7 +19,7 @@ from pathlib import Path
 from .fetchers import fetch_all_holdings
 
 ROOT = Path(__file__).resolve().parent.parent
-CONFIG = ROOT / "data" / "config" / "etf_sources.xlsx"
+CONFIG = ROOT / "data" / "config" / "portfolio_weights.xlsx"
 CACHE = ROOT / "data" / "holdings" / "cache"
 MANUAL = ROOT / "data" / "holdings" / "manual"
 
