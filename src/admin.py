@@ -13,9 +13,12 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 
-ROOT    = Path(__file__).resolve().parent
-CONFIG  = ROOT / "data" / "config"
-RETURNS = ROOT / "data" / "returns"
+# admin.py can live at repo root OR inside src/
+# Either way, ROOT points to the repo root
+_HERE = Path(__file__).resolve().parent
+ROOT  = _HERE.parent if _HERE.name == "src" else _HERE
+CONFIG     = ROOT / "data" / "config"
+RETURNS    = ROOT / "data" / "returns"
 COMMENTARY = ROOT / "data" / "commentary"
 
 # Ensure repo root is in sys.path so src package is importable
@@ -188,17 +191,23 @@ def month_label(m):
         return str(m)
 
 def run_generate(skip_fetch=False):
-    """Run generate_report.py as a subprocess and stream output."""
+    """
+    Run generate_report.py.
+    Only works when running locally — Streamlit Cloud cannot run the pipeline.
+    """
     import os
-    # Ensure ROOT is in PYTHONPATH so src package is importable
     env = {**os.environ, "PYTHONPATH": str(ROOT)}
     cmd = [sys.executable, "-m", "src.generate_report"]
     if skip_fetch:
         cmd.append("--skip-fetch")
-    # Always run from repo root so src/ is found
-    cwd = str(ROOT)
-    result = subprocess.run(cmd, capture_output=True, text=True, cwd=cwd, env=env)
+    result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(ROOT), env=env)
     return result.returncode, result.stdout, result.stderr
+
+
+def is_streamlit_cloud() -> bool:
+    """Detect if running on Streamlit Cloud."""
+    import os
+    return os.path.exists("/mount/src") or os.environ.get("STREAMLIT_SHARING_MODE") is not None
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 def main():
@@ -475,50 +484,51 @@ def main():
         with c1:
             generate = st.button("⚡  Generate Report", key="gen_btn")
 
-        if generate:
+        if is_streamlit_cloud():
+            st.markdown('''<div class="status-info">
+                <strong>⚠ Running on Streamlit Cloud</strong><br><br>
+                The Generate Report pipeline cannot run on Streamlit Cloud because it needs to:<br>
+                &nbsp;&nbsp;• Fetch holdings from iShares/GlobalX (blocked by cloud firewalls)<br>
+                &nbsp;&nbsp;• Write files to disk (read-only on Streamlit Cloud)<br>
+                &nbsp;&nbsp;• Run heavy Python dependencies (ReportLab, matplotlib)<br><br>
+                <strong>To generate the report, run this on your local machine:</strong><br>
+                <code>cd rh-portfolio-reporting-phase1</code><br>
+                <code>python -m src.generate_report --skip-fetch</code><br><br>
+                Then upload the generated <code>dashboard_data.json</code> to GitHub via the Publish tab.
+            </div>''', unsafe_allow_html=True)
+        elif generate:
             with st.spinner("Running pipeline... this takes 2-4 minutes"):
                 code, stdout, stderr = run_generate(skip_fetch=skip)
 
-            if code == 0:
-                st.markdown('<div class="status-ok">✓ Report generated successfully.</div>',
-                            unsafe_allow_html=True)
-                with st.expander("View output log"):
-                    st.code(stdout)
-
-                # Check for outputs
-                snaps = ROOT / "outputs" / "snapshots"
-                months_dirs = sorted([d for d in snaps.iterdir() if d.is_dir()], reverse=True)
-                if months_dirs:
-                    latest = months_dirs[0]
-                    pdf = list(latest.glob("*.pdf"))
-                    json_f = latest / "dashboard_data.json"
-
-                    st.markdown('<div class="sh">Generated Files</div>',
+            if generate and not is_streamlit_cloud():
+                if code == 0:
+                    st.markdown('<div class="status-ok">✓ Report generated successfully.</div>',
                                 unsafe_allow_html=True)
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        if pdf:
-                            st.download_button(
-                                "⬇  Download PDF Factsheet",
-                                data=pdf[0].read_bytes(),
-                                file_name=pdf[0].name,
-                                mime="application/pdf",
-                                key="dl_pdf"
-                            )
-                    with col2:
-                        if json_f.exists():
-                            st.download_button(
-                                "⬇  Download dashboard_data.json",
-                                data=json_f.read_text(),
-                                file_name="dashboard_data.json",
-                                mime="application/json",
-                                key="dl_json"
-                            )
-            else:
-                st.markdown(f'<div class="status-err">✗ Generation failed.</div>',
-                            unsafe_allow_html=True)
-                with st.expander("View error log"):
-                    st.code(stderr or stdout)
+                    with st.expander("View output log"):
+                        st.code(stdout)
+                    snaps = ROOT / "outputs" / "snapshots"
+                    if snaps.exists():
+                        months_dirs = sorted([d for d in snaps.iterdir() if d.is_dir()], reverse=True)
+                        if months_dirs:
+                            latest = months_dirs[0]
+                            pdf = list(latest.glob("*.pdf"))
+                            json_f = latest / "dashboard_data.json"
+                            col1, col2 = st.columns(2)
+                            with col1:
+                                if pdf:
+                                    st.download_button("⬇  Download PDF",
+                                        data=pdf[0].read_bytes(), file_name=pdf[0].name,
+                                        mime="application/pdf", key="dl_pdf")
+                            with col2:
+                                if json_f.exists():
+                                    st.download_button("⬇  Download dashboard_data.json",
+                                        data=json_f.read_text(), file_name="dashboard_data.json",
+                                        mime="application/json", key="dl_json")
+                else:
+                    st.markdown(f'<div class="status-err">✗ Generation failed.</div>',
+                                unsafe_allow_html=True)
+                    with st.expander("View error log"):
+                        st.code(stderr or stdout)
 
         # Show last generated
         st.markdown('<div class="sh">Last Generated Report</div>', unsafe_allow_html=True)
