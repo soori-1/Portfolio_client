@@ -434,8 +434,6 @@ def main():
                     issuer,status = "Unknown","⚡ Auto-discover"
                 rows.append({"Ticker":tk,"ETF Name":nm[:42],"Weight":wt,"Issuer":issuer,"Status":status})
             st.dataframe(pd.DataFrame(rows), use_container_width=True, hide_index=True)
-            st.markdown('<div class="status-info"><strong>To add a new ETF:</strong> add a row to <code>data/config/portfolio_weights.xlsx</code> with ticker, name and weight. The system detects the issuer and fetches holdings automatically — no other config needed.</div>', unsafe_allow_html=True)
-        if not src_df.empty:
             st.dataframe(src_df, use_container_width=True, hide_index=True)
 
     # ══════════════════════════════════════════════════════
