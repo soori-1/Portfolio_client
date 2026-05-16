@@ -408,11 +408,39 @@ def main():
                 'directly in Excel, then come back here and Generate Report.</div>',
                 unsafe_allow_html=True)
 
-        st.markdown('<div class="sh">ETF Sources</div>', unsafe_allow_html=True)
+        st.markdown('<div class="sh">Auto-Discovery Status</div>', unsafe_allow_html=True)
         src_path = CONFIG / "etf_sources.xlsx"
-        if src_path.exists():
-            src = pd.read_excel(src_path)
-            st.dataframe(src, use_container_width=True, hide_index=True)
+        src_df = pd.read_excel(src_path) if src_path.exists() else pd.DataFrame(columns=["Ticker","Issuer","Product URL"])
+        known_tickers = set(src_df["Ticker"].astype(str).str.strip().tolist()) if not src_df.empty else set()
+
+        if not weights.empty:
+            status_rows = []
+            issuer_map = {}
+            if not src_df.empty:
+                for _, sr in src_df.iterrows():
+                    issuer_map[str(sr["Ticker"]).strip()] = str(sr["Issuer"]).strip()
+
+            for _, r in weights.iterrows():
+                tk = str(r["ETF Ticker"]).strip()
+                issuer = issuer_map.get(tk, "auto")
+                if issuer.lower() == "manual":
+                    status = "📁 Manual CSV"
+                elif issuer.lower() == "auto" or tk not in known_tickers:
+                    status = "⚡ Auto-discover"
+                else:
+                    status = "✓  " + issuer
+                status_rows.append({
+                    "Ticker": tk,
+                    "ETF Name": str(r.get("ETF Name","")),
+                    "Weight (%)": str(r["Portfolio Weight (%)"]) + "%",
+                    "Issuer": issuer if tk in known_tickers else "auto",
+                    "Fetch Status": status,
+                })
+            st.dataframe(pd.DataFrame(status_rows), use_container_width=True, hide_index=True)
+
+        st.markdown('<div class="sh">ETF Sources Config</div>', unsafe_allow_html=True)
+        if not src_df.empty:
+            st.dataframe(src_df, use_container_width=True, hide_index=True)
 
     # ══════════════════════════════════════════════════════
     # TAB 3 — Generate Report
