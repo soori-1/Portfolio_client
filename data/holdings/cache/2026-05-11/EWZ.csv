@@ -1,0 +1,52 @@
+Ticker,Security Name,Weight (%),Sector,Country,Asset Class
+VALE3,CIA VALE DO RIO DOCE SH,10.7,Materials,Brazil,Equity
+NU,NU HOLDINGS CLASS A,8.4,Financials,Brazil,Equity
+ITUB4,ITAU UNIBANCO HOLDING PREF SA,8.26,Financials,Brazil,Equity
+PETR4,PETROLEO BRASILEIRO PREF SA,7.49,Energy,Brazil,Equity
+PETR3,PETROLEO BRASILEIRO SA PETROBRAS,6.79,Energy,Brazil,Equity
+B3SA3,B3 BRASIL BOLSA BALCAO SA,3.67,Financials,Brazil,Equity
+BBDC4,BANCO BRADESCO PREF SA,3.31,Financials,Brazil,Equity
+ABEV3,AMBEV SA,3.02,Consumer Staples,Brazil,Equity
+SBSP3,COMPANHIA DE SANEAMENTO BASICO DE,3.01,Utilities,Brazil,Equity
+WEGE3,WEG SA,2.97,Industrials,Brazil,Equity
+AXIA3,CENTRAIS ELETR BRAS-ELETROBRAS SA,2.79,Utilities,Brazil,Equity
+BPAC11,BCO BTG PACTUAL UNT SA,2.76,Financials,Brazil,Equity
+ITSA4,ITAUSA INVESTIMENTOS ITAU PREF SA,2.58,Financials,Brazil,Equity
+PRIO3,PETRO RIO SA,2.07,Energy,Brazil,Equity
+EMBJ3,EMBRAER SA,2.05,Industrials,Brazil,Equity
+EQTL3,EQUATORIAL SA,2.02,Utilities,Brazil,Equity
+RENT3,LOCALIZA RENT A CAR SA,1.85,Industrials,Brazil,Equity
+VBBR3,VIBRA ENERGIA SA,1.51,Consumer Discretionary,Brazil,Equity
+BBAS3,BANCO DO BRASIL SA,1.49,Financials,Brazil,Equity
+XP,XP CLASS A INC,1.38,Financials,Brazil,Equity
+GGBR4,GERDAU PREF SA,1.29,Materials,Brazil,Equity
+VIVT3,TELEFONICA BRASIL SA,1.28,Communication,Brazil,Equity
+RDOR3,REDE DOR SAO LUIZ SA,1.25,Health Care,Brazil,Equity
+SUZB3,SUZANO SA,1.23,Materials,Brazil,Equity
+JBS,JBS N V NV CLASS A,1.2,Consumer Staples,Brazil,Equity
+RADL3,RAIA DROGASIL,1.14,Consumer Staples,Brazil,Equity
+BBSE3,BB SEGURIDADE SA,0.99,Financials,Brazil,Equity
+UGPA3,ULTRAPAR PARTICIPOES SA,0.96,Consumer Discretionary,Brazil,Equity
+RAIL3,RUMO SA,0.91,Industrials,Brazil,Equity
+AXIA7,CENTRAIS ELET BRAS PRF SA,0.87,Utilities,Brazil,Equity
+CMIG4,CIA ENERGETICA DE MINAS GERAIS PRE,0.87,Utilities,Brazil,Equity
+TIMS3,TIM SA,0.84,Communication,Brazil,Equity
+TOTS3,TOTVS SA,0.8,Information Technology,Brazil,Equity
+CPLE3,CIA PARANAENSE DE ENERGIA COPEL,0.75,Utilities,Brazil,Equity
+ENGI11,ENERGISA UNITS SA,0.72,Utilities,Brazil,Equity
+MOTV3,MOTIVA INFRAESTRUTURA DE MOBILIDAD,0.71,Industrials,Brazil,Equity
+AXIA6,CENTRAIS ELETR BRAS-ELETROBRAS PRE,0.69,Utilities,Brazil,Equity
+BRL,BRL CASH,0.69,Cash and/or Derivatives,Brazil,Cash
+KLBN11,KLABIN UNITS SA,0.61,Materials,Brazil,Equity
+ENEV3,ENEVA SA,0.6,Utilities,Brazil,Equity
+BBDC3,BANCO BRADESCO SA,0.58,Financials,Brazil,Equity
+CPFE3,CPFL ENERGIA SA,0.53,Utilities,Brazil,Equity
+CXSE3,CAIXA SEGURIDADE PARTICIPACOES SA,0.49,Financials,Brazil,Equity
+EGIE3,ENGIE BRASIL ENERGIA SA,0.47,Utilities,Brazil,Equity
+XTSLA,BLK CSH FND TREASURY SL AGENCY,0.39,Cash and/or Derivatives,United States,Money Market
+PSSA3,PORTO SEGURO SA,0.37,Financials,Brazil,Equity
+MBRF3,MARFRIG GLOBAL FOODS SA,0.33,Consumer Staples,Brazil,Equity
+STNE,STONECO LTD CLASS A,0.22,Financials,Brazil,Equity
+JPFFT,CASH COLLATERAL USD JPFFT,0.06,Cash and/or Derivatives,United States,Cash Collateral and Margins
+ETD_BRL,ETD BRL BALANCE WITH R73215,0.06,Cash and/or Derivatives,Brazil,Cash
+GSCFT,CASH COLLATERAL USD GSCFT,0.06,Cash and/or Derivatives,United States,Cash Collateral and Margins

@@ -1,0 +1,50 @@
+Ticker,Security Name,Weight (%),Sector,Country,Asset Class
+CBA,COMMONWEALTH BANK OF AUSTRALIA,14.63,Financials,Australia,Equity
+BHP,BHP GROUP LTD,14.63,Materials,Australia,Equity
+WBC,WESTPAC BANKING CORPORATION CORP,6.36,Financials,Australia,Equity
+NAB,NATIONAL AUSTRALIA BANK LTD,5.85,Financials,Australia,Equity
+ANZ,ANZ GROUP HOLDINGS LTD,5.51,Financials,Australia,Equity
+MQG,MACQUARIE GROUP LTD DEF,4.31,Financials,Australia,Equity
+WES,WESFARMERS LTD,4.08,Consumer Discretionary,Australia,Equity
+RIO,RIO TINTO LTD,3.3,Materials,Australia,Equity
+GMG,GOODMAN GROUP UNITS,3.08,Real Estate,Australia,Equity
+CSL,CSL LTD,2.89,Health Care,Australia,Equity
+WDS,WOODSIDE ENERGY GROUP LTD,2.84,Energy,Australia,Equity
+TCL,TRANSURBAN GROUP STAPLED UNITS,2.23,Industrials,Australia,Equity
+WOW,WOOLWORTHS GROUP LTD,2.04,Consumer Staples,Australia,Equity
+FMG,FORTESCUE LTD,1.79,Materials,Australia,Equity
+QBE,QBE INSURANCE GROUP LTD,1.67,Financials,Australia,Equity
+BXB,BRAMBLES LTD,1.51,Industrials,Australia,Equity
+COL,COLES GROUP LTD,1.44,Consumer Staples,Australia,Equity
+NST,NORTHERN STAR RESOURCES LTD,1.43,Materials,Australia,Equity
+EVN,EVOLUTION MINING LTD,1.32,Materials,Australia,Equity
+ALL,ARISTOCRAT LEISURE LTD,1.29,Consumer Discretionary,Australia,Equity
+STO,SANTOS LTD,1.21,Energy,Australia,Equity
+TLS,TELSTRA GROUP LTD,1.04,Communication,Australia,Equity
+ORG,ORIGIN ENERGY LTD,0.98,Utilities,Australia,Equity
+SCG,SCENTRE GROUP,0.96,Real Estate,Australia,Equity
+S32,SOUTH32 LTD,0.92,Materials,Australia,Equity
+SUN,SUNCORP GROUP LTD,0.9,Financials,Australia,Equity
+LYC,LYNAS RARE EARTHS LTD,0.88,Materials,Australia,Equity
+IAG,INSURANCE AUSTRALIA GROUP LTD,0.86,Financials,Australia,Equity
+CPU,COMPUTERSHARE LTD,0.8,Industrials,Australia,Equity
+SOL,WASHINGTON H SOUL PATTINSON & COMP,0.74,Financials,Australia,Equity
+SIG,SIGMA HEALTHCARE LTD,0.74,Health Care,Australia,Equity
+XRO,XERO LTD,0.71,Information Technology,Australia,Equity
+APA,APA GROUP UNITS,0.67,Utilities,Australia,Equity
+MPL,MEDIBANK PRIVATE LTD,0.63,Financials,Australia,Equity
+TLC,THE LOTTERY CORPORATION LTD,0.59,Consumer Discretionary,Australia,Equity
+ASX,ASX LTD,0.56,Financials,Australia,Equity
+CAR,CAR GROUP LTD,0.49,Communication,Australia,Equity
+SGP,STOCKLAND STAPLED UNITS LTD,0.48,Real Estate,Australia,Equity
+VCX,VICINITY CENTRES,0.47,Real Estate,Australia,Equity
+REA,REA GROUP LTD,0.46,Communication,Australia,Equity
+SHL,SONIC HEALTHCARE LTD,0.44,Health Care,Australia,Equity
+WTC,WISETECH GLOBAL LTD,0.42,Information Technology,Australia,Equity
+AUD,AUD CASH,0.42,Cash and/or Derivatives,Australia,Cash
+SGH,SGH LTD,0.41,Industrials,Australia,Equity
+PME,PRO MEDICUS LTD,0.37,Health Care,Australia,Equity
+QAN,QANTAS AIRWAYS LTD,0.33,Industrials,Australia,Equity
+COH,COCHLEAR LTD,0.32,Health Care,Australia,Equity
+XTSLA,BLK CSH FND TREASURY SL AGENCY,0.04,Cash and/or Derivatives,United States,Money Market
+UBFUT,CASH COLLATERAL AUD UBFUT,0.02,Cash and/or Derivatives,Australia,Cash Collateral and Margins

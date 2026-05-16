@@ -1,0 +1,1115 @@
+Ticker,Security Name,Weight (%),Sector,Country,Asset Class
+NVDA,NVIDIA CORP,6.22,Information Technology,United States,Equity
+AAPL,APPLE INC,5.13,Information Technology,United States,Equity
+MSFT,MICROSOFT CORP,3.49,Information Technology,United States,Equity
+AMZN,AMAZON.COM INC,3.12,Consumer Discretionary,United States,Equity
+GOOGL,ALPHABET INC CLASS A,2.77,Communication,United States,Equity
+AVGO,BROADCOM INC,2.3,Information Technology,United States,Equity
+GOOG,ALPHABET INC CLASS C,2.3,Communication,United States,Equity
+META,META PLATFORMS INC CLASS A,1.58,Communication,United States,Equity
+TSLA,TESLA INC,1.44,Consumer Discretionary,United States,Equity
+MU,MICRON TECHNOLOGY INC,1.0,Information Technology,United States,Equity
+JPM,JPMORGAN CHASE & CO,0.98,Financials,United States,Equity
+LLY,ELI LILLY,0.91,Health Care,United States,Equity
+AMD,ADVANCED MICRO DEVICES INC,0.88,Information Technology,United States,Equity
+BRKB,BERKSHIRE HATHAWAY INC CLASS B,0.78,Financials,United States,Equity
+XOM,EXXON MOBIL CORP,0.73,Energy,United States,Equity
+ASML,ASML HOLDING NV,0.71,Information Technology,Netherlands,Equity
+WMT,WALMART INC,0.68,Consumer Staples,United States,Equity
+INTC,INTEL CORPORATION CORP,0.67,Information Technology,United States,Equity
+V,VISA INC CLASS A,0.64,Financials,United States,Equity
+JNJ,JOHNSON & JOHNSON,0.63,Health Care,United States,Equity
+COST,COSTCO WHOLESALE CORP,0.53,Consumer Staples,United States,Equity
+CAT,CATERPILLAR INC,0.5,Industrials,United States,Equity
+MA,MASTERCARD INC CLASS A,0.5,Financials,United States,Equity
+CSCO,CISCO SYSTEMS INC,0.46,Information Technology,United States,Equity
+NFLX,NETFLIX INC,0.44,Communication,United States,Equity
+LRCX,LAM RESEARCH CORP,0.44,Information Technology,United States,Equity
+ABBV,ABBVIE INC,0.42,Health Care,United States,Equity
+BAC,BANK OF AMERICA CORP,0.42,Financials,United States,Equity
+CVX,CHEVRON CORP,0.41,Energy,United States,Equity
+AMAT,APPLIED MATERIAL INC,0.41,Information Technology,United States,Equity
+UNH,UNITEDHEALTH GROUP INC,0.41,Health Care,United States,Equity
+PG,PROCTER & GAMBLE,0.41,Consumer Staples,United States,Equity
+ORCL,ORACLE CORP,0.4,Information Technology,United States,Equity
+KO,COCA-COLA,0.38,Consumer Staples,United States,Equity
+HD,HOME DEPOT INC,0.38,Consumer Discretionary,United States,Equity
+PLTR,PALANTIR TECHNOLOGIES INC CLASS A,0.37,Information Technology,United States,Equity
+GE,GE AEROSPACE,0.37,Industrials,United States,Equity
+HSBA,HSBC HOLDINGS PLC,0.36,Financials,United Kingdom,Equity
+ROP,ROCHE PS PAR AG,0.34,Health Care,Switzerland,Equity
+AZN,ASTRAZENECA PLC,0.34,Health Care,United Kingdom,Equity
+GS,GOLDMAN SACHS GROUP INC,0.34,Financials,United States,Equity
+GEV,GE VERNOVA INC,0.33,Industrials,United States,Equity
+MRK,MERCK & CO INC,0.33,Health Care,United States,Equity
+NOVN,NOVARTIS AG,0.33,Health Care,Switzerland,Equity
+PM,PHILIP MORRIS INTERNATIONAL INC,0.32,Consumer Staples,United States,Equity
+TXN,TEXAS INSTRUMENT INC,0.31,Information Technology,United States,Equity
+NESN,NESTLE SA,0.31,Consumer Staples,Switzerland,Equity
+RY,ROYAL BANK OF CANADA,0.3,Financials,Canada,Equity
+KLAC,KLA CORP,0.29,Information Technology,United States,Equity
+SHEL,SHELL PLC,0.29,Energy,United Kingdom,Equity
+SIE,SIEMENS N AG,0.28,Industrials,Germany,Equity
+WFC,WELLS FARGO,0.28,Financials,United States,Equity
+RTX,RTX CORP,0.28,Industrials,United States,Equity
+QCOM,QUALCOMM INC,0.28,Information Technology,United States,Equity
+MS,MORGAN STANLEY,0.28,Financials,United States,Equity
+LIN,LINDE PLC,0.27,Materials,United States,Equity
+C,CITIGROUP INC,0.27,Financials,United States,Equity
+IBM,INTERNATIONAL BUSINESS MACHINES CO,0.26,Information Technology,United States,Equity
+CBA,COMMONWEALTH BANK OF AUSTRALIA,0.25,Financials,Australia,Equity
+BHP,BHP GROUP LTD,0.25,Materials,Australia,Equity
+PEP,PEPSICO INC,0.25,Consumer Staples,United States,Equity
+ADI,ANALOG DEVICES INC,0.24,Information Technology,United States,Equity
+VZ,VERIZON COMMUNICATIONS INC,0.24,Communication,United States,Equity
+MCD,MCDONALDS CORP,0.24,Consumer Discretionary,United States,Equity
+DIS,WALT DISNEY,0.23,Communication,United States,Equity
+NEE,NEXTERA ENERGY INC,0.23,Utilities,United States,Equity
+BA,BOEING,0.22,Industrials,United States,Equity
+SAN,BANCO SANTANDER SA,0.22,Financials,Spain,Equity
+SAP,SAP,0.21,Information Technology,Germany,Equity
+TD,TORONTO DOMINION,0.21,Financials,Canada,Equity
+T,AT&T INC,0.21,Communication,United States,Equity
+AMGN,AMGEN INC,0.21,Health Care,United States,Equity
+TTE,TOTALENERGIES,0.21,Energy,France,Equity
+SU,SCHNEIDER ELECTRIC,0.21,Industrials,France,Equity
+TMO,THERMO FISHER SCIENTIFIC INC,0.21,Health Care,United States,Equity
+AXP,AMERICAN EXPRESS,0.21,Financials,United States,Equity
+CRM,SALESFORCE INC,0.2,Information Technology,United States,Equity
+STX,SEAGATE TECHNOLOGY HOLDINGS PLC,0.2,Information Technology,United States,Equity
+TJX,TJX INC,0.2,Consumer Discretionary,United States,Equity
+PANW,PALO ALTO NETWORKS INC,0.2,Information Technology,United States,Equity
+ABBN,ABB LTD,0.2,Industrials,Switzerland,Equity
+ALV,ALLIANZ,0.2,Financials,Germany,Equity
+GILD,GILEAD SCIENCES INC,0.19,Health Care,United States,Equity
+WDC,WESTERN DIGITAL CORP,0.19,Information Technology,United States,Equity
+ENR,SIEMENS ENERGY N AG,0.19,Industrials,Germany,Equity
+ISRG,INTUITIVE SURGICAL INC,0.19,Health Care,United States,Equity
+BLK,BLACKROCK INC,0.19,Financials,United States,Equity
+UNP,UNION PACIFIC CORP,0.19,Industrials,United States,Equity
+ETN,EATON PLC,0.19,Industrials,United States,Equity
+APH,AMPHENOL CORP CLASS A,0.18,Information Technology,United States,Equity
+ANET,ARISTA NETWORKS INC,0.18,Information Technology,United States,Equity
+SCHW,CHARLES SCHWAB CORP,0.18,Financials,United States,Equity
+GLW,CORNING INC,0.18,Information Technology,United States,Equity
+UBER,UBER TECHNOLOGIES INC,0.18,Industrials,United States,Equity
+NOVO B,NOVO NORDISK CLASS B,0.18,Health Care,Denmark,Equity
+DE,DEERE,0.18,Industrials,United States,Equity
+WELL,WELLTOWER INC,0.17,Real Estate,United States,Equity
+IBE,IBERDROLA SA,0.17,Utilities,Spain,Equity
+ABT,ABBOTT LABORATORIES,0.17,Health Care,United States,Equity
+PFE,PFIZER INC,0.17,Health Care,United States,Equity
+MRVL,MARVELL TECHNOLOGY INC,0.17,Information Technology,United States,Equity
+UBSG,UBS GROUP AG,0.17,Financials,Switzerland,Equity
+RR.,ROLLS-ROYCE HOLDINGS PLC,0.17,Industrials,United Kingdom,Equity
+COP,CONOCOPHILLIPS,0.17,Energy,United States,Equity
+MC,LVMH,0.17,Consumer Discretionary,France,Equity
+SHOP,SHOPIFY SUBORDINATE VOTING INC CLA,0.16,Information Technology,Canada,Equity
+BKNG,BOOKING HOLDINGS INC,0.16,Consumer Discretionary,United States,Equity
+HON,HONEYWELL INTERNATIONAL INC,0.16,Industrials,United States,Equity
+PLD,PROLOGIS REIT INC,0.16,Real Estate,United States,Equity
+CRWD,CROWDSTRIKE HOLDINGS INC CLASS A,0.16,Information Technology,United States,Equity
+SPGI,S&P GLOBAL INC,0.16,Financials,United States,Equity
+NEM,NEWMONT,0.15,Materials,United States,Equity
+LOW,LOWES COMPANIES INC,0.15,Consumer Discretionary,United States,Equity
+BATS,BRITISH AMERICAN TOBACCO,0.15,Consumer Staples,United Kingdom,Equity
+ULVR,UNILEVER PLC,0.15,Consumer Staples,United Kingdom,Equity
+BBVA,BANCO BILBAO VIZCAYA ARGENTARIA SA,0.15,Financials,Spain,Equity
+AIR,AIRBUS GROUP,0.15,Industrials,France,Equity
+VRT,VERTIV HOLDINGS CLASS A,0.15,Industrials,United States,Equity
+SAF,SAFRAN SA,0.14,Industrials,France,Equity
+COF,CAPITAL ONE FINANCIAL CORP,0.14,Financials,United States,Equity
+CB,CHUBB,0.14,Financials,United States,Equity
+DTE,DEUTSCHE TELEKOM N AG,0.14,Communication,Germany,Equity
+SBUX,STARBUCKS CORP,0.14,Consumer Discretionary,United States,Equity
+AI,LAIR LIQUIDE SOCIETE ANONYME POUR,0.14,Materials,France,Equity
+RIO,RIO TINTO PLC,0.14,Materials,United Kingdom,Equity
+1299,AIA GROUP LTD,0.14,Financials,Hong Kong,Equity
+ENB,ENBRIDGE INC,0.14,Energy,Canada,Equity
+UCG,UNICREDIT,0.14,Financials,Italy,Equity
+BP.,BP PLC,0.14,Energy,United Kingdom,Equity
+MO,ALTRIA GROUP INC,0.14,Consumer Staples,United States,Equity
+CVS,CVS HEALTH CORP,0.14,Health Care,United States,Equity
+BMY,BRISTOL MYERS SQUIBB,0.14,Health Care,United States,Equity
+PGR,PROGRESSIVE CORP,0.14,Financials,United States,Equity
+PWR,QUANTA SERVICES INC,0.13,Industrials,United States,Equity
+VRTX,VERTEX PHARMACEUTICALS INC,0.13,Health Care,United States,Equity
+ACN,ACCENTURE PLC CLASS A,0.13,Information Technology,United States,Equity
+PH,PARKER-HANNIFIN CORP,0.13,Industrials,United States,Equity
+INTU,INTUIT INC,0.13,Information Technology,United States,Equity
+CFR,COMPAGNIE FINANCIERE RICHEMONT SA,0.13,Consumer Discretionary,Switzerland,Equity
+DHR,DANAHER CORP,0.13,Health Care,United States,Equity
+BMO,BANK OF MONTREAL,0.13,Financials,Canada,Equity
+APP,APPLOVIN CORP CLASS A,0.13,Information Technology,United States,Equity
+BNP,BNP PARIBAS SA,0.13,Financials,France,Equity
+LMT,LOCKHEED MARTIN CORP,0.13,Industrials,United States,Equity
+ADBE,ADOBE INC,0.12,Information Technology,United States,Equity
+EQIX,EQUINIX REIT INC,0.12,Real Estate,United States,Equity
+TT,TRANE TECHNOLOGIES PLC,0.12,Industrials,United States,Equity
+CM,CANADIAN IMPERIAL BANK OF COMMERCE,0.12,Financials,Canada,Equity
+ZURN,ZURICH INSURANCE GROUP AG,0.12,Financials,Switzerland,Equity
+CME,CME GROUP INC CLASS A,0.12,Financials,United States,Equity
+HWM,HOWMET AEROSPACE INC,0.12,Industrials,United States,Equity
+OR,LOREAL SA,0.12,Consumer Staples,France,Equity
+GSK,GLAXOSMITHKLINE,0.12,Health Care,United Kingdom,Equity
+SO,SOUTHERN,0.12,Utilities,United States,Equity
+SNPS,SYNOPSYS INC,0.12,Information Technology,United States,Equity
+TMUS,T MOBILE US INC,0.12,Communication,United States,Equity
+D05,DBS GROUP HOLDINGS LTD,0.12,Financials,Singapore,Equity
+BNS,BANK OF NOVA SCOTIA,0.12,Financials,Canada,Equity
+CDNS,CADENCE DESIGN SYSTEMS INC,0.12,Information Technology,United States,Equity
+AEM,AGNICO EAGLE MINES LTD,0.12,Materials,Canada,Equity
+DUK,DUKE ENERGY CORP,0.12,Utilities,United States,Equity
+MDT,MEDTRONIC PLC,0.12,Health Care,United States,Equity
+ISP,INTESA SANPAOLO,0.12,Financials,Italy,Equity
+BN,BROOKFIELD CORP CLASS A,0.12,Financials,Canada,Equity
+SYK,STRYKER CORP,0.12,Health Care,United States,Equity
+SAN,SANOFI SA,0.11,Health Care,France,Equity
+NOW,SERVICENOW INC,0.11,Information Technology,United States,Equity
+ENEL,ENEL,0.11,Utilities,Italy,Equity
+CEG,CONSTELLATION ENERGY CORP,0.11,Utilities,United States,Equity
+IFX,INFINEON TECHNOLOGIES AG,0.11,Information Technology,Germany,Equity
+WBC,WESTPAC BANKING CORPORATION CORP,0.11,Financials,Australia,Equity
+CNQ,CANADIAN NATURAL RESOURCES LTD,0.11,Energy,Canada,Equity
+CMCSA,COMCAST CORP CLASS A,0.11,Communication,United States,Equity
+CMI,CUMMINS INC,0.11,Industrials,United States,Equity
+MCK,MCKESSON CORP,0.11,Health Care,United States,Equity
+BX,BLACKSTONE INC,0.11,Financials,United States,Equity
+FCX,FREEPORT MCMORAN INC,0.11,Materials,United States,Equity
+BK,BANK OF NEW YORK MELLON CORP,0.11,Financials,United States,Equity
+WMB,WILLIAMS INC,0.11,Energy,United States,Equity
+ICE,INTERCONTINENTAL EXCHANGE INC,0.11,Financials,United States,Equity
+INGA,ING GROEP NV,0.1,Financials,Netherlands,Equity
+NG.,NATIONAL GRID PLC,0.1,Utilities,United Kingdom,Equity
+USB,US BANCORP,0.1,Financials,United States,Equity
+PNC,PNC FINANCIAL SERVICES GROUP INC,0.1,Financials,United States,Equity
+NAB,NATIONAL AUSTRALIA BANK LTD,0.1,Financials,Australia,Equity
+ADP,AUTOMATIC DATA PROCESSING INC,0.1,Industrials,United States,Equity
+WM,WASTE MANAGEMENT INC,0.1,Industrials,United States,Equity
+JCI,JOHNSON CONTROLS INTERNATIONAL PLC,0.1,Industrials,United States,Equity
+ELV,ELEVANCE HEALTH INC,0.1,Health Care,United States,Equity
+AMT,AMERICAN TOWER REIT CORP,0.1,Real Estate,United States,Equity
+FDX,FEDEX CORP,0.1,Industrials,United States,Equity
+CS,AXA SA,0.1,Financials,France,Equity
+CSX,CSX CORP,0.1,Industrials,United States,Equity
+DELL,DELL TECHNOLOGIES INC CLASS C,0.1,Information Technology,United States,Equity
+MAR,MARRIOTT INTERNATIONAL INC CLASS A,0.1,Consumer Discretionary,United States,Equity
+BARC,BARCLAYS PLC,0.1,Financials,United Kingdom,Equity
+LLOY,LLOYDS BANKING GROUP PLC,0.1,Financials,United Kingdom,Equity
+ORLY,OREILLY AUTOMOTIVE INC,0.1,Consumer Discretionary,United States,Equity
+BSX,BOSTON SCIENTIFIC CORP,0.09,Health Care,United States,Equity
+SLB,SLB NV,0.09,Energy,United States,Equity
+ANZ,ANZ GROUP HOLDINGS LTD,0.09,Financials,Australia,Equity
+MDLZ,MONDELEZ INTERNATIONAL INC CLASS A,0.09,Consumer Staples,United States,Equity
+MRSH,MARSH INC,0.09,Financials,United States,Equity
+CP,CANADIAN PACIFIC KANSAS CITY LTD,0.09,Industrials,Canada,Equity
+ABI,ANHEUSER-BUSCH INBEV SA,0.09,Consumer Staples,Belgium,Equity
+BA.,BAE SYSTEMS PLC,0.09,Industrials,United Kingdom,Equity
+EMR,EMERSON ELECTRIC,0.09,Industrials,United States,Equity
+CI,CIGNA,0.09,Health Care,United States,Equity
+MPWR,MONOLITHIC POWER SYSTEMS INC,0.09,Information Technology,United States,Equity
+SU,SUNCOR ENERGY INC,0.09,Energy,Canada,Equity
+GD,GENERAL DYNAMICS CORP,0.09,Industrials,United States,Equity
+CIEN,CIENA CORP,0.09,Information Technology,United States,Equity
+GLEN,GLENCORE PLC,0.09,Materials,United Kingdom,Equity
+MMM,3M,0.09,Industrials,United States,Equity
+MPC,MARATHON PETROLEUM CORP,0.09,Energy,United States,Equity
+MUV2,MUENCHENER RUECKVERSICHERUNGS-GESE,0.09,Financials,Germany,Equity
+GM,GENERAL MOTORS,0.09,Consumer Discretionary,United States,Equity
+DG,VINCI SA,0.09,Industrials,France,Equity
+CRH,CRH PUBLIC LIMITED PLC,0.09,Materials,United States,Equity
+ROST,ROSS STORES INC,0.09,Consumer Discretionary,United States,Equity
+UPS,UNITED PARCEL SERVICE INC CLASS B,0.09,Industrials,United States,Equity
+SHW,SHERWIN WILLIAMS,0.09,Materials,United States,Equity
+FTNT,FORTINET INC,0.09,Information Technology,United States,Equity
+NXPI,NXP SEMICONDUCTORS NV,0.09,Information Technology,United States,Equity
+MELI,MERCADOLIBRE INC,0.09,Consumer Discretionary,United States,Equity
+NOC,NORTHROP GRUMMAN CORP,0.09,Industrials,United States,Equity
+HLT,HILTON WORLDWIDE HOLDINGS INC,0.09,Consumer Discretionary,United States,Equity
+REGN,REGENERON PHARMACEUTICALS INC,0.09,Health Care,United States,Equity
+MCO,MOODYS CORP,0.09,Financials,United States,Equity
+INVE B,INVESTOR CLASS B,0.09,Financials,Sweden,Equity
+VLO,VALERO ENERGY CORP,0.09,Energy,United States,Equity
+ABX,BARRICK MINING CORP,0.09,Materials,Canada,Equity
+HCA,HCA HEALTHCARE INC,0.08,Health Care,United States,Equity
+ITW,ILLINOIS TOOL INC,0.08,Industrials,United States,Equity
+PSX,PHILLIPS 66,0.08,Energy,United States,Equity
+RCL,ROYAL CARIBBEAN GROUP LTD,0.08,Consumer Discretionary,United States,Equity
+AEP,AMERICAN ELECTRIC POWER INC,0.08,Utilities,United States,Equity
+EOG,EOG RESOURCES INC,0.08,Energy,United States,Equity
+FIX,COMFORT SYSTEMS USA INC,0.08,Industrials,United States,Equity
+NSC,NORFOLK SOUTHERN CORP,0.08,Industrials,United States,Equity
+CL,COLGATE-PALMOLIVE,0.08,Consumer Staples,United States,Equity
+TDG,TRANSDIGM GROUP INC,0.08,Industrials,United States,Equity
+DLR,DIGITAL REALTY TRUST REIT INC,0.08,Real Estate,United States,Equity
+SPG,SIMON PROPERTY GROUP REIT INC,0.08,Real Estate,United States,Equity
+RHM,RHEINMETALL AG,0.08,Industrials,Germany,Equity
+ITX,INDUSTRIA DE DISENO TEXTIL SA,0.08,Consumer Discretionary,Spain,Equity
+MFC,MANULIFE FINANCIAL CORP,0.08,Financials,Canada,Equity
+NOKIA,NOKIA,0.08,Information Technology,Finland,Equity
+TRP,TC ENERGY CORP,0.08,Energy,Canada,Equity
+TRV,TRAVELERS COMPANIES INC,0.08,Financials,United States,Equity
+ECL,ECOLAB INC,0.08,Materials,United States,Equity
+BKR,BAKER HUGHES CLASS A,0.08,Energy,United States,Equity
+APD,AIR PRODUCTS AND CHEMICALS INC,0.08,Materials,United States,Equity
+AON,AON PLC CLASS A,0.08,Financials,United States,Equity
+WPM,WHEATON PRECIOUS METALS CORP,0.08,Materials,Canada,Equity
+LITE,LUMENTUM HOLDINGS INC,0.08,Information Technology,United States,Equity
+SPOT,SPOTIFY TECHNOLOGY SA,0.08,Communication,Sweden,Equity
+NWG,NATWEST GROUP PLC,0.08,Financials,United Kingdom,Equity
+TFC,TRUIST FINANCIAL CORP,0.08,Financials,United States,Equity
+KEYS,KEYSIGHT TECHNOLOGIES INC,0.08,Information Technology,United States,Equity
+MSI,MOTOROLA SOLUTIONS INC,0.08,Information Technology,United States,Equity
+KKR,KKR AND CO INC,0.08,Financials,United States,Equity
+388,HONG KONG EXCHANGES AND CLEARING L,0.07,Financials,Hong Kong,Equity
+PRX,PROSUS NV CLASS N,0.07,Consumer Discretionary,Netherlands,Equity
+MNST,MONSTER BEVERAGE CORP,0.07,Consumer Staples,United States,Equity
+WBD,WARNER BROS. DISCOVERY INC SERIES,0.07,Communication,United States,Equity
+DASH,DOORDASH INC CLASS A,0.07,Consumer Discretionary,United States,Equity
+KMI,KINDER MORGAN INC,0.07,Energy,United States,Equity
+ABNB,AIRBNB INC CLASS A,0.07,Consumer Discretionary,United States,Equity
+MQG,MACQUARIE GROUP LTD DEF,0.07,Financials,Australia,Equity
+RMS,HERMES INTERNATIONAL,0.07,Consumer Discretionary,France,Equity
+NET,CLOUDFLARE INC CLASS A,0.07,Information Technology,United States,Equity
+URI,UNITED RENTALS INC,0.07,Industrials,United States,Equity
+TEL,TE CONNECTIVITY PLC,0.07,Information Technology,United States,Equity
+CTAS,CINTAS CORP,0.07,Industrials,United States,Equity
+EL,ESSILORLUXOTTICA SA,0.07,Health Care,France,Equity
+SRE,SEMPRA,0.07,Utilities,United States,Equity
+AAL,ANGLO AMERICAN PLC,0.07,Materials,United Kingdom,Equity
+REL,RELX PLC,0.07,Industrials,United Kingdom,Equity
+DDOG,DATADOG INC CLASS A,0.07,Information Technology,United States,Equity
+DBK,DEUTSCHE BANK AG,0.07,Financials,Germany,Equity
+LSEG,LONDON STOCK EXCHANGE GROUP PLC,0.07,Financials,United Kingdom,Equity
+PCAR,PACCAR INC,0.07,Industrials,United States,Equity
+O39,OVERSEA-CHINESE BANKING LTD,0.07,Financials,Singapore,Equity
+WES,WESFARMERS LTD,0.07,Consumer Discretionary,Australia,Equity
+CNR,CANADIAN NATIONAL RAILWAY,0.07,Industrials,Canada,Equity
+APO,APOLLO GLOBAL MANAGEMENT INC,0.07,Financials,United States,Equity
+TGT,TARGET CORP,0.07,Consumer Staples,United States,Equity
+BE,BLOOM ENERGY CLASS A CORP,0.07,Industrials,United States,Equity
+TER,TERADYNE INC,0.07,Information Technology,United States,Equity
+NDA FI,NORDEA BANK,0.07,Financials,Finland,Equity
+AFL,AFLAC INC,0.07,Financials,United States,Equity
+AZO,AUTOZONE INC,0.07,Consumer Discretionary,United States,Equity
+XTSLA,BLK CSH FND TREASURY SL AGENCY,0.07,Cash and/or Derivatives,United States,Money Market
+ALL,ALLSTATE CORP,0.07,Financials,United States,Equity
+O,REALTY INCOME REIT CORP,0.07,Real Estate,United States,Equity
+GWW,WW GRAINGER INC,0.07,Industrials,United States,Equity
+HOOD,ROBINHOOD MARKETS INC CLASS A,0.07,Financials,United States,Equity
+GLE,SOCIETE GENERALE SA,0.07,Financials,France,Equity
+BAS,BASF N,0.07,Materials,Germany,Equity
+CTVA,CORTEVA INC,0.07,Materials,United States,Equity
+VOLV B,VOLVO CLASS B,0.07,Industrials,Sweden,Equity
+ENGI,ENGIE SA,0.07,Utilities,France,Equity
+LHX,L3HARRIS TECHNOLOGIES INC,0.06,Industrials,United States,Equity
+ENI,ENI,0.06,Energy,Italy,Equity
+MCHP,MICROCHIP TECHNOLOGY INC,0.06,Information Technology,United States,Equity
+DB1,DEUTSCHE BOERSE AG,0.06,Financials,Germany,Equity
+AME,AMETEK INC,0.06,Industrials,United States,Equity
+LNG,CHENIERE ENERGY INC,0.06,Energy,United States,Equity
+FLEX,FLEX LTD,0.06,Information Technology,United States,Equity
+PRY,PRYSMIAN,0.06,Industrials,Italy,Equity
+NUE,NUCOR CORP,0.06,Materials,United States,Equity
+DHL,DEUTSCHE POST AG,0.06,Industrials,Germany,Equity
+D,DOMINION ENERGY INC,0.06,Utilities,United States,Equity
+OKE,ONEOK INC,0.06,Energy,United States,Equity
+ATCO A,ATLAS COPCO CLASS A,0.06,Industrials,Sweden,Equity
+COHR,COHERENT CORP,0.06,Information Technology,United States,Equity
+TRGP,TARGA RESOURCES CORP,0.06,Energy,United States,Equity
+CARR,CARRIER GLOBAL CORP,0.06,Industrials,United States,Equity
+NKE,NIKE INC CLASS B,0.06,Consumer Discretionary,United States,Equity
+ADSK,AUTODESK INC,0.06,Information Technology,United States,Equity
+VST,VISTRA CORP,0.06,Utilities,United States,Equity
+AJG,ARTHUR J GALLAGHER,0.06,Financials,United States,Equity
+CVNA,CARVANA CLASS A,0.06,Consumer Discretionary,United States,Equity
+EBAY,EBAY INC,0.06,Consumer Discretionary,United States,Equity
+RKLB,ROCKET LAB CORP,0.06,Industrials,United States,Equity
+ASM,ASM INTERNATIONAL NV,0.06,Information Technology,Netherlands,Equity
+FAST,FASTENAL,0.06,Industrials,United States,Equity
+RIO,RIO TINTO LTD,0.06,Materials,Australia,Equity
+DVN,DEVON ENERGY CORP,0.06,Energy,United States,Equity
+ARGX,ARGENX,0.06,Health Care,Belgium,Equity
+ROK,ROCKWELL AUTOMATION INC,0.06,Industrials,United States,Equity
+CCO,CAMECO CORP,0.06,Energy,Canada,Equity
+CPG,COMPASS GROUP PLC,0.06,Consumer Discretionary,United Kingdom,Equity
+ETR,ENTERGY CORP,0.06,Utilities,United States,Equity
+HOLN,HOLCIM LTD AG,0.06,Materials,Switzerland,Equity
+MSTR,STRATEGY INC CLASS A,0.06,Information Technology,United States,Equity
+SNOW,SNOWFLAKE INC,0.06,Information Technology,United States,Equity
+SREN,SWISS RE AG,0.06,Financials,Switzerland,Equity
+DSV,DSV,0.06,Industrials,Denmark,Equity
+PSA,PUBLIC STORAGE REIT,0.06,Real Estate,United States,Equity
+CABK,CAIXABANK SA,0.06,Financials,Spain,Equity
+FERG,FERGUSON ENTERPRISES INC,0.06,Industrials,United States,Equity
+STAN,STANDARD CHARTERED PLC,0.06,Financials,United Kingdom,Equity
+BN,DANONE SA,0.06,Consumer Staples,France,Equity
+EA,ELECTRONIC ARTS INC,0.06,Communication,United States,Equity
+EUR,EUR CASH,0.06,Cash and/or Derivatives,European Union,Cash
+COR,CENCORA INC,0.06,Health Care,United States,Equity
+WAB,WESTINGHOUSE AIR BRAKE TECHNOLOGIE,0.06,Industrials,United States,Equity
+EW,EDWARDS LIFESCIENCES CORP,0.06,Health Care,United States,Equity
+EOAN,E.ON N,0.06,Utilities,Germany,Equity
+F,FORD MOTOR CO,0.06,Consumer Discretionary,United States,Equity
+XEL,XCEL ENERGY INC,0.06,Utilities,United States,Equity
+LR,LEGRAND SA,0.06,Industrials,France,Equity
+MSCI,MSCI INC,0.06,Financials,United States,Equity
+DGE,DIAGEO PLC,0.05,Consumer Staples,United Kingdom,Equity
+GMG,GOODMAN GROUP UNITS,0.05,Real Estate,Australia,Equity
+EXC,EXELON CORP,0.05,Utilities,United States,Equity
+CMG,CHIPOTLE MEXICAN GRILL INC,0.05,Consumer Discretionary,United States,Equity
+RSG,REPUBLIC SERVICES INC,0.05,Industrials,United States,Equity
+AMP,AMERIPRISE FINANCE INC,0.05,Financials,United States,Equity
+FITB,FIFTH THIRD BANCORP,0.05,Financials,United States,Equity
+ATD,ALIMENTATION COUCHE TARD INC,0.05,Consumer Staples,Canada,Equity
+STT,STATE STREET CORP,0.05,Financials,United States,Equity
+IDXX,IDEXX LABORATORIES INC,0.05,Health Care,United States,Equity
+CAH,CARDINAL HEALTH INC,0.05,Health Care,United States,Equity
+COIN,COINBASE GLOBAL INC CLASS A,0.05,Financials,United States,Equity
+CLS,CELESTICA INC,0.05,Information Technology,Canada,Equity
+MBG,MERCEDES-BENZ GROUP N AG,0.05,Consumer Discretionary,Germany,Equity
+EME,EMCOR GROUP INC,0.05,Industrials,United States,Equity
+MET,METLIFE INC,0.05,Financials,United States,Equity
+CBRE,CBRE GROUP INC CLASS A,0.05,Real Estate,United States,Equity
+FNV,FRANCO NEVADA CORP,0.05,Materials,Canada,Equity
+SAND,SANDVIK,0.05,Industrials,Sweden,Equity
+BDX,BECTON DICKINSON,0.05,Health Care,United States,Equity
+LONN,LONZA GROUP AG,0.05,Health Care,Switzerland,Equity
+BAYN,BAYER AG,0.05,Health Care,Germany,Equity
+XYZ,BLOCK INC CLASS A,0.05,Financials,United States,Equity
+RACE,FERRARI NV,0.05,Consumer Discretionary,Italy,Equity
+RWE,RWE AG,0.05,Utilities,Germany,Equity
+CSL,CSL LTD,0.05,Health Care,Australia,Equity
+AIG,AMERICAN INTERNATIONAL GROUP INC,0.05,Financials,United States,Equity
+PYPL,PAYPAL HOLDINGS INC,0.05,Financials,United States,Equity
+PRU,PRUDENTIAL PLC,0.05,Financials,United Kingdom,Equity
+HPE,HEWLETT PACKARD ENTERPRISE,0.05,Information Technology,United States,Equity
+SSE,SSE PLC,0.05,Utilities,United Kingdom,Equity
+YUM,YUM BRANDS INC,0.05,Consumer Discretionary,United States,Equity
+DHI,D R HORTON INC,0.05,Consumer Discretionary,United States,Equity
+TTWO,TAKE TWO INTERACTIVE SOFTWARE INC,0.05,Communication,United States,Equity
+KR,KROGER,0.05,Consumer Staples,United States,Equity
+HLN,HALEON PLC,0.05,Health Care,United Kingdom,Equity
+AD,KONINKLIJKE AHOLD DELHAIZE NV,0.05,Consumer Staples,Netherlands,Equity
+SGO,COMPAGNIE DE SAINT GOBAIN SA,0.05,Industrials,France,Equity
+RKT,RECKITT BENCKISER GROUP PLC,0.05,Consumer Staples,United Kingdom,Equity
+TEVA,TEVA PHARMACEUTICAL INDUSTRIES ADR,0.05,Health Care,Israel,Equity
+CVE,CENOVUS ENERGY,0.05,Energy,Canada,Equity
+WDS,WOODSIDE ENERGY GROUP LTD,0.05,Energy,Australia,Equity
+GRMN,GARMIN LTD,0.05,Consumer Discretionary,United States,Equity
+OXY,OCCIDENTAL PETROLEUM CORP,0.05,Energy,United States,Equity
+TSCO,TESCO PLC,0.05,Consumer Staples,United Kingdom,Equity
+G,ASSICURAZIONI GENERALI,0.05,Financials,Italy,Equity
+STMPA,STMICROELECTRONICS NV,0.05,Information Technology,France,Equity
+K,KINROSS GOLD CORP,0.05,Materials,Canada,Equity
+SLF,SUN LIFE FINANCIAL INC,0.05,Financials,Canada,Equity
+ASSA B,ASSA ABLOY B,0.05,Industrials,Sweden,Equity
+ON,ON SEMICONDUCTOR CORP,0.05,Information Technology,United States,Equity
+CCI,CROWN CASTLE INC,0.05,Real Estate,United States,Equity
+IRM,IRON MOUNTAIN INC,0.05,Real Estate,United States,Equity
+ALNY,ALNYLAM PHARMACEUTICALS INC,0.05,Health Care,United States,Equity
+NDAQ,NASDAQ INC,0.05,Financials,United States,Equity
+VTR,VENTAS REIT INC,0.05,Real Estate,United States,Equity
+GALD,GALDERMA GROUP N AG,0.05,Health Care,Switzerland,Equity
+PEG,PUBLIC SERVICE ENTERPRISE GROUP IN,0.05,Utilities,United States,Equity
+JBL,JABIL INC,0.05,Information Technology,United States,Equity
+ODFL,OLD DOMINION FREIGHT LINE INC,0.05,Industrials,United States,Equity
+WCN,WASTE CONNECTIONS INC,0.05,Industrials,United States,Equity
+HIG,HARTFORD INSURANCE GROUP INC,0.05,Financials,United States,Equity
+LUMI,BANK LEUMI LE ISRAEL,0.05,Financials,Israel,Equity
+ORA,ORANGE SA,0.05,Communication,France,Equity
+ED,CONSOLIDATED EDISON INC,0.05,Utilities,United States,Equity
+ADM,ARCHER DANIELS MIDLAND,0.05,Consumer Staples,United States,Equity
+NBIS,NEBIUS NV CLASS A,0.04,Information Technology,Netherlands,Equity
+WEC,WEC ENERGY GROUP INC,0.04,Utilities,United States,Equity
+KDP,KEURIG DR PEPPER INC,0.04,Consumer Staples,United States,Equity
+VMC,VULCAN MATERIALS,0.04,Materials,United States,Equity
+MLM,MARTIN MARIETTA MATERIALS INC,0.04,Materials,United States,Equity
+FANG,DIAMONDBACK ENERGY INC,0.04,Energy,United States,Equity
+ROP,ROPER TECHNOLOGIES INC,0.04,Information Technology,United States,Equity
+CSU,CONSTELLATION SOFTWARE INC,0.04,Information Technology,Canada,Equity
+IBKR,INTERACTIVE BROKERS GROUP INC CLAS,0.04,Financials,United States,Equity
+U11,UNITED OVERSEAS BANK LTD,0.04,Financials,Singapore,Equity
+ZTS,ZOETIS INC CLASS A,0.04,Health Care,United States,Equity
+SDZ,SANDOZ GROUP AG,0.04,Health Care,Switzerland,Equity
+CBOE,CBOE GLOBAL MARKETS INC,0.04,Financials,United States,Equity
+EBS,ERSTE GROUP BANK AG,0.04,Financials,Austria,Equity
+GIVN,GIVAUDAN SA,0.04,Materials,Switzerland,Equity
+SYY,SYSCO CORP,0.04,Consumer Staples,United States,Equity
+PCG,PG&E CORP,0.04,Utilities,United States,Equity
+FER,FERROVIAL NV,0.04,Industrials,Spain,Equity
+DANSKE,DANSKE BANK,0.04,Financials,Denmark,Equity
+ACGL,ARCH CAPITAL GROUP LTD,0.04,Financials,United States,Equity
+WAT,WATERS CORP,0.04,Health Care,United States,Equity
+EQT,EQT CORP,0.04,Energy,United States,Equity
+PRU,PRUDENTIAL FINANCIAL INC,0.04,Financials,United States,Equity
+HAL,HALLIBURTON,0.04,Energy,United States,Equity
+III,3I GROUP PLC,0.04,Financials,United Kingdom,Equity
+ERIC B,ERICSSON B,0.04,Information Technology,Sweden,Equity
+MTB,M&T BANK CORP,0.04,Financials,United States,Equity
+CHF,CHF CASH,0.04,Cash and/or Derivatives,Switzerland,Cash
+POW,POWER CORPORATION OF CANADA,0.04,Financials,Canada,Equity
+DOL,DOLLARAMA INC,0.04,Consumer Discretionary,Canada,Equity
+KVUE,KENVUE INC,0.04,Consumer Staples,United States,Equity
+SE,SEA ADS REPRESENTING LTD CLASS A,0.04,Consumer Discretionary,Singapore,Equity
+UCB,UCB SA,0.04,Health Care,Belgium,Equity
+HUM,HUMANA INC,0.04,Health Care,United States,Equity
+EXPN,EXPERIAN PLC,0.04,Industrials,United Kingdom,Equity
+POLI,BANK HAPOALIM BM,0.04,Financials,Israel,Equity
+A,AGILENT TECHNOLOGIES INC,0.04,Health Care,United States,Equity
+KMB,KIMBERLY CLARK CORP,0.04,Consumer Staples,United States,Equity
+GBP,GBP CASH,0.04,Cash and/or Derivatives,United Kingdom,Cash
+IFC,INTACT FINANCIAL CORP,0.04,Financials,Canada,Equity
+HBAN,HUNTINGTON BANCSHARES INC,0.04,Financials,United States,Equity
+NTR,NUTRIEN LTD,0.04,Materials,Canada,Equity
+TCL,TRANSURBAN GROUP STAPLED UNITS,0.04,Industrials,Australia,Equity
+CBK,COMMERZBANK AG,0.04,Financials,Germany,Equity
+FFH,FAIRFAX FINANCIAL HOLDINGS SUB VOT,0.04,Financials,Canada,Equity
+VOD,VODAFONE GROUP PLC,0.04,Communication,United Kingdom,Equity
+CASY,CASEYS GENERAL STORES INC,0.04,Consumer Staples,United States,Equity
+SLHN,SWISS LIFE HOLDING AG,0.04,Financials,Switzerland,Equity
+IQV,IQVIA HOLDINGS INC,0.04,Health Care,United States,Equity
+CPRT,COPART INC,0.04,Industrials,United States,Equity
+IR,INGERSOLL RAND INC,0.04,Industrials,United States,Equity
+ALC,ALCON AG,0.04,Health Care,Switzerland,Equity
+STLD,STEEL DYNAMICS INC,0.04,Materials,United States,Equity
+FISV,FISERV INC,0.04,Financials,United States,Equity
+NTRS,NORTHERN TRUST CORP,0.04,Financials,United States,Equity
+PAYX,PAYCHEX INC,0.04,Industrials,United States,Equity
+SEB A,SKANDINAVISKA ENSKILDA BANKEN,0.04,Financials,Sweden,Equity
+Q,QNITY ELECTRONICS INC,0.04,Information Technology,United States,Equity
+TECK.B,TECK RESOURCES SUBORDINATE VOTING,0.04,Materials,Canada,Equity
+AXON,AXON ENTERPRISE INC,0.04,Industrials,United States,Equity
+EXR,EXTRA SPACE STORAGE REIT INC,0.04,Real Estate,United States,Equity
+RJF,RAYMOND JAMES INC,0.04,Financials,United States,Equity
+GEHC,GE HEALTHCARE TECHNOLOGIES INC,0.04,Health Care,United States,Equity
+AEE,AMEREN CORP,0.04,Utilities,United States,Equity
+ADS,ADIDAS N AG,0.04,Consumer Discretionary,Germany,Equity
+WOW,WOOLWORTHS GROUP LTD,0.04,Consumer Staples,Australia,Equity
+RMD,RESMED INC,0.04,Health Care,United States,Equity
+VICI,VICI PPTYS INC,0.04,Real Estate,United States,Equity
+KBC,KBC GROEP,0.04,Financials,Belgium,Equity
+ACS,ACS ACTIVIDADES DE CONSTRUCCION Y,0.03,Industrials,Spain,Equity
+CRDO,CREDO TECHNOLOGY GROUP HOLDING LTD,0.03,Information Technology,United States,Equity
+VWS,VESTAS WIND SYSTEMS,0.03,Industrials,Denmark,Equity
+REP,REPSOL SA,0.03,Energy,Spain,Equity
+TWLO,TWILIO INC CLASS A,0.03,Information Technology,United States,Equity
+EQNR,EQUINOR,0.03,Energy,Norway,Equity
+DOV,DOVER CORP,0.03,Industrials,United States,Equity
+FTS,FORTIS INC,0.03,Utilities,Canada,Equity
+SUNB,SUNBELT RENTALS HOLDINGS INC,0.03,Industrials,United Kingdom,Equity
+OTIS,OTIS WORLDWIDE CORP,0.03,Industrials,United States,Equity
+Z74,SINGAPORE TELECOMMUNICATIONS LTD,0.03,Communication,Singapore,Equity
+DTE,DTE ENERGY,0.03,Utilities,United States,Equity
+SIKA,SIKA AG,0.03,Materials,Switzerland,Equity
+SWED A,SWEDBANK,0.03,Financials,Sweden,Equity
+ZM,ZOOM COMMUNICATIONS INC CLASS A,0.03,Information Technology,United States,Equity
+SYF,SYNCHRONY FINANCIAL,0.03,Financials,United States,Equity
+HEI,HEIDELBERG MATERIALS AG,0.03,Materials,Germany,Equity
+CNC,CENTENE CORP,0.03,Health Care,United States,Equity
+VIE,VEOLIA ENVIRON. SA,0.03,Utilities,France,Equity
+ADYEN,ADYEN NV,0.03,Financials,Netherlands,Equity
+CFG,CITIZENS FINANCIAL GROUP INC,0.03,Financials,United States,Equity
+TDY,TELEDYNE TECHNOLOGIES INC,0.03,Information Technology,United States,Equity
+CNP,CENTERPOINT ENERGY INC,0.03,Utilities,United States,Equity
+CCL,CARNIVAL CORP,0.03,Consumer Discretionary,United States,Equity
+ATO,ATMOS ENERGY CORP,0.03,Utilities,United States,Equity
+NRG,NRG ENERGY INC,0.03,Utilities,United States,Equity
+16,SUN HUNG KAI PROPERTIES LTD,0.03,Real Estate,Hong Kong,Equity
+IMB,IMPERIAL BRANDS PLC,0.03,Consumer Staples,United Kingdom,Equity
+FICO,FAIR ISAAC CORP,0.03,Information Technology,United States,Equity
+TPR,TAPESTRY INC,0.03,Consumer Discretionary,United States,Equity
+XYL,XYLEM INC,0.03,Industrials,United States,Equity
+FTAI,FTAI AVIATION LTD,0.03,Industrials,United States,Equity
+BIIB,BIOGEN INC,0.03,Health Care,United States,Equity
+BMW,BMW AG,0.03,Consumer Discretionary,Germany,Equity
+HSY,HERSHEY FOODS,0.03,Consumer Staples,United States,Equity
+LYV,LIVE NATION ENTERTAINMENT INC,0.03,Communication,United States,Equity
+EXPE,EXPEDIA GROUP INC,0.03,Consumer Discretionary,United States,Equity
+AMRZ,AMRIZE AG,0.03,Materials,United States,Equity
+AVB,AVALONBAY COMMUNITIES REIT INC,0.03,Real Estate,United States,Equity
+CW,CURTISS WRIGHT CORP,0.03,Industrials,United States,Equity
+SAMPO,SAMPO CLASS A,0.03,Financials,Finland,Equity
+ATCO B,ATLAS COPCO CLASS B,0.03,Industrials,Sweden,Equity
+CRWV,COREWEAVE INC CLASS A,0.03,Information Technology,United States,Equity
+WDAY,WORKDAY INC CLASS A,0.03,Information Technology,United States,Equity
+1,CK HUTCHISON HOLDINGS LTD,0.03,Industrials,Hong Kong,Equity
+EIX,EDISON INTERNATIONAL,0.03,Utilities,United States,Equity
+FMG,FORTESCUE LTD,0.03,Materials,Australia,Equity
+AMS,AMADEUS IT GROUP SA,0.03,Consumer Discretionary,Spain,Equity
+ALAB,ASTERA LABS INC,0.03,Information Technology,United States,Equity
+PPL,PEMBINA PIPELINE CORP,0.03,Energy,Canada,Equity
+DNB,DNB BANK,0.03,Financials,Norway,Equity
+DOW,DOW INC,0.03,Materials,United States,Equity
+L,LOBLAW COMPANIES LTD,0.03,Consumer Staples,Canada,Equity
+MT,ARCELORMITTAL SA,0.03,Materials,France,Equity
+AER,AERCAP HOLDINGS NV,0.03,Industrials,Netherlands,Equity
+ARES,ARES MANAGEMENT CORP CLASS A,0.03,Financials,United States,Equity
+PAAS,PAN AMERICAN SILVER CORP,0.03,Materials,Canada,Equity
+UTHR,UNITED THERAPEUTICS CORP,0.03,Health Care,United States,Equity
+UMG,UNIVERSAL MUSIC GROUP NV,0.03,Communication,Netherlands,Equity
+PGHN,PARTNERS GROUP HOLDING AG,0.03,Financials,Switzerland,Equity
+PPL,PPL CORP,0.03,Utilities,United States,Equity
+FE,FIRSTENERGY CORP,0.03,Utilities,United States,Equity
+HO,THALES SA,0.03,Industrials,France,Equity
+VEEV,VEEVA SYSTEMS INC CLASS A,0.03,Health Care,United States,Equity
+PPG,PPG INDUSTRIES INC,0.03,Materials,United States,Equity
+LDO,LEONARDO FINMECCANICA SPA,0.03,Industrials,Italy,Equity
+A5G,AIB GROUP PLC,0.03,Financials,Ireland,Equity
+ML,MICHELIN,0.03,Consumer Discretionary,France,Equity
+CINF,CINCINNATI FINANCIAL CORP,0.03,Financials,United States,Equity
+CTSH,COGNIZANT TECHNOLOGY SOLUTIONS COR,0.03,Information Technology,United States,Equity
+QBE,QBE INSURANCE GROUP LTD,0.03,Financials,Australia,Equity
+OMC,OMNICOM GROUP INC,0.03,Communication,United States,Equity
+LISP,CHOCOLADEFABRIKEN LINDT & SPRUENGL,0.03,Consumer Staples,Switzerland,Equity
+ULTA,ULTA BEAUTY INC,0.03,Consumer Discretionary,United States,Equity
+HUBB,HUBBELL INC,0.03,Industrials,United States,Equity
+WTW,WILLIS TOWERS WATSON PLC,0.03,Financials,United States,Equity
+QSR,RESTAURANTS BRANDS INTERNATIONAL I,0.03,Consumer Discretionary,Canada,Equity
+NTRA,NATERA INC,0.03,Health Care,United States,Equity
+MTD,METTLER TOLEDO INC,0.03,Health Care,United States,Equity
+P,EVERPURE INC CLASS A,0.03,Information Technology,United States,Equity
+VRSK,VERISK ANALYTICS INC,0.03,Industrials,United States,Equity
+LPLA,LPL FINANCIAL HOLDINGS INC,0.03,Financials,United States,Equity
+AWK,AMERICAN WATER WORKS INC,0.03,Utilities,United States,Equity
+RVMD,REVOLUTION MEDICINES INC,0.03,Health Care,United States,Equity
+TPL,TEXAS PACIFIC LAND CORP,0.03,Energy,United States,Equity
+TSEM,TOWER SEMICONDUCTOR LTD,0.03,Information Technology,Israel,Equity
+RYA,RYANAIR HOLDINGS PLC,0.03,Industrials,Ireland,Equity
+RBLX,ROBLOX CORP CLASS A,0.03,Communication,United States,Equity
+WST,WEST PHARMACEUTICAL SERVICES INC,0.03,Health Care,United States,Equity
+RF,REGIONS FINANCIAL CORP,0.03,Financials,United States,Equity
+NN,NN GROUP NV,0.03,Financials,Netherlands,Equity
+DRI,DARDEN RESTAURANTS INC,0.03,Consumer Discretionary,United States,Equity
+ES,EVERSOURCE ENERGY,0.03,Utilities,United States,Equity
+669,TECHTRONIC INDUSTRIES LTD,0.03,Industrials,Hong Kong,Equity
+MDB,MONGODB INC CLASS A,0.03,Information Technology,United States,Equity
+DG,DOLLAR GENERAL CORP,0.03,Consumer Staples,United States,Equity
+DXCM,DEXCOM INC,0.03,Health Care,United States,Equity
+HLMA,HALMA PLC,0.03,Information Technology,United Kingdom,Equity
+FSLR,FIRST SOLAR INC,0.03,Information Technology,United States,Equity
+VRSN,VERISIGN INC,0.03,Information Technology,United States,Equity
+EQR,EQUITY RESIDENTIAL REIT,0.03,Real Estate,United States,Equity
+TROW,T ROWE PRICE GROUP INC,0.03,Financials,United States,Equity
+NTAP,NETAPP INC,0.03,Information Technology,United States,Equity
+GEBN,GEBERIT AG,0.03,Industrials,Switzerland,Equity
+IMO,IMPERIAL OIL LTD,0.03,Energy,Canada,Equity
+CMS,CMS ENERGY CORP,0.03,Utilities,United States,Equity
+ENTG,ENTEGRIS INC,0.03,Information Technology,United States,Equity
+CPAY,CORPAY INC,0.03,Financials,United States,Equity
+PFG,PRINCIPAL FINANCIAL GROUP INC,0.03,Financials,United States,Equity
+AV.,AVIVA PLC,0.03,Financials,United Kingdom,Equity
+SBAC,SBA COMMUNICATIONS REIT CORP CLASS,0.03,Real Estate,United States,Equity
+BESI,BE SEMICONDUCTOR INDUSTRIES NV,0.03,Information Technology,Netherlands,Equity
+FIS,FIDELITY NATIONAL INFORMATION SERV,0.03,Financials,United States,Equity
+CHD,CHURCH AND DWIGHT INC,0.03,Consumer Staples,United States,Equity
+ACA,CREDIT AGRICOLE SA,0.03,Financials,France,Equity
+EXE,EXPAND ENERGY CORP,0.03,Energy,United States,Equity
+VACN,VAT GROUP AG,0.03,Industrials,Switzerland,Equity
+PHM,PULTEGROUP INC,0.03,Consumer Discretionary,United States,Equity
+HBAN,HELVETIA BALOISE HOLDING N AG,0.03,Financials,Switzerland,Equity
+VLTO,VERALTO CORP,0.03,Industrials,United States,Equity
+PUB,PUBLICIS GROUPE SA,0.03,Communication,France,Equity
+COL,COLES GROUP LTD,0.03,Consumer Staples,Australia,Equity
+WRT1V,WARTSILA,0.03,Industrials,Finland,Equity
+AENA,AENA SME SA,0.03,Industrials,Spain,Equity
+DTG,DAIMLER TRUCK HOLDING E AG,0.03,Industrials,Germany,Equity
+KHC,KRAFT HEINZ,0.03,Consumer Staples,United States,Equity
+ANTO,ANTOFAGASTA PLC,0.03,Materials,United Kingdom,Equity
+HEIA,HEINEKEN NV,0.03,Consumer Staples,Netherlands,Equity
+PHIA,KONINKLIJKE PHILIPS NV,0.03,Health Care,Netherlands,Equity
+SCMN,SWISSCOM AG,0.03,Communication,Switzerland,Equity
+MKL,MARKEL GROUP INC,0.03,Financials,United States,Equity
+NXT,NEXT PLC,0.03,Consumer Discretionary,United Kingdom,Equity
+ILMN,ILLUMINA INC,0.03,Health Care,United States,Equity
+BMPS,BANCA MONTE DEI PASCHI DI SIENA SP,0.03,Financials,Italy,Equity
+ESLT,ELBIT SYSTEMS LTD,0.03,Industrials,Israel,Equity
+HPQ,HP INC,0.03,Information Technology,United States,Equity
+WSM,WILLIAMS SONOMA INC,0.03,Consumer Discretionary,United States,Equity
+STZ,CONSTELLATION BRANDS INC CLASS A,0.03,Consumer Staples,United States,Equity
+HEXA B,HEXAGON CLASS B,0.03,Information Technology,Sweden,Equity
+BPE,BPER BANCA,0.03,Financials,Italy,Equity
+INSM,INSMED INC,0.03,Health Care,United States,Equity
+SHB A,SVENSKA HANDELSBANKEN-A SHS,0.03,Financials,Sweden,Equity
+NI,NISOURCE INC,0.03,Utilities,United States,Equity
+SW,SMURFIT WESTROCK PLC,0.03,Materials,United States,Equity
+KPN,KONINKLIJKE KPN NV,0.03,Communication,Netherlands,Equity
+KER,KERING SA,0.03,Consumer Discretionary,France,Equity
+SAB,BANCO DE SABADELL SA,0.03,Financials,Spain,Equity
+EFX,EQUIFAX INC,0.03,Industrials,United States,Equity
+BXB,BRAMBLES LTD,0.03,Industrials,Australia,Equity
+VOW3,VOLKSWAGEN NON-VOTING PREF AG,0.02,Consumer Discretionary,Germany,Equity
+CCEP,COCA COLA EUROPACIFIC PARTNERS PLC,0.02,Consumer Staples,Netherlands,Equity
+FTV,FORTIVE CORP,0.02,Industrials,United States,Equity
+KEY,KEYCORP,0.02,Financials,United States,Equity
+NST,NORTHERN STAR RESOURCES LTD,0.02,Materials,Australia,Equity
+IHG,INTERCONTINENTAL HOTELS GROUP PLC,0.02,Consumer Discretionary,United Kingdom,Equity
+RPRX,ROYALTY PHARMA PLC CLASS A,0.02,Health Care,United States,Equity
+WSP,WSP GLOBAL INC,0.02,Industrials,Canada,Equity
+DD,DUPONT DE NEMOURS INC,0.02,Materials,United States,Equity
+ABN,ABN AMRO BANK NV,0.02,Financials,Netherlands,Equity
+BAM,BROOKFIELD ASSET MANAGEMENT VOTING,0.02,Financials,Canada,Equity
+MTX,MTU AERO ENGINES HOLDING AG,0.02,Industrials,Germany,Equity
+STE,STERIS,0.02,Health Care,United States,Equity
+NSIS B,NOVOZYMES B,0.02,Materials,Denmark,Equity
+SOFI,SOFI TECHNOLOGIES INC,0.02,Financials,United States,Equity
+EL,ESTEE LAUDER INC CLASS A,0.02,Consumer Staples,United States,Equity
+EXPD,EXPEDITORS INTERNATIONAL OF WASHIN,0.02,Industrials,United States,Equity
+IREN,IREN LTD,0.02,Information Technology,United States,Equity
+ALL,ARISTOCRAT LEISURE LTD,0.02,Consumer Discretionary,Australia,Equity
+FFIV,F5 INC,0.02,Information Technology,United States,Equity
+FRE,FRESENIUS SE AND CO KGAA,0.02,Health Care,Germany,Equity
+DGX,QUEST DIAGNOSTICS INC,0.02,Health Care,United States,Equity
+2388,BOC HONG KONG HOLDINGS LTD,0.02,Financials,Hong Kong,Equity
+LH,LABCORP HOLDINGS INC,0.02,Health Care,United States,Equity
+IFF,INTERNATIONAL FLAVORS & FRAGRANCES,0.02,Materials,United States,Equity
+PKG,PACKAGING CORP OF AMERICA,0.02,Materials,United States,Equity
+L,LOEWS CORP,0.02,Financials,United States,Equity
+LGEN,LEGAL AND GENERAL GROUP PLC,0.02,Financials,United Kingdom,Equity
+KNEBV,KONE,0.02,Industrials,Finland,Equity
+JBHT,JB HUNT TRANSPORT SERVICES INC,0.02,Industrials,United States,Equity
+LEN,LENNAR A CORP CLASS A,0.02,Consumer Discretionary,United States,Equity
+EPI A,EPIROC CLASS A,0.02,Industrials,Sweden,Equity
+CHRW,CH ROBINSON WORLDWIDE INC,0.02,Industrials,United States,Equity
+VNA,VONOVIA SE,0.02,Real Estate,Germany,Equity
+CF,CF INDUSTRIES HOLDINGS INC,0.02,Materials,United States,Equity
+LYB,LYONDELLBASELL INDUSTRIES NV CLASS,0.02,Materials,United States,Equity
+CDE,COEUR MINING INC,0.02,Materials,United States,Equity
+LNT,ALLIANT ENERGY CORP,0.02,Utilities,United States,Equity
+EVN,EVOLUTION MINING LTD,0.02,Materials,Australia,Equity
+EVRG,EVERGY INC,0.02,Utilities,United States,Equity
+FWONK,LIBERTY MEDIA FORMULA ONE SERIES C,0.02,Communication,United States,Equity
+BAER,JULIUS BAER GRUPPE AG,0.02,Financials,Switzerland,Equity
+TSN,TYSON FOODS INC CLASS A,0.02,Consumer Staples,United States,Equity
+BBD.B,BOMBARDIER INC CLASS B,0.02,Industrials,Canada,Equity
+SAAB B,SAAB CLASS B,0.02,Industrials,Sweden,Equity
+CAP,CAPGEMINI,0.02,Information Technology,France,Equity
+SNA,SNAP ON INC,0.02,Industrials,United States,Equity
+BT.A,BT GROUP PLC,0.02,Communication,United Kingdom,Equity
+GIS,GENERAL MILLS INC,0.02,Consumer Staples,United States,Equity
+ALFA,ALFA LAVAL,0.02,Industrials,Sweden,Equity
+AGI,ALAMOS GOLD INC CLASS A,0.02,Materials,Canada,Equity
+BAMI,BANCO BPM,0.02,Financials,Italy,Equity
+PTC,PTC INC,0.02,Information Technology,United States,Equity
+BR,BROADRIDGE FINANCIAL SOLUTIONS INC,0.02,Industrials,United States,Equity
+AMCR,AMCOR PLC,0.02,Materials,United States,Equity
+SMCI,SUPER MICRO COMPUTER INC,0.02,Information Technology,United States,Equity
+HEIA,HEICO CORP CLASS A,0.02,Industrials,United States,Equity
+RBA,RB GLOBAL INC,0.02,Industrials,Canada,Equity
+RS,RELIANCE STEEL & ALUMINUM,0.02,Materials,United States,Equity
+BURL,BURLINGTON STORES INC,0.02,Consumer Discretionary,United States,Equity
+SATS,ECHOSTAR CORP CLASS A,0.02,Communication,United States,Equity
+BG,BUNGE GLOBAL SA,0.02,Consumer Staples,United States,Equity
+GPN,GLOBAL PAYMENTS INC,0.02,Financials,United States,Equity
+WY,WEYERHAEUSER REIT,0.02,Real Estate,United States,Equity
+LUN,LUNDIN MINING CORP,0.02,Materials,Canada,Equity
+MRK,MERCK,0.02,Health Care,Germany,Equity
+FLUT,FLUTTER ENTERTAINMENT PLC,0.02,Consumer Discretionary,United States,Equity
+MG,MAGNA INTERNATIONAL INC,0.02,Consumer Discretionary,Canada,Equity
+FCNCA,FIRST CITIZENS BANCSHARES INC CLAS,0.02,Financials,United States,Equity
+INCY,INCYTE CORP,0.02,Health Care,United States,Equity
+IEX,IDEX CORP,0.02,Industrials,United States,Equity
+AFRM,AFFIRM HOLDINGS INC CLASS A,0.02,Financials,United States,Equity
+BIRG,BANK OF IRELAND GROUP PLC,0.02,Financials,Ireland,Equity
+DLTR,DOLLAR TREE INC,0.02,Consumer Staples,United States,Equity
+STO,SANTOS LTD,0.02,Energy,Australia,Equity
+FM,FIRST QUANTUM MINERALS LTD,0.02,Materials,Canada,Equity
+TOU,TOURMALINE OIL CORP,0.02,Energy,Canada,Equity
+SUI,SUN COMMUNITIES REIT INC,0.02,Real Estate,United States,Equity
+ASTS,AST SPACEMOBILE INC CLASS A,0.02,Communication,United States,Equity
+NLY,ANNALY CAPITAL MANAGEMENT REIT INC,0.02,Financials,United States,Equity
+EQT,EQT,0.02,Financials,Sweden,Equity
+SGSN,SGS SA,0.02,Industrials,Switzerland,Equity
+WKL,WOLTERS KLUWER NV,0.02,Industrials,Netherlands,Equity
+BRO,BROWN & BROWN INC,0.02,Financials,United States,Equity
+LOGN,LOGITECH INTERNATIONAL SA,0.02,Information Technology,Switzerland,Equity
+LVS,LAS VEGAS SANDS CORP,0.02,Consumer Discretionary,United States,Equity
+CSL,CARLISLE COMPANIES INC,0.02,Industrials,United States,Equity
+S68,SINGAPORE EXCHANGE LTD,0.02,Financials,Singapore,Equity
+HNR1,HANNOVER RUECK,0.02,Financials,Germany,Equity
+ZBH,ZIMMER BIOMET HOLDINGS INC,0.02,Health Care,United States,Equity
+KIM,KIMCO REALTY REIT CORP,0.02,Real Estate,United States,Equity
+TLS,TELSTRA GROUP LTD,0.02,Communication,Australia,Equity
+IP,INTERNATIONAL PAPER,0.02,Materials,United States,Equity
+EMA,EMERA INC,0.02,Utilities,Canada,Equity
+ESS,ESSEX PROPERTY TRUST REIT INC,0.02,Real Estate,United States,Equity
+TEF,TELEFONICA SA,0.02,Communication,Spain,Equity
+WRB,WR BERKLEY CORP,0.02,Financials,United States,Equity
+RDDT,REDDIT INC CLASS A,0.02,Communication,United States,Equity
+UPM,UPM-KYMMENE,0.02,Materials,Finland,Equity
+RTO,RENTOKIL INITIAL PLC,0.02,Industrials,United Kingdom,Equity
+ROL,ROLLINS INC,0.02,Industrials,United States,Equity
+MONC,MONCLER,0.02,Consumer Discretionary,Italy,Equity
+GWO,GREAT WEST LIFECO INC,0.02,Financials,Canada,Equity
+INVH,INVITATION HOMES INC,0.02,Real Estate,United States,Equity
+ESSITY B,ESSITY CLASS B,0.02,Consumer Staples,Sweden,Equity
+MAS,MASCO CORP,0.02,Industrials,United States,Equity
+TSCO,TRACTOR SUPPLY,0.02,Consumer Discretionary,United States,Equity
+ZS,ZSCALER INC,0.02,Information Technology,United States,Equity
+LDOS,LEIDOS HOLDINGS INC,0.02,Industrials,United States,Equity
+LII,LENNOX INTERNATIONAL INC,0.02,Industrials,United States,Equity
+CLNX,CELLNEX TELECOM,0.02,Communication,Spain,Equity
+TRN,TERNA RETE ELETTRICA NAZIONALE,0.02,Utilities,Italy,Equity
+DECK,DECKERS OUTDOOR CORP,0.02,Consumer Discretionary,United States,Equity
+TRMB,TRIMBLE INC,0.02,Information Technology,United States,Equity
+PHOE,PHOENIX FINANCIAL LTD,0.02,Financials,Israel,Equity
+DSY,DASSAULT SYSTEMES,0.02,Information Technology,France,Equity
+BALL,BALL CORP,0.02,Materials,United States,Equity
+NVMI,NOVA LTD,0.02,Information Technology,Israel,Equity
+FBK,FINECOBANK BANCA FINECO,0.02,Financials,Italy,Equity
+SSNC,SS AND C TECHNOLOGIES HOLDINGS INC,0.02,Industrials,United States,Equity
+WPC,W. P. CAREY REIT INC,0.02,Real Estate,United States,Equity
+INF,INFORMA PLC,0.02,Communication,United Kingdom,Equity
+GMAB,GENMAB,0.02,Health Care,Denmark,Equity
+NDSN,NORDSON CORP,0.02,Industrials,United States,Equity
+STLAM,STELLANTIS NV,0.02,Consumer Discretionary,Italy,Equity
+RI,PERNOD RICARD SA,0.02,Consumer Staples,France,Equity
+EDP,EDP ENERGIAS DE PORTUGAL SA,0.02,Utilities,Portugal,Equity
+SCG,SCENTRE GROUP,0.02,Real Estate,Australia,Equity
+TEAM,ATLASSIAN CORP CLASS A,0.02,Information Technology,United States,Equity
+NHY,NORSK HYDRO,0.02,Materials,Norway,Equity
+2,CLP HOLDINGS LTD,0.02,Utilities,Hong Kong,Equity
+GPC,GENUINE PARTS,0.02,Consumer Discretionary,United States,Equity
+TXT,TEXTRON INC,0.02,Industrials,United States,Equity
+TRU,TRANSUNION,0.02,Industrials,United States,Equity
+DSFIR,DSM FIRMENICH AG,0.02,Materials,Netherlands,Equity
+PNFP,PINNACLE FINANCIAL PARTNERS INC,0.02,Financials,United States,Equity
+PST,POSTE ITALIANE,0.02,Financials,Italy,Equity
+IONQ,IONQ INC,0.02,Information Technology,United States,Equity
+ORSTED,ORSTED A/S,0.02,Utilities,Denmark,Equity
+RO,ROCHE HOLDING AG,0.02,Health Care,Switzerland,Equity
+ORG,ORIGIN ENERGY LTD,0.02,Utilities,Australia,Equity
+S32,SOUTH32 LTD,0.02,Materials,Australia,Equity
+LULU,LULULEMON ATHLETICA INC,0.02,Consumer Discretionary,United States,Equity
+WSO,WATSCO INC,0.02,Industrials,United States,Equity
+OKTA,OKTA INC CLASS A,0.02,Information Technology,United States,Equity
+FOXA,FOX CORP CLASS A,0.02,Communication,United States,Equity
+CDW,CDW CORP,0.02,Information Technology,United States,Equity
+NVR,NVR INC,0.02,Consumer Discretionary,United States,Equity
+EG,EVEREST GROUP LTD,0.02,Financials,United States,Equity
+RKT,ROCKET COMPANIES INC CLASS A,0.02,Financials,United States,Equity
+MRU,METRO INC,0.02,Consumer Staples,Canada,Equity
+J,JACOBS SOLUTIONS INC,0.02,Industrials,United States,Equity
+KOG,KONGSBERG GRUPPEN,0.02,Industrials,Norway,Equity
+CSGP,COSTAR GROUP INC,0.02,Real Estate,United States,Equity
+ENX,EURONEXT NV,0.02,Financials,France,Equity
+MAA,MID AMERICA APARTMENT COMMUNITIES,0.02,Real Estate,United States,Equity
+BOL,BOLIDEN,0.02,Materials,Sweden,Equity
+KRX,KINGSPAN GROUP PLC,0.02,Industrials,Ireland,Equity
+DKS,DICKS SPORTING INC,0.02,Consumer Discretionary,United States,Equity
+WCP,WHITECAP RESOURCES INC,0.02,Energy,Canada,Equity
+TRI,THOMSON REUTERS CORP,0.02,Industrials,Canada,Equity
+URW,UNIBAIL RODAMCO WE STAPLED UNITS,0.02,Real Estate,France,Equity
+H,HYDRO ONE LTD,0.02,Utilities,Canada,Equity
+SRG,SNAM,0.02,Utilities,Italy,Equity
+GIB.A,CGI INC CLASS A,0.02,Information Technology,Canada,Equity
+NBIX,NEUROCRINE BIOSCIENCES INC,0.02,Health Care,United States,Equity
+RCI.B,ROGERS COMMUNICATIONS NON-VOTING I,0.02,Communication,Canada,Equity
+CCH,COCA COLA HBC AG,0.02,Consumer Staples,United Kingdom,Equity
+CARL B,CARLSBERG AS CL B,0.02,Consumer Staples,Denmark,Equity
+823,LINK REAL ESTATE INVESTMENT TRUST,0.02,Real Estate,Hong Kong,Equity
+DSCT,ISRAEL DISCOUNT BANK LTD,0.02,Financials,Israel,Equity
+DOC,HEALTHPEAK PROPERTIES INC,0.02,Real Estate,United States,Equity
+TELIA,TELIA COMPANY,0.02,Communication,Sweden,Equity
+TYL,TYLER TECHNOLOGIES INC,0.02,Information Technology,United States,Equity
+MZTF,MIZRAHI TEFAHOT BANK LTD,0.02,Financials,Israel,Equity
+SHL,SIEMENS HEALTHINEERS AG,0.02,Health Care,Germany,Equity
+HEN3,HENKEL & KGAA PREF AG,0.02,Consumer Staples,Germany,Equity
+BG,BAWAG GROUP AG,0.02,Financials,Austria,Equity
+NESTE,NESTE,0.02,Energy,Finland,Equity
+SGRO,SEGRO REIT PLC,0.02,Real Estate,United Kingdom,Equity
+RPM,RPM INTERNATIONAL INC,0.02,Materials,United States,Equity
+SVT,SEVERN TRENT PLC,0.02,Utilities,United Kingdom,Equity
+GDDY,GODADDY INC CLASS A,0.02,Information Technology,United States,Equity
+KRZ,KERRY GROUP PLC,0.02,Consumer Staples,Ireland,Equity
+1113,CK ASSET HOLDINGS LTD,0.02,Real Estate,Hong Kong,Equity
+FGR,EIFFAGE SA,0.02,Industrials,France,Equity
+AVY,AVERY DENNISON CORP,0.02,Materials,United States,Equity
+SN.,SMITH AND NEPHEW PLC,0.02,Health Care,United Kingdom,Equity
+PINS,PINTEREST INC CLASS A,0.02,Communication,United States,Equity
+WN,GEORGE WESTON LTD,0.02,Consumer Staples,Canada,Equity
+APTV,APTIV PLC,0.02,Consumer Discretionary,United States,Equity
+LYC,LYNAS RARE EARTHS LTD,0.02,Materials,Australia,Equity
+DKK,DKK CASH,0.02,Cash and/or Derivatives,Denmark,Cash
+ELE,ENDESA SA,0.02,Utilities,Spain,Equity
+ALA,ALTAGAS LTD,0.02,Utilities,Canada,Equity
+6,POWER ASSETS HOLDINGS LTD,0.02,Utilities,Hong Kong,Equity
+PNR,PENTAIR,0.02,Industrials,United States,Equity
+GGG,GRACO INC,0.02,Industrials,United States,Equity
+EDV,ENDEAVOUR MINING,0.02,Materials,United Kingdom,Equity
+TIH,TOROMONT INDUSTRIES LTD,0.01,Industrials,Canada,Equity
+SUN,SUNCORP GROUP LTD,0.01,Financials,Australia,Equity
+CHTR,CHARTER COMMUNICATIONS INC CLASS A,0.01,Communication,United States,Equity
+ALLE,ALLEGION PLC,0.01,Industrials,United States,Equity
+SCHP,SCHINDLER HOLDING PAR AG,0.01,Industrials,Switzerland,Equity
+UU.,UNITED UTILITIES GROUP PLC,0.01,Utilities,United Kingdom,Equity
+EN,BOUYGUES SA,0.01,Industrials,France,Equity
+COO,COOPER INC,0.01,Health Care,United States,Equity
+STMN,STRAUMANN HOLDING AG,0.01,Health Care,Switzerland,Equity
+TEL,TELENOR,0.01,Communication,Norway,Equity
+MKC,MCCORMICK & CO NON-VOTING INC,0.01,Consumer Staples,United States,Equity
+REG,REGENCY CENTERS REIT CORP,0.01,Real Estate,United States,Equity
+TEL2 B,TELE2 B,0.01,Communication,Sweden,Equity
+J36,JARDINE MATHESON HOLDINGS LTD,0.01,Industrials,Hong Kong,Equity
+ASRNL,ASR NEDERLAND NV,0.01,Financials,Netherlands,Equity
+AGN,AEGON LTD,0.01,Financials,Netherlands,Equity
+FPH,FISHER AND PAYKEL HEALTHCARE CORPO,0.01,Health Care,New Zealand,Equity
+SY1,SYMRISE AG,0.01,Materials,Germany,Equity
+GLPI,GAMING AND LEISURE PROPERTIES REIT,0.01,Real Estate,United States,Equity
+FNF,FIDELITY NATIONAL FINANCIAL INC,0.01,Financials,United States,Equity
+CPU,COMPUTERSHARE LTD,0.01,Industrials,Australia,Equity
+TW,TRADEWEB MARKETS INC CLASS A,0.01,Financials,United States,Equity
+S63,SINGAPORE TECHNOLOGIES ENGINEERING,0.01,Industrials,Singapore,Equity
+IOT,SAMSARA INC CLASS A,0.01,Information Technology,United States,Equity
+IT,GARTNER INC,0.01,Information Technology,United States,Equity
+SGD,SGD CASH,0.01,Cash and/or Derivatives,Singapore,Cash
+CICT,CAPITALAND INTEGRATED COMMERCIAL T,0.01,Real Estate,Singapore,Equity
+ARX,ARC RESOURCES LTD,0.01,Energy,Canada,Equity
+AKRBP,AKER BP,0.01,Energy,Norway,Equity
+X,TMX GROUP LTD,0.01,Financials,Canada,Equity
+GEN,GEN DIGITAL INC,0.01,Information Technology,United States,Equity
+HEI,HEICO CORP,0.01,Industrials,United States,Equity
+BBY,BEST BUY INC,0.01,Consumer Discretionary,United States,Equity
+ADM,ADMIRAL GROUP PLC,0.01,Financials,United Kingdom,Equity
+BN4,KEPPEL LTD,0.01,Industrials,Singapore,Equity
+UDR,UDR REIT INC,0.01,Real Estate,United States,Equity
+EQH,EQUITABLE HOLDINGS INC,0.01,Financials,United States,Equity
+GALP,GALP ENERGIA SGPS SA CLASS B,0.01,Energy,Portugal,Equity
+CA,CARREFOUR SA,0.01,Consumer Staples,France,Equity
+CNA,CENTRICA PLC,0.01,Utilities,United Kingdom,Equity
+SPSN,SWISS PRIME SITE AG,0.01,Real Estate,Switzerland,Equity
+METSO,METSO CORPORATION,0.01,Industrials,Finland,Equity
+IAG,INSURANCE AUSTRALIA GROUP LTD,0.01,Financials,Australia,Equity
+BNZL,BUNZL,0.01,Industrials,United Kingdom,Equity
+EVO,EVOLUTION,0.01,Consumer Discretionary,Sweden,Equity
+BKT,BANKINTER SA,0.01,Financials,Spain,Equity
+RIVN,RIVIAN AUTOMOTIVE INC CLASS A,0.01,Consumer Discretionary,United States,Equity
+CLX,CLOROX,0.01,Consumer Staples,United States,Equity
+3,HONG KONG AND CHINA GAS LTD,0.01,Utilities,Hong Kong,Equity
+DPZ,DOMINOS PIZZA INC,0.01,Consumer Discretionary,United States,Equity
+ATRL,ATKINSREALIS GROUP INC,0.01,Industrials,Canada,Equity
+ITRK,INTERTEK GROUP PLC,0.01,Industrials,United Kingdom,Equity
+TFII,TFI INTERNATIONAL INC,0.01,Industrials,Canada,Equity
+FORTUM,FORTUM,0.01,Utilities,Finland,Equity
+USD,USD CASH,0.01,Cash and/or Derivatives,United States,Cash
+ZBRA,ZEBRA TECHNOLOGIES CORP CLASS A,0.01,Information Technology,United States,Equity
+SOON,SONOVA HOLDING AG,0.01,Health Care,Switzerland,Equity
+MNG,M&G PLC,0.01,Financials,United Kingdom,Equity
+TEN,TENARIS SA,0.01,Energy,Italy,Equity
+OMV,OMV AG,0.01,Energy,Austria,Equity
+SOL,WASHINGTON H SOUL PATTINSON & COMP,0.01,Financials,Australia,Equity
+SGE,THE SAGE GROUP PLC,0.01,Information Technology,United Kingdom,Equity
+FRES,FRESNILLO PLC,0.01,Materials,United Kingdom,Equity
+CG,CARLYLE GROUP INC,0.01,Financials,United States,Equity
+UHS,UNIVERSAL HEALTH SERVICES INC CLAS,0.01,Health Care,United States,Equity
+KNIN,KUEHNE UND NAGEL INTERNATIONAL AG,0.01,Industrials,Switzerland,Equity
+TOST,TOAST INC CLASS A,0.01,Financials,United States,Equity
+CNH,CNH INDUSTRIAL N.V. NV,0.01,Industrials,United States,Equity
+XRO,XERO LTD,0.01,Information Technology,Australia,Equity
+ACM,AECOM,0.01,Industrials,United States,Equity
+AKZA,AKZO NOBEL NV,0.01,Materials,Netherlands,Equity
+PODD,INSULET CORP,0.01,Health Care,United States,Equity
+DAL,DELTA AIR LINES INC,0.01,Industrials,United States,Equity
+DKNG,DRAFTKINGS INC CLASS A,0.01,Consumer Discretionary,United States,Equity
+AGS,AGEAS SA,0.01,Financials,Belgium,Equity
+GIL,GILDAN ACTIVEWEAR INC,0.01,Consumer Discretionary,Canada,Equity
+UNI,UNIPOL ASSICURAZIONI SPA,0.01,Financials,Italy,Equity
+TTD,TRADE DESK INC CLASS A,0.01,Communication,United States,Equity
+288,WH GROUP LTD,0.01,Consumer Staples,Hong Kong,Equity
+NWSA,NEWS CORP CLASS A,0.01,Communication,United States,Equity
+HM B,HENNES & MAURITZ,0.01,Consumer Discretionary,Sweden,Equity
+SOLV,SOLVENTUM CORP,0.01,Health Care,United States,Equity
+BVI,BUREAU VERITAS SA,0.01,Industrials,France,Equity
+SKA B,SKANSKA B,0.01,Industrials,Sweden,Equity
+SMIN,SMITHS GROUP PLC,0.01,Industrials,United Kingdom,Equity
+RXL,REXEL SA,0.01,Industrials,France,Equity
+HEIO,HEINEKEN HOLDING NV,0.01,Consumer Staples,Netherlands,Equity
+CHKP,CHECK POINT SOFTWARE TECHNOLOGIES,0.01,Information Technology,Israel,Equity
+HOT,HOCHTIEF AG,0.01,Industrials,Germany,Equity
+JKHY,JACK HENRY AND ASSOCIATES INC,0.01,Financials,United States,Equity
+BEAN,BELIMO N AG,0.01,Industrials,Switzerland,Equity
+EPI B,EPIROC CLASS B,0.01,Industrials,Sweden,Equity
+G1A,GEA GROUP AG,0.01,Industrials,Germany,Equity
+IAG,IA FINANCIAL INC,0.01,Financials,Canada,Equity
+AC,ACCOR SA,0.01,Consumer Discretionary,France,Equity
+HUBS,HUBSPOT INC,0.01,Information Technology,United States,Equity
+APA,APA GROUP UNITS,0.01,Utilities,Australia,Equity
+H78,HONGKONG LAND HOLDINGS LTD,0.01,Real Estate,Hong Kong,Equity
+KBX,KNORR BREMSE AG,0.01,Industrials,Germany,Equity
+SIG,SIGMA HEALTHCARE LTD,0.01,Health Care,Australia,Equity
+ORK,ORKLA,0.01,Consumer Staples,Norway,Equity
+BNR,BRENNTAG,0.01,Industrials,Germany,Equity
+YAR,YARA INTERNATIONAL,0.01,Materials,Norway,Equity
+STN,STANTEC INC,0.01,Industrials,Canada,Equity
+FOX,FOX CORP CLASS B,0.01,Communication,United States,Equity
+BLDR,BUILDERS FIRSTSOURCE INC,0.01,Industrials,United States,Equity
+SGAFT,CASH COLLATERAL USD SGAFT,0.01,Cash and/or Derivatives,United States,Cash Collateral and Margins
+MRO,MELROSE INDUSTRIES PLC,0.01,Industrials,United Kingdom,Equity
+MKS,MARKS AND SPENCER GROUP PLC,0.01,Consumer Staples,United Kingdom,Equity
+NOK,NOK CASH,0.01,Cash and/or Derivatives,Norway,Cash
+ADDT B,ADDTECH CLASS B,0.01,Industrials,Sweden,Equity
+MPL,MEDIBANK PRIVATE LTD,0.01,Financials,Australia,Equity
+TREL B,TRELLEBORG B,0.01,Industrials,Sweden,Equity
+BCP,BANCO COMERCIAL PORTUGUES SA,0.01,Financials,Portugal,Equity
+MOWI,MOWI,0.01,Consumer Staples,Norway,Equity
+SECU B,SECURITAS B,0.01,Industrials,Sweden,Equity
+ABF,ASSOCIATED BRITISH FOODS PLC,0.01,Consumer Staples,United Kingdom,Equity
+CCL.B,CCL INDUSTRIES INC CLASS B,0.01,Materials,Canada,Equity
+SOBI,SWEDISH ORPHAN BIOVITRUM,0.01,Health Care,Sweden,Equity
+SDLF,STANDARD LIFE PLC,0.01,Financials,United Kingdom,Equity
+WISE,WISE PLC CLASS A,0.01,Financials,United Kingdom,Equity
+SAP,SAPUTO INC,0.01,Consumer Staples,Canada,Equity
+LOTB,LOTUS BAKERIES NV,0.01,Consumer Staples,Belgium,Equity
+GFL,GFL ENVIRONMENTAL SUBORDINATE VOTI,0.01,Industrials,Canada,Equity
+CAD,CAD CASH,0.01,Cash and/or Derivatives,Canada,Cash
+LI,KLEPIERRE REIT SA,0.01,Real Estate,France,Equity
+CON,CONTINENTAL AG,0.01,Consumer Discretionary,Germany,Equity
+ERF,EUROFINS SCIENTIFIC,0.01,Health Care,France,Equity
+BEI,BEIERSDORF AG,0.01,Consumer Staples,Germany,Equity
+MAERSK A,A P MOLLER MAERSK,0.01,Industrials,Denmark,Equity
+FME,FRESENIUS MEDICAL CARE AG,0.01,Health Care,Germany,Equity
+BS6,YANGZIJIANG SHIPBUILDING (HOLDINGS,0.01,Industrials,Singapore,Equity
+IFT,INFRATIL LTD,0.01,Financials,New Zealand,Equity
+EXO,EXOR NV,0.01,Financials,Netherlands,Equity
+COLO B,COLOPLAST B,0.01,Health Care,Denmark,Equity
+UAL,UNITED AIRLINES HOLDINGS INC,0.01,Industrials,United States,Equity
+GRAB,GRAB HOLDINGS LTD CLASS A,0.01,Industrials,Singapore,Equity
+TIT,TELECOM ITALIA,0.01,Communication,Italy,Equity
+OKLO,OKLO INC CLASS A,0.01,Utilities,United States,Equity
+SPX,SPIRAX GROUP PLC,0.01,Industrials,United Kingdom,Equity
+AZRG,AZRIELI GROUP LTD,0.01,Real Estate,Israel,Equity
+ELI,ELIA GROUP SA,0.01,Utilities,Belgium,Equity
+AM,DASSAULT AVIATION SA,0.01,Industrials,France,Equity
+ORNBV,ORION CLASS B,0.01,Health Care,Finland,Equity
+TLC,THE LOTTERY CORPORATION LTD,0.01,Consumer Discretionary,Australia,Equity
+H,HYATT HOTELS CORP CLASS A,0.01,Consumer Discretionary,United States,Equity
+TLX,TALANX AG,0.01,Financials,Germany,Equity
+EFN,ELEMENT FLEET MANAGEMENT CORP,0.01,Industrials,Canada,Equity
+REA,REA GROUP LTD,0.01,Communication,Australia,Equity
+HEN,HENKEL AG,0.01,Consumer Staples,Germany,Equity
+LUG,LUNDIN GOLD INC,0.01,Materials,Canada,Equity
+CAE,CAE INC,0.01,Industrials,Canada,Equity
+MAERSK B,A P MOLLER MAERSK B,0.01,Industrials,Denmark,Equity
+PSON,PEARSON PLC,0.01,Consumer Discretionary,United Kingdom,Equity
+NTGY,NATURGY ENERGY GROUP SA,0.01,Utilities,Spain,Equity
+CRBG,COREBRIDGE FINANCIAL INC,0.01,Financials,United States,Equity
+SCHN,SCHINDLER HOLDING AG,0.01,Industrials,Switzerland,Equity
+EMSN,EMS-CHEMIE HOLDING AG,0.01,Materials,Switzerland,Equity
+INDU C,INDUSTRIVARDEN SERIES,0.01,Financials,Sweden,Equity
+UHR,THE SWATCH GROUP AG,0.01,Consumer Discretionary,Switzerland,Equity
+66,MTR CORPORATION CORP LTD,0.01,Industrials,Hong Kong,Equity
+AIA,AUCKLAND INTERNATIONAL AIRPORT LTD,0.01,Industrials,New Zealand,Equity
+Z,ZILLOW GROUP INC CLASS C,0.01,Real Estate,United States,Equity
+KEY,KEYERA CORP,0.01,Energy,Canada,Equity
+GET,GETLINK,0.01,Industrials,France,Equity
+IG,ITALGAS,0.01,Utilities,Italy,Equity
+ASX,ASX LTD,0.01,Financials,Australia,Equity
+ANA,ACCIONA SA,0.01,Utilities,Spain,Equity
+ELISA,ELISA,0.01,Communication,Finland,Equity
+FUTU,FUTU HOLDINGS ADR LTD,0.01,Financials,Hong Kong,Equity
+MICC,MAGNUM ICE CREAM NV,0.01,Consumer Staples,Netherlands,Equity
+IVN,IVANHOE MINES LTD CLASS A,0.01,Materials,Canada,Equity
+GBLB,GROUPE BRUXELLES LAMBERT NV,0.01,Financials,Belgium,Equity
+SGP,STOCKLAND STAPLED UNITS LTD,0.01,Real Estate,Australia,Equity
+27,GALAXY ENTERTAINMENT GROUP LTD,0.01,Consumer Discretionary,Hong Kong,Equity
+SKF B,SKF B,0.01,Industrials,Sweden,Equity
+RBI,RAIFFEISEN BANK INTERNATIONAL AG,0.01,Financials,Austria,Equity
+6823,HKT TRUST AND HKT UNITS LTD,0.01,Communication,Hong Kong,Equity
+CLAR,CAPITALAND ASCENDAS REIT,0.01,Real Estate,Singapore,Equity
+SGAFT,CASH COLLATERAL EUR SGAFT,0.01,Cash and/or Derivatives,European Union,Cash Collateral and Margins
+PNDORA,PANDORA,0.01,Consumer Discretionary,Denmark,Equity
+CAR,CAR GROUP LTD,0.01,Communication,Australia,Equity
+AMUN,AMUNDI SA,0.01,Financials,France,Equity
+83,SINO LAND LTD,0.01,Real Estate,Hong Kong,Equity
+12,HENDERSON LAND DEVELOPMENT LTD,0.01,Real Estate,Hong Kong,Equity
+LIFCO B,LIFCO CLASS B,0.01,Industrials,Sweden,Equity
+SBRY,SAINSBURY(J) PLC,0.01,Consumer Staples,United Kingdom,Equity
+SRT3,SARTORIUS PREF AG,0.01,Health Care,Germany,Equity
+C6L,SINGAPORE AIRLINES LTD,0.01,Industrials,Singapore,Equity
+IPN,IPSEN SA,0.01,Health Care,France,Equity
+QIA,QIAGEN NV,0.01,Health Care,Germany,Equity
+IAG,INTERNATIONAL AIRLINES GROUP SA,0.01,Industrials,Spain,Equity
+F34,WILMAR INTERNATIONAL LTD,0.01,Consumer Staples,Singapore,Equity
+WTB,WHITBREAD PLC,0.01,Consumer Discretionary,United Kingdom,Equity
+NIBE B,NIBE INDUSTRIER CLASS B,0.01,Industrials,Sweden,Equity
+NICE,NICE LTD,0.01,Information Technology,Israel,Equity
+KESKOB,KESKO CLASS B,0.01,Consumer Staples,Finland,Equity
+REC,RECORDATI INDUSTRIA CHIMICA E FARM,0.01,Health Care,Italy,Equity
+INDU A,INDUSTRIVARDEN A,0.01,Financials,Sweden,Equity
+TRYG,TRYG,0.01,Financials,Denmark,Equity
+RNO,RENAULT SA,0.01,Consumer Discretionary,France,Equity
+SNAP,SNAP INC CLASS A,0.01,Communication,United States,Equity
+OTEX,OPEN TEXT CORP,0.01,Information Technology,Canada,Equity
+BARN,BARRY CALLEBAUT AG,0.01,Consumer Staples,Switzerland,Equity
+CTC.A,CANADIAN TIRE LTD CLASS A,0.01,Consumer Discretionary,Canada,Equity
+SCA B,SVENSKA CELLULOSA B,0.01,Materials,Sweden,Equity
+FSV,FIRSTSERVICE SUBORDINATE VOTING CO,0.01,Real Estate,Canada,Equity
+LAND,LAND SECURITIES GROUP REIT PLC,0.01,Real Estate,United Kingdom,Equity
+JMT,JERONIMO MARTINS SA,0.01,Consumer Staples,Portugal,Equity
+ALO,ALSTOM SA,0.01,Industrials,France,Equity
+DSG,DESCARTES SYSTEMS GROUP INC,0.01,Information Technology,Canada,Equity
+9CI,CAPITALAND INVESTMENT LTD,0.01,Real Estate,Singapore,Equity
+G24,SCOUT24 N,0.01,Communication,Germany,Equity
+SEK,SEK CASH,0.01,Cash and/or Derivatives,Sweden,Cash
+AUD,AUD CASH,0.01,Cash and/or Derivatives,Australia,Cash
+1308,SITC INTERNATIONAL HOLDINGS LTD,0.01,Industrials,Hong Kong,Equity
+19,SWIRE PACIFIC LTD A,0.01,Industrials,Hong Kong,Equity
+STERV,STORA ENSO CLASS R,0.01,Materials,Finland,Equity
+HRL,HORMEL FOODS CORP,0.01,Consumer Staples,United States,Equity
+SHL,SONIC HEALTHCARE LTD,0.01,Health Care,Australia,Equity
+SOF,SOFINA SA,0.01,Financials,Belgium,Equity
+VCX,VICINITY CENTRES,0.01,Real Estate,Australia,Equity
+PAH3,PORSCHE AUTOMOBIL HOLDING PREF,0.01,Consumer Discretionary,Germany,Equity
+1038,CHEUNG KONG INFRASTRUCTURE HOLDING,0.01,Utilities,Hong Kong,Equity
+TITR,TELECOM ITALIA S.P.A.,0.01,Communication,Italy,Equity
+AUTO,AUTOTRADER GROUP PLC,0.01,Communication,United Kingdom,Equity
+SDR,SCHRODERS PLC,0.01,Financials,United Kingdom,Equity
+WTC,WISETECH GLOBAL LTD,0.01,Information Technology,Australia,Equity
+INDT,INDUTRADE,0.01,Industrials,Sweden,Equity
+RED,REDEIA CORPORACION SA,0.01,Utilities,Spain,Equity
+AVOL,AVOLTA AG,0.01,Consumer Discretionary,Switzerland,Equity
+T,TELUS,0.01,Communication,Canada,Equity
+HAG,HENSOLDT AG,0.01,Industrials,Germany,Equity
+KGF,KINGFISHER PLC,0.01,Consumer Discretionary,United Kingdom,Equity
+P911,DR ING HC F PORSCHE PRF AG,0.01,Consumer Discretionary,Germany,Equity
+BMW3,BMW PREF AG,0.01,Consumer Discretionary,Germany,Equity
+PME,PRO MEDICUS LTD,0.01,Health Care,Australia,Equity
+GJF,GJENSIDIGE FORSIKRING,0.01,Financials,Norway,Equity
+SYENS,SYENSQO NV,0.01,Materials,Belgium,Equity
+DIM,SARTORIUS STEDIM BIOTECH SA,0.01,Health Care,France,Equity
+DIE,DIETEREN (D) SA,0.01,Consumer Discretionary,Belgium,Equity
+ZAL,ZALANDO,0.01,Consumer Discretionary,Germany,Equity
+BMED,BANCA MEDIOLANUM,0.01,Financials,Italy,Equity
+ERIE,ERIE INDEMNITY CLASS A,0.01,Financials,United States,Equity
+BOL,BOLLORE,0.01,Energy,France,Equity
+COH,COCHLEAR LTD,0.01,Health Care,Australia,Equity
+BTRW,BARRATT REDROW PLC,0.01,Consumer Discretionary,United Kingdom,Equity
+EMP.A,EMPIRE LTD CLASS A,0.01,Consumer Staples,Canada,Equity
+ENT,ENTAIN PLC,0.01,Consumer Discretionary,United Kingdom,Equity
+SGH,SGH LTD,0.01,Industrials,Australia,Equity
+VER,VERBUND AG,0.01,Utilities,Austria,Equity
+EDPR,EDP RENOVAVEIS SA,0.01,Utilities,Portugal,Equity
+TUB,FINANCIERE DE TUBIZE SA,0.01,Health Care,Belgium,Equity
+SAGA B,SAGAX CLASS B,0.01,Real Estate,Sweden,Equity
+QAN,QANTAS AIRWAYS LTD,0.01,Industrials,Australia,Equity
+IDR,INDRA SISTEMAS SA,0.01,Information Technology,Spain,Equity
+LEG,LEG IMMOBILIEN N,0.01,Real Estate,Germany,Equity
+CEN,CONTACT ENERGY LTD,0.01,Utilities,New Zealand,Equity
+AYV,AYVENS SA,0.01,Industrials,France,Equity
+CU,CANADIAN UTILITIES LTD CLASS A,0.01,Utilities,Canada,Equity
+LHA,DEUTSCHE LUFTHANSA AG,0.01,Industrials,Germany,Equity
+IGM,IGM FINANCIAL INC,0.01,Financials,Canada,Equity
+ICL,ICL GROUP LTD,0.01,Materials,Israel,Equity
+LUND B,LUNDBERGFORETAGEN CLASS B,0.01,Financials,Sweden,Equity
+AAF,AIRTEL AFRICA PLC,0.01,Communication,United Kingdom,Equity
+MEL,MERIDIAN ENERGY LTD,0.01,Utilities,New Zealand,Equity
+MAP,MAPFRE SA,0.01,Financials,Spain,Equity
+BEIJ B,BEIJER REF CLASS B,0.01,Industrials,Sweden,Equity
+SW,SODEXO SA,0.01,Consumer Discretionary,France,Equity
+RAA,RATIONAL AG,0.01,Industrials,Germany,Equity
+EVK,EVONIK INDUSTRIES AG,0.01,Materials,Germany,Equity
+GFC,GECINA SA,0.01,Real Estate,France,Equity
+BEPC,BROOKFIELD RENEWABLE SUBORDINATE V,0.01,Utilities,Canada,Equity
+BZU,BUZZI,0.01,Materials,Italy,Equity
+ADP,AEROPORTS DE PARIS SA,0.01,Industrials,France,Equity
+GRF,GRIFOLS SA CLASS A,0.01,Health Care,Spain,Equity

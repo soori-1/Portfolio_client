@@ -1,0 +1,1043 @@
+Ticker,Security Name,Weight (%),Sector,Country,Asset Class
+2330,TAIWAN SEMICONDUCTOR MANUFACTURING,14.36,Information Technology,Taiwan,Equity
+005930,SAMSUNG ELECTRONICS LTD,6.91,Information Technology,Korea (South),Equity
+000660,SK HYNIX INC,5.0,Information Technology,Korea (South),Equity
+700,TENCENT HOLDINGS LTD,3.07,Communication,China,Equity
+9988,ALIBABA GROUP HOLDING LTD,2.43,Consumer Discretionary,China,Equity
+2454,MEDIATEK INC,1.41,Information Technology,Taiwan,Equity
+2308,DELTA ELECTRONICS INC,1.09,Information Technology,Taiwan,Equity
+939,CHINA CONSTRUCTION BANK CORP H,0.86,Financials,China,Equity
+005935,SAMSUNG ELECTRONICS NON VOTING PRE,0.81,Information Technology,Korea (South),Equity
+2317,HON HAI PRECISION INDUSTRY LTD,0.8,Information Technology,Taiwan,Equity
+HDFCBANK,HDFC BANK LTD,0.75,Financials,India,Equity
+RELIANCE,RELIANCE INDUSTRIES LTD,0.74,Energy,India,Equity
+ICICIBANK,ICICI BANK LTD,0.57,Financials,India,Equity
+PDD,PDD HOLDINGS ADS INC,0.56,Consumer Discretionary,China,Equity
+1810,XIAOMI CORP,0.56,Information Technology,China,Equity
+402340,SK SQUARE LTD,0.55,Industrials,Korea (South),Equity
+VALE3,CIA VALE DO RIO DOCE SH,0.48,Materials,Brazil,Equity
+1398,INDUSTRIAL AND COMMERCIAL BANK OF,0.46,Financials,China,Equity
+2318,PING AN INSURANCE (GROUP) CO OF CH,0.45,Financials,China,Equity
+005380,HYUNDAI MOTOR,0.44,Consumer Discretionary,Korea (South),Equity
+3711,ASE TECHNOLOGY HOLDING LTD,0.44,Information Technology,Taiwan,Equity
+3690,MEITUAN,0.43,Consumer Discretionary,China,Equity
+ANG,ANGLOGOLD ASHANTI PLC,0.43,Materials,South Africa,Equity
+1120,AL RAJHI BANK,0.42,Financials,Saudi Arabia,Equity
+BHARTIARTL,BHARTI AIRTEL LTD,0.4,Communication,India,Equity
+1211,BYD LTD H,0.37,Consumer Discretionary,China,Equity
+NU,NU HOLDINGS CLASS A,0.37,Financials,Brazil,Equity
+3988,BANK OF CHINA LTD H,0.37,Financials,China,Equity
+2383,ELITE MATERIAL LTD,0.37,Information Technology,Taiwan,Equity
+ITUB4,ITAU UNIBANCO HOLDING PREF SA,0.37,Financials,Brazil,Equity
+2222,SAUDI ARABIAN OIL,0.35,Energy,Saudi Arabia,Equity
+PETR4,PETROLEO BRASILEIRO PREF SA,0.34,Energy,Brazil,Equity
+NPN,NASPERS LIMITED LTD CLASS N,0.34,Consumer Discretionary,South Africa,Equity
+XTSLA,BLK CSH FND TREASURY SL AGENCY,0.33,Cash and/or Derivatives,United States,Money Market
+9888,BAIDU CLASS A INC,0.33,Communication,China,Equity
+9999,NETEASE INC,0.33,Communication,China,Equity
+INFY,INFOSYS LTD,0.32,Information Technology,India,Equity
+GFI,GOLD FIELDS LTD,0.32,Materials,South Africa,Equity
+105560,KB FINANCIAL GROUP INC,0.32,Financials,Korea (South),Equity
+034020,DOOSAN ENERBILITY LTD,0.32,Industrials,Korea (South),Equity
+PETR3,PETROLEO BRASILEIRO SA PETROBRAS,0.31,Energy,Brazil,Equity
+2345,ACCTON TECHNOLOGY CORP,0.31,Information Technology,Taiwan,Equity
+GMEXICOB,GRUPO MEXICO B,0.3,Materials,Mexico,Equity
+9618,JD.COM CLASS A INC,0.29,Consumer Discretionary,China,Equity
+009150,SAMSUNG ELECTRO MECHANICS LTD,0.28,Information Technology,Korea (South),Equity
+3037,UNIMICRON TECHNOLOGY CORP,0.28,Information Technology,Taiwan,Equity
+9961,TRIP.COM GROUP LTD,0.26,Consumer Discretionary,China,Equity
+2303,UNITED MICRO ELECTRONICS CORP,0.26,Information Technology,Taiwan,Equity
+M&M,MAHINDRA AND MAHINDRA LTD,0.26,Consumer Discretionary,India,Equity
+OTP,OTP BANK,0.25,Financials,Hungary,Equity
+AXISBANK,AXIS BANK LTD,0.25,Financials,India,Equity
+1180,THE SAUDI NATIONAL BANK,0.25,Financials,Saudi Arabia,Equity
+KFH,KUWAIT FINANCE HOUSE,0.24,Financials,Kuwait,Equity
+DELTA.R,DELTA ELECTRONICS (THAILAND) NON-V,0.24,Information Technology,Thailand,Equity
+2891,CTBC FINANCIAL HOLDING LTD,0.24,Financials,Taiwan,Equity
+2628,CHINA LIFE INSURANCE LTD H,0.24,Financials,China,Equity
+012450,HANWHA AEROSPACE LTD,0.24,Industrials,Korea (South),Equity
+2382,QUANTA COMPUTER INC,0.23,Information Technology,Taiwan,Equity
+2899,ZIJIN MINING GROUP LTD H,0.23,Materials,China,Equity
+055550,SHINHAN FINANCIAL GROUP LTD,0.23,Financials,Korea (South),Equity
+857,PETROCHINA LTD H,0.23,Energy,China,Equity
+GFNORTEO,GPO FINANCE BANORTE,0.23,Financials,Mexico,Equity
+LT,LARSEN AND TOUBRO LTD,0.23,Industrials,India,Equity
+BAJFINANCE,BAJAJ FINANCE LTD,0.23,Financials,India,Equity
+006400,SAMSUNG SDI LTD,0.22,Information Technology,Korea (South),Equity
+FSR,FIRSTRAND LTD,0.22,Financials,South Africa,Equity
+2360,CHROMA ATE INC,0.22,Information Technology,Taiwan,Equity
+000270,KIA CORPORATION CORP,0.21,Consumer Discretionary,Korea (South),Equity
+3017,ASIA VITAL COMPONENTS LTD,0.21,Information Technology,Taiwan,Equity
+2881,FUBON FINANCIAL HOLDING LTD,0.21,Financials,Taiwan,Equity
+005490,POSCO,0.21,Materials,Korea (South),Equity
+SBK,STANDARD BANK GROUP,0.2,Financials,South Africa,Equity
+028260,SAMSUNG C&T CORP,0.2,Industrials,Korea (South),Equity
+AMXB,AMERICA MOVIL B,0.2,Communication,Mexico,Equity
+2882,CATHAY FINANCIAL HOLDING LTD,0.19,Financials,Taiwan,Equity
+NBK,NATIONAL BANK OF KUWAIT,0.19,Financials,Kuwait,Equity
+086790,HANA FINANCIAL GROUP INC,0.19,Financials,Korea (South),Equity
+1211,SAUDI ARABIAN MINING,0.19,Materials,Saudi Arabia,Equity
+3968,CHINA MERCHANTS BANK LTD H,0.19,Financials,China,Equity
+VAL,VALTERRA PLATINUM LTD,0.19,Materials,South Africa,Equity
+QNBK,QATAR NATIONAL BANK,0.19,Financials,Qatar,Equity
+PKO,POWSZECHNA KASA OSZCZEDNOSCI BANK,0.18,Financials,Poland,Equity
+CPI,CAPITEC LTD,0.18,Financials,South Africa,Equity
+TCS,TATA CONSULTANCY SERVICES LTD,0.18,Information Technology,India,Equity
+7010,SAUDI TELECOM,0.18,Communication,Saudi Arabia,Equity
+PKN,ORLEN SA,0.18,Energy,Poland,Equity
+267260,HD HYUNDAI ELECTRIC LTD,0.18,Industrials,Korea (South),Equity
+EMAAR,EMAAR PROPERTIES,0.18,Real Estate,United Arab Emirates,Equity
+BAP,CREDICORP LTD,0.18,Financials,Peru,Equity
+MTN,MTN GROUP LTD,0.18,Communication,South Africa,Equity
+KOTAKBANK,KOTAK MAHINDRA BANK LTD,0.18,Financials,India,Equity
+FAB,FIRST ABU DHABI BANK,0.17,Financials,United Arab Emirates,Equity
+1288,AGRICULTURAL BANK OF CHINA LTD H,0.17,Financials,China,Equity
+6160,BEONE MEDICINES AG,0.17,Health Care,China,Equity
+FEMSAUBD,FOMENTO ECONOMICO MEXICANO,0.17,Consumer Staples,Mexico,Equity
+035420,NAVER CORP,0.16,Communication,Korea (South),Equity
+2327,YAGEO CORP,0.16,Information Technology,Taiwan,Equity
+012330,HYUNDAI MOBIS LTD,0.16,Consumer Discretionary,Korea (South),Equity
+068270,CELLTRION INC,0.16,Health Care,Korea (South),Equity
+BBDC4,BANCO BRADESCO PREF SA,0.16,Financials,Brazil,Equity
+HINDUNILVR,HINDUSTAN UNILEVER LTD,0.16,Consumer Staples,India,Equity
+SBIN,STATE BANK OF INDIA,0.16,Financials,India,Equity
+CEMEXCPO,CEMEX CPO,0.16,Materials,Mexico,Equity
+BBCA,BANK CENTRAL ASIA,0.16,Financials,Indonesia,Equity
+1088,CHINA SHENHUA ENERGY LTD H,0.16,Energy,China,Equity
+B3SA3,B3 BRASIL BOLSA BALCAO SA,0.15,Financials,Brazil,Equity
+2885,YUANTA FINANCIAL HOLDING LTD,0.15,Financials,Taiwan,Equity
+SUNPHARMA,SUN PHARMACEUTICAL INDUSTRIES LTD,0.15,Health Care,India,Equity
+175,GEELY AUTOMOBILE HOLDINGS LTD,0.15,Consumer Discretionary,China,Equity
+NTPC,NTPC LTD,0.15,Utilities,India,Equity
+6669,WIWYNN CORPORATION CORP,0.15,Information Technology,Taiwan,Equity
+EAND,EMIRATES TELECOM,0.15,Communication,United Arab Emirates,Equity
+MARUTI,MARUTI SUZUKI INDIA LTD,0.15,Consumer Discretionary,India,Equity
+PBBANK,PUBLIC BANK,0.15,Financials,Malaysia,Equity
+300750,CONTEMPORARY AMPEREX TECHNOLOGY LT,0.14,Industrials,China,Equity
+1024,KUAISHOU TECHNOLOGY,0.14,Communication,China,Equity
+WALMEX*,WALMART DE MEXICO V,0.14,Consumer Staples,Mexico,Equity
+9987,YUM CHINA HOLDINGS INC,0.14,Consumer Discretionary,China,Equity
+TATASTEEL,TATA STEEL LTD,0.14,Materials,India,Equity
+BEL,BHARAT ELECTRONICS LTD,0.14,Industrials,India,Equity
+MAYBANK,MALAYAN BANKING,0.14,Financials,Malaysia,Equity
+TITAN,TITAN COMPANY LTD,0.14,Consumer Discretionary,India,Equity
+SCCO,SOUTHERN COPPER CORP,0.14,Materials,Peru,Equity
+1801,INNOVENT BIOLOGICS INC,0.13,Health Care,China,Equity
+298040,HYOSUNG HEAVY INDUSTRIES CORP,0.13,Industrials,Korea (South),Equity
+2412,CHUNGHWA TELECOM LTD,0.13,Communication,Taiwan,Equity
+5274,ASPEED TECHNOLOGY INC,0.13,Information Technology,Taiwan,Equity
+329180,HD HYUNDAI HEAVY INDUSTRIES LTD,0.13,Industrials,Korea (South),Equity
+ITSA4,ITAUSA INVESTIMENTOS ITAU PREF SA,0.13,Financials,Brazil,Equity
+CIMB,CIMB GROUP HOLDINGS,0.13,Financials,Malaysia,Equity
+010120,LS ELECTRIC LTD,0.13,Industrials,Korea (South),Equity
+2887,TS FINANCIAL HOLDING LTD,0.13,Financials,Taiwan,Equity
+032830,SAMSUNG LIFE LTD,0.13,Financials,Korea (South),Equity
+ABEV3,AMBEV SA,0.13,Consumer Staples,Brazil,Equity
+SBSP3,COMPANHIA DE SANEAMENTO BASICO DE,0.13,Utilities,Brazil,Equity
+WEGE3,WEG SA,0.12,Industrials,Brazil,Equity
+POWERGRID,POWER GRID CORPORATION OF INDIA LT,0.12,Utilities,India,Equity
+3665,BIZLINK HOLDING INC,0.12,Industrials,Taiwan,Equity
+EMIRATESNBD,EMIRATES NBD,0.12,Financials,United Arab Emirates,Equity
+600519,KWEICHOW MOUTAI LTD A,0.12,Consumer Staples,China,Equity
+010140,SAMSUNG HEAVY INDUSTRIES LTD,0.12,Industrials,Korea (South),Equity
+2886,MEGA FINANCIAL HOLDING LTD,0.12,Financials,Taiwan,Equity
+373220,LG ENERGY SOLUTION LTD,0.12,Industrials,Korea (South),Equity
+ETE,NATIONAL BANK OF GREECE SA,0.12,Financials,Greece,Equity
+SHFL,SHRIRAM FINANCE LTD,0.12,Financials,India,Equity
+7769,HONPRECISION INC,0.12,Information Technology,Taiwan,Equity
+2884,E.SUN FINANCIAL HOLDING LTD,0.12,Financials,Taiwan,Equity
+ULTRACEMCO,ULTRATECH CEMENT LTD,0.12,Materials,India,Equity
+HINDALCO,HINDALCO INDUSTRIES LTD,0.12,Materials,India,Equity
+1109,CHINA RESOURCES LAND LTD,0.12,Real Estate,China,Equity
+316140,WOORI FINANCIAL GROUP INC,0.12,Financials,Korea (South),Equity
+IMP,IMPALA PLATINUM LTD,0.12,Materials,South Africa,Equity
+2357,ASUSTEK COMPUTER INC,0.12,Information Technology,Taiwan,Equity
+2269,WUXI BIOLOGICS CAYMAN INC,0.12,Health Care,China,Equity
+3443,GLOBAL UNICHIP CORP,0.12,Information Technology,Taiwan,Equity
+1303,NAN YA PLASTICS CORP,0.12,Materials,Taiwan,Equity
+051910,LG CHEM LTD,0.12,Materials,Korea (South),Equity
+AXIA3,CENTRAIS ELETR BRAS-ELETROBRAS SA,0.11,Utilities,Brazil,Equity
+BPAC11,BCO BTG PACTUAL UNT SA,0.11,Financials,Brazil,Equity
+2010,SAUDI BASIC INDUSTRIES,0.11,Materials,Saudi Arabia,Equity
+3231,WISTRON CORP,0.11,Information Technology,Taiwan,Equity
+2368,GOLD CIRCUIT ELECTRONICS LTD,0.11,Information Technology,Taiwan,Equity
+034730,SK INC,0.11,Industrials,Korea (South),Equity
+386,CHINA PETROLEUM AND CHEMICAL CORP,0.11,Energy,China,Equity
+3750,CONTEMPORARY AMPEREX TECHNOLOGY LT,0.11,Industrials,China,Equity
+KGH,KGHM POLSKA MIEDZ SA,0.11,Materials,Poland,Equity
+SQM.B,SOCIEDAD QUIMICA Y MINERA DE CHILE,0.11,Materials,Chile,Equity
+2328,PICC PROPERTY AND CASUALTY LTD H,0.1,Financials,China,Equity
+009540,HD KOREA SHIPBUILDING & OFFSHORE E,0.1,Industrials,Korea (South),Equity
+ASELS.E,ASELSAN ELEKTRONIK SANAYI VE TICAR,0.1,Industrials,Turkey,Equity
+2423,KE HOLDINGS INC,0.1,Real Estate,China,Equity
+992,LENOVO GROUP LTD,0.1,Information Technology,China,Equity
+ICT,INTERNATIONAL CONTAINER TERMINAL S,0.1,Industrials,Philippines,Equity
+2301,LITE ON TECHNOLOGY CORP,0.1,Information Technology,Taiwan,Equity
+BBRI,BANK RAKYAT INDONESIA (PERSERO),0.1,Financials,Indonesia,Equity
+6869,YANGTZE OPTICAL FIBRE AND CABLE JO,0.1,Information Technology,China,Equity
+2020,ANTA SPORTS PRODUCTS LTD,0.1,Consumer Discretionary,China,Equity
+EUROB,EUROBANK SA,0.1,Financials,Greece,Equity
+1378,CHINA HONGQIAO GROUP LTD,0.1,Materials,China,Equity
+1347,HUA HONG SEMICONDUCTOR LTD,0.1,Information Technology,China,Equity
+2890,SINOPAC FINANCIAL HOLDINGS LTD,0.1,Financials,Taiwan,Equity
+HCLTECH,HCL TECHNOLOGIES LTD,0.1,Information Technology,India,Equity
+3661,ALCHIP TECHNOLOGIES LTD,0.1,Information Technology,Taiwan,Equity
+2601,CHINA PACIFIC INSURANCE (GROUP) LT,0.1,Financials,China,Equity
+ABG,ABSA GROUP LTD,0.1,Financials,South Africa,Equity
+ADCB,ABU DHABI COMMERCIAL BANK,0.1,Financials,United Arab Emirates,Equity
+PEO,BANK PEKAO SA,0.09,Financials,Poland,Equity
+9633,NONGFU SPRING LTD H,0.09,Consumer Staples,China,Equity
+042660,HANWHA OCEAN LTD,0.09,Industrials,Korea (South),Equity
+PE&OLES*,INDUST PENOLES,0.09,Materials,Mexico,Equity
+2883,KGI FINANCIAL HOLDING LTD,0.09,Financials,Taiwan,Equity
+033780,KT&G CORP,0.09,Consumer Staples,Korea (South),Equity
+207940,SAMSUNG BIOLOGICS LTD,0.09,Health Care,Korea (South),Equity
+TPEIR,PIRAEUS BANK SA,0.09,Financials,Greece,Equity
+9992,POP MART INTERNATIONAL GROUP LTD,0.09,Consumer Discretionary,China,Equity
+064350,HYUNDAI-ROTEM,0.09,Industrials,Korea (South),Equity
+042700,HANMI SEMICONDUCTOR LTD,0.09,Information Technology,Korea (South),Equity
+1216,UNI-PRESIDENT ENTERPRISES CORP,0.09,Consumer Staples,Taiwan,Equity
+ADVANC.R,ADVANCED INFO SERVICE NON-VOTING D,0.09,Communication,Thailand,Equity
+2015,LI AUTO CLASS A INC,0.09,Consumer Discretionary,China,Equity
+PTT.R,PTT NON-VOTING DR PCL,0.09,Energy,Thailand,Equity
+9926,AKESO INC,0.09,Health Care,China,Equity
+QIBK,QATAR ISLAMIC BANK,0.09,Financials,Qatar,Equity
+9866,NIO CLASS A INC,0.09,Consumer Discretionary,China,Equity
+1010,RIYAD BANK,0.09,Financials,Saudi Arabia,Equity
+2449,KING YUAN ELECTRONICS LTD,0.09,Information Technology,Taiwan,Equity
+066570,LG ELECTRONICS INC,0.09,Consumer Discretionary,Korea (South),Equity
+006800,MIRAE ASSET SECURITIES CO LTD,0.09,Financials,Korea (South),Equity
+2892,FIRST FINANCIAL HOLDING LTD,0.09,Financials,Taiwan,Equity
+PRIO3,PETRO RIO SA,0.09,Energy,Brazil,Equity
+NESTLEIND,NESTLE INDIA LTD,0.09,Consumer Staples,India,Equity
+086520,ECOPRO LTD,0.09,Industrials,Korea (South),Equity
+EICHERMOT,EICHER MOTORS LTD,0.09,Consumer Discretionary,India,Equity
+ASIANPAINT,ASIAN PAINTS LTD,0.08,Materials,India,Equity
+EMBJ3,EMBRAER SA,0.08,Industrials,Brazil,Equity
+PZU,PZU SA,0.08,Financials,Poland,Equity
+2057,ZTO EXPRESS (CAYMAN) INC,0.08,Industrials,China,Equity
+EQTL3,EQUATORIAL SA,0.08,Utilities,Brazil,Equity
+HAR,HARMONY GOLD MINING COMPANY LIMITE,0.08,Materials,South Africa,Equity
+HAL,HINDUSTAN AERONAUTICS LTD,0.08,Industrials,India,Equity
+2338,WEICHAI POWER LTD H,0.08,Industrials,China,Equity
+000810,SAMSUNG FIRE & MARINE INSURANCE LT,0.08,Financials,Korea (South),Equity
+3653,JENTECH PRECISION INDUSTRIAL LTD,0.08,Information Technology,Taiwan,Equity
+TENAGA,TENAGA NASIONAL,0.08,Utilities,Malaysia,Equity
+ADANIPORTS,ADANI PORTS AND SPECIAL ECONOMIC Z,0.08,Industrials,India,Equity
+BMRI,BANK MANDIRI (PERSERO),0.08,Financials,Indonesia,Equity
+ITC,ITC LTD,0.08,Consumer Staples,India,Equity
+2059,KING SLIDE WORKS LTD,0.08,Information Technology,Taiwan,Equity
+9868,XPENG CLASS A INC,0.08,Consumer Discretionary,China,Equity
+035720,KAKAO CORP,0.08,Communication,Korea (South),Equity
+2880,HUA NAN FINANCIAL HOLDINGS LTD,0.08,Financials,Taiwan,Equity
+4958,ZHEN DING TECHNOLOGY HOLDING LTD,0.08,Information Technology,Taiwan,Equity
+3993,CMOC GROUP LTD,0.08,Materials,China,Equity
+SLM,SANLAM LIMITED LTD,0.08,Financials,South Africa,Equity
+GAPB,GRUPO AEROPORTUARIO DEL PACIFICO,0.08,Industrials,Mexico,Equity
+HTHT,H WORLD GROUP ADR LTD,0.08,Consumer Discretionary,China,Equity
+DSY,DISCOVERY LTD,0.08,Financials,South Africa,Equity
+SSW,SIBANYE STILLWATER LTD,0.08,Materials,South Africa,Equity
+RENT3,LOCALIZA RENT A CAR SA,0.07,Industrials,Brazil,Equity
+TVSMOTOR,TVS MOTOR COMPANY LTD,0.07,Consumer Discretionary,India,Equity
+TMCV,TATA MOTORS LTD,0.07,Industrials,India,Equity
+196170,ALTEOGEN INC,0.07,Health Care,Korea (South),Equity
+ONGC,OIL AND NATURAL GAS LTD,0.07,Energy,India,Equity
+APOLLOHOSP,APOLLO HOSPITALS ENTERPRISE LTD,0.07,Health Care,India,Equity
+1060,SAUDI AWWAL BANK,0.07,Financials,Saudi Arabia,Equity
+2379,REALTEK SEMICONDUCTOR CORP,0.07,Information Technology,Taiwan,Equity
+3034,NOVATEK MICROELECTRONICS CORP,0.07,Information Technology,Taiwan,Equity
+INDIGO,INTERGLOBE AVIATION LTD,0.07,Industrials,India,Equity
+1150,ALINMA BANK,0.07,Financials,Saudi Arabia,Equity
+COALINDIA,COAL INDIA LTD,0.07,Energy,India,Equity
+SBILIFE,SBI LIFE INSURANCE COMPANY LTD,0.07,Financials,India,Equity
+2020,SABIC AGRI-NUTRIENTS,0.07,Materials,Saudi Arabia,Equity
+998,CHINA CITIC BANK CORP LTD H,0.07,Financials,China,Equity
+3529,EMEMORY TECHNOLOGY INC,0.07,Information Technology,Taiwan,Equity
+300308,ZHONGJI INNOLIGHT LTD A,0.07,Information Technology,China,Equity
+000150,DOOSAN CORP,0.07,Industrials,Korea (South),Equity
+GRASIM,GRASIM INDUSTRIES LTD,0.07,Materials,India,Equity
+267250,HD HYUNDAI LTD,0.07,Energy,Korea (South),Equity
+DIVISLAB,DIVIS LABORATORIES LTD,0.07,Health Care,India,Equity
+ALDAR,ALDAR PROPERTIES,0.07,Real Estate,United Arab Emirates,Equity
+1093,CSPC PHARMACEUTICAL GROUP LTD,0.07,Health Care,China,Equity
+SHP,SHOPRITE HOLDINGS LTD,0.07,Consumer Staples,South Africa,Equity
+TLKM,TELEKOMUNIKASI INDONESIA,0.07,Communication,Indonesia,Equity
+TECHM,TECH MAHINDRA LTD,0.07,Information Technology,India,Equity
+MAXHEALTH,MAX HEALTHCARE INSTITUTE LTD,0.07,Health Care,India,Equity
+BID,BID CORPORATION LTD,0.07,Consumer Staples,South Africa,Equity
+GULF.R,GULF DEVELOPMENT NON-VOTING DR PCL,0.07,Utilities,Thailand,Equity
+JSWSTEEL,JSW STEEL LTD,0.07,Materials,India,Equity
+PMETAL,PRESS METAL ALUMINIUM HOLDINGS,0.07,Materials,Malaysia,Equity
+047810,KOREA AEROSPACE INDUSTRIES LTD,0.07,Industrials,Korea (South),Equity
+CHILE,BANCO DE CHILE,0.07,Financials,Chile,Equity
+000720,HYUNDAI ENGINEERING & CONSTRUCTION,0.07,Industrials,Korea (South),Equity
+3008,LARGAN PRECISION LTD,0.07,Information Technology,Taiwan,Equity
+ADIB,ABU DHABI ISLAMIC BANK,0.07,Financials,United Arab Emirates,Equity
+3328,BANK OF COMMUNICATIONS LTD H,0.07,Financials,China,Equity
+TRENT,TRENT LTD,0.07,Consumer Discretionary,India,Equity
+LTM,LATAM AIRLINES GROUP SA,0.06,Industrials,Chile,Equity
+CEZ,CEZ,0.06,Utilities,Czech Republic,Equity
+CIPLA,CIPLA LTD,0.06,Health Care,India,Equity
+5880,TAIWAN COOPERATIVE FINANCIAL HOLDI,0.06,Financials,Taiwan,Equity
+CUMMINSIND,CUMMINS INDIA LTD,0.06,Industrials,India,Equity
+247540,ECOPRO BM LTD,0.06,Industrials,Korea (South),Equity
+BIMAS.E,BIM BIRLESIK MAGAZALAR A,0.06,Consumer Staples,Turkey,Equity
+015760,KOREA ELECTRIC POWER CORP,0.06,Utilities,Korea (South),Equity
+XP,XP CLASS A INC,0.06,Financials,Brazil,Equity
+NPH,NORTHAM PLATINUM HLDGS LTD,0.06,Materials,South Africa,Equity
+071050,KOREA INVESTMENT HOLDINGS LTD,0.06,Financials,Korea (South),Equity
+688,CHINA OVERSEAS LAND INVESTMENT LTD,0.06,Real Estate,China,Equity
+BAJAJ-AUTO,BAJAJ AUTO LTD,0.06,Consumer Discretionary,India,Equity
+DMART,AVENUE SUPERMARTS LTD,0.06,Consumer Staples,India,Equity
+BBAS3,BANCO DO BRASIL SA,0.06,Financials,Brazil,Equity
+9901,NEW ORIENTAL EDUCATION & TECHNOLOG,0.06,Consumer Discretionary,China,Equity
+SOL,SASOL LTD,0.06,Materials,South Africa,Equity
+ALPHA,ALPHA BANK SA,0.06,Financials,Greece,Equity
+TATAPOWER,TATA POWER LTD,0.06,Utilities,India,Equity
+2082,ACWA POWER CO,0.06,Utilities,Saudi Arabia,Equity
+079550,LIG DEFENSE&AEROSPACE LTD,0.06,Industrials,Korea (South),Equity
+CHOLAFIN,CHOLAMANDALAM INVESTMENT AND FINAN,0.06,Financials,India,Equity
+DRREDDY,DR REDDYS LABORATORIES LTD,0.06,Health Care,India,Equity
+TMPV,TATA MOTORS PASSENGER VEHICLES LTD,0.06,Consumer Discretionary,India,Equity
+TATACONSUM,TATA CONSUMER PRODUCTS LTD,0.06,Consumer Staples,India,Equity
+601138,FOXCONN INDUSTRIAL INTERNET LTD A,0.06,Information Technology,China,Equity
+JIOFIN,JIO FINANCIAL SERVICES LTD,0.06,Financials,India,Equity
+VBBR3,VIBRA ENERGIA SA,0.06,Consumer Discretionary,Brazil,Equity
+BAJAJFINSV,BAJAJ FINSERV LTD,0.06,Financials,India,Equity
+CPALL.R,CP ALL NON-VOTING DR PCL,0.06,Consumer Staples,Thailand,Equity
+VBL,VARUN BEVERAGES LTD,0.06,Consumer Staples,India,Equity
+3533,LOTES LTD,0.06,Information Technology,Taiwan,Equity
+2395,ADVANTECH LTD,0.06,Information Technology,Taiwan,Equity
+PFC,POWER FINANCE CORPORATION LTD,0.06,Financials,India,Equity
+PFCIBEST,GRUPO CIBEST PREF SA,0.06,Financials,Colombia,Equity
+NED,NEDBANK GROUP LTD,0.06,Financials,South Africa,Equity
+2603,EVERGREEN MARINE CORP (TAIWAN) LTD,0.06,Industrials,Taiwan,Equity
+1177,SINO BIOPHARMACEUTICAL LTD,0.06,Health Care,China,Equity
+278470,APR LTD,0.06,Consumer Staples,Korea (South),Equity
+COMI,COMMERCIAL INTERNATIONAL BANK EGYP,0.06,Financials,Egypt,Equity
+3481,INNOLUX CORP,0.06,Information Technology,Taiwan,Equity
+3692,HANSOH PHARMACEUTICAL GROUP LTD,0.06,Health Care,China,Equity
+20,SENSETIME GROUP CLASS B INC,0.06,Information Technology,China,Equity
+267,CITIC LTD,0.06,Industrials,China,Equity
+6446,PHARMAESSENTIA CORP,0.06,Health Care,Taiwan,Equity
+2002,CHINA STEEL CORP,0.06,Materials,Taiwan,Equity
+EBP,ERSTE BANK POLSKA SA,0.06,Financials,Poland,Equity
+ADANIPOWER,ADANI POWER LTD,0.06,Utilities,India,Equity
+003670,POSCO FUTURE M LTD,0.06,Industrials,Korea (South),Equity
+600036,CHINA MERCHANTS BANK LTD A,0.06,Financials,China,Equity
+2319,CHINA MENGNIU DAIRY LTD,0.06,Consumer Staples,China,Equity
+1590,AIRTAC INTERNATIONAL GROUP,0.05,Industrials,Taiwan,Equity
+ASII,ASTRA INTERNATIONAL,0.05,Industrials,Indonesia,Equity
+AOT.R,AIRPORTS OF THAILAND NON-VOTING DR,0.05,Industrials,Thailand,Equity
+6488,GLOBALWAFERS LTD,0.05,Information Technology,Taiwan,Equity
+HEROMOTOCO,HERO MOTOCORP LTD,0.05,Consumer Discretionary,India,Equity
+688041,HYGON INFORMATION TECHNOLOGY LTD A,0.05,Information Technology,China,Equity
+6690,HAIER SMART HOME CLASS H LTD H,0.05,Consumer Discretionary,China,Equity
+003550,LG CORP,0.05,Industrials,Korea (South),Equity
+JBS,JBS N V NV CLASS A,0.05,Consumer Staples,Brazil,Equity
+2359,WUXI APPTEC LTD H,0.05,Health Care,China,Equity
+688256,CAMBRICON TECHNOLOGIES CORPORATION,0.05,Information Technology,China,Equity
+017670,SK TELECOM LTD,0.05,Communication,Korea (South),Equity
+ETERNAL,ETERNAL LTD,0.05,Consumer Discretionary,India,Equity
+ALE,ALLEGRO SA,0.05,Consumer Discretionary,Poland,Equity
+6618,JD HEALTH INTERNATIONAL INC,0.05,Consumer Staples,China,Equity
+CGPOWER,CG POWER AND INDUSTRIAL SOLUTIONS,0.05,Industrials,India,Equity
+AC*,ARCA CONTINENTAL,0.05,Consumer Staples,Mexico,Equity
+1818,ZHAOJIN MINING INDUSTRY LTD H,0.05,Materials,China,Equity
+7020,ETIHAD ETISALAT,0.05,Communication,Saudi Arabia,Equity
+2688,ENN ENERGY HOLDINGS LTD,0.05,Utilities,China,Equity
+LPP,LPP SA,0.05,Consumer Discretionary,Poland,Equity
+005387,HYUNDAI MOTOR S2 PREF,0.05,Consumer Discretionary,Korea (South),Equity
+086280,HYUNDAI GLOVIS LTD,0.05,Industrials,Korea (South),Equity
+601899,ZIJIN MINING GROUP LTD A,0.05,Materials,China,Equity
+VIVT3,TELEFONICA BRASIL SA,0.05,Communication,Brazil,Equity
+1050,BANQUE SAUDI FRANSI,0.05,Financials,Saudi Arabia,Equity
+HDFCLIFE,HDFC LIFE INSURANCE COMPANY LTD,0.05,Financials,India,Equity
+GVT&D,GE VERNOVA T&D INDIA LTD,0.05,Industrials,India,Equity
+BRITANNIA,BRITANNIA INDUSTRIES LTD,0.05,Consumer Staples,India,Equity
+AUBANK,AU SMALL FINANCE BANK LTD,0.05,Financials,India,Equity
+LUPIN,LUPIN LTD,0.05,Health Care,India,Equity
+BDMS.R,BANGKOK DUSIT MEDICAL SERVICES NON,0.05,Health Care,Thailand,Equity
+9698,GDS HOLDINGS LTD CLASS A,0.05,Information Technology,China,Equity
+RDOR3,REDE DOR SAO LUIZ SA,0.05,Health Care,Brazil,Equity
+788,CHINA TOWER CORP LTD H,0.05,Communication,China,Equity
+PTTEP.R,PTT EXPLORATION AND PRODUCTION NON,0.05,Energy,Thailand,Equity
+1336,NEW CHINA LIFE INSURANCE COMPANY L,0.05,Financials,China,Equity
+GGBR4,GERDAU PREF SA,0.05,Materials,Brazil,Equity
+1339,THE PEOPLES INSURANCE CO (GROUP),0.05,Financials,China,Equity
+096770,SK INNOVATION LTD,0.05,Energy,Korea (South),Equity
+SUZB3,SUZANO SA,0.05,Materials,Brazil,Equity
+1171,YANKUANG ENERGY GROUP COMPANY LTD,0.05,Energy,China,Equity
+2382,SUNNY OPTICAL TECHNOLOGY LTD,0.05,Information Technology,China,Equity
+INDHOTEL,INDIAN HOTELS LTD,0.05,Consumer Discretionary,India,Equity
+3045,TAIWAN MOBILE LTD,0.05,Communication,Taiwan,Equity
+CPLE3,CIA PARANAENSE DE ENERGIA COPEL,0.05,Utilities,Brazil,Equity
+138040,MERITZ FINANCIAL GROUP INC,0.05,Financials,Korea (South),Equity
+POLICYBZR,PB FINTECH LTD,0.05,Financials,India,Equity
+5347,VANGUARD INTERNATIONAL SEMICONDUCT,0.05,Information Technology,Taiwan,Equity
+SUZLON,SUZLON ENERGY LTD,0.05,Industrials,India,Equity
+PERSISTENT,PERSISTENT SYSTEMS LTD,0.05,Information Technology,India,Equity
+1301,FORMOSA PLASTICS CORP,0.05,Materials,Taiwan,Equity
+MOTHERSON,SAMVARDHANA MOTHERSON INTERNATIONA,0.05,Consumer Discretionary,India,Equity
+272210,HANWHA SYSTEMS LTD,0.05,Industrials,Korea (South),Equity
+1658,POSTAL SAVINGS BANK OF CHINA LTD H,0.05,Financials,China,Equity
+RICHTER,GEDEON RICHTER,0.05,Health Care,Hungary,Equity
+BVN,BUENAVENTURA ADR REPRESENTING,0.05,Materials,Peru,Equity
+600900,CHINA YANGTZE POWER LTD A,0.05,Utilities,China,Equity
+HDFCAMC,HDFC ASSET MANAGEMENT COMPANY LTD,0.05,Financials,India,Equity
+REM,REMGRO LTD,0.05,Financials,South Africa,Equity
+DIB,DB ISLAMIC BANK,0.05,Financials,United Arab Emirates,Equity
+2331,LI NING LTD,0.05,Consumer Discretionary,China,Equity
+INDUSINDBK,INDUSIND BANK LTD,0.05,Financials,India,Equity
+9626,BILIBILI INC,0.05,Communication,China,Equity
+BCI,BANCO DE CREDITO E INVERSION,0.05,Financials,Chile,Equity
+INDUSTOWER,INDUS TOWERS LTD,0.05,Communication,India,Equity
+BRL,BRL CASH,0.05,Cash and/or Derivatives,Brazil,Cash
+RADL3,RAIA DROGASIL,0.05,Consumer Staples,Brazil,Equity
+ADNOCGAS,ADNOC GAS PLC,0.04,Energy,United Arab Emirates,Equity
+WIPRO,WIPRO LTD,0.04,Information Technology,India,Equity
+MOL,MOL HUNGARIAN OIL AND GAS,0.04,Energy,Hungary,Equity
+TORNTPHARM,TORRENT PHARMACEUTICALS LTD,0.04,Health Care,India,Equity
+VOD,VODACOM GROUP LTD,0.04,Communication,South Africa,Equity
+2600,ALUMINUM CORPORATION OF CHINA LTD,0.04,Materials,China,Equity
+ADNOCDRILL,ADNOC DRILLING COMPANY,0.04,Energy,United Arab Emirates,Equity
+SCC.R,SIAM CEMENT NON-VOTING DR PCL,0.04,Materials,Thailand,Equity
+601318,PING AN INSURANCE (GROUP) OF CHINA,0.04,Financials,China,Equity
+ASURB,GRUPO AEROPORTUARIO DEL SURESTE B,0.04,Industrials,Mexico,Equity
+5871,CHAILEASE HOLDING LTD,0.04,Financials,Taiwan,Equity
+2280,ALMARAI,0.04,Consumer Staples,Saudi Arabia,Equity
+6030,CITIC SECURITIES COMPANY LTD H,0.04,Financials,China,Equity
+TUPRS.E,TURKIYE PETROL RAFINERILERI A,0.04,Energy,Turkey,Equity
+2376,GIGABYTE TECHNOLOGY LTD,0.04,Information Technology,Taiwan,Equity
+1208,MMG LTD,0.04,Materials,China,Equity
+4904,FAR EASTONE TELECOMMUNICATIONS LTD,0.04,Communication,Taiwan,Equity
+291,CHINA RESOURCES BEER HOLDINGS LTD,0.04,Consumer Staples,China,Equity
+KOFUBL,COCA-COLA FEMSA CLASS UBL UNITS,0.04,Consumer Staples,Mexico,Equity
+4938,PEGATRON CORP,0.04,Information Technology,Taiwan,Equity
+3293,INTERNATIONAL GAMES SYSTEM LTD,0.04,Communication,Taiwan,Equity
+ENEV3,ENEVA SA,0.04,Utilities,Brazil,Equity
+1101,TAIWAN CEMENT LTD,0.04,Materials,Taiwan,Equity
+1326,FORMOSA CHEMICALS & FIBRE CORP,0.04,Materials,Taiwan,Equity
+358,JIANGXI COPPER LTD H,0.04,Materials,China,Equity
+TME,TENCENT MUSIC ENTERTAINMENT GROUP,0.04,Communication,China,Equity
+ASHOKLEY,ASHOK LEYLAND LTD,0.04,Industrials,India,Equity
+259960,KRAFTON INC,0.04,Communication,Korea (South),Equity
+836,CHINA RESOURCES POWER LTD,0.04,Utilities,China,Equity
+BZ,KANZHUN AMERICAN DEPOSITORY SHARES,0.04,Industrials,China,Equity
+GAMUDA,GAMUDA,0.04,Industrials,Malaysia,Equity
+4013,DR SULAIMAN AL HABIB MEDICAL GRP,0.04,Health Care,Saudi Arabia,Equity
+1530,3SBIO INC,0.04,Health Care,China,Equity
+2099,CHINA GOLD INTERNATIONAL RESOURCES,0.04,Materials,China,Equity
+AKBNK.E,AKBANK A,0.04,Financials,Turkey,Equity
+BBDC3,BANCO BRADESCO SA,0.04,Financials,Brazil,Equity
+005830,DB INSURANCE LTD,0.04,Financials,Korea (South),Equity
+IQCD,INDUSTRIES QATAR,0.04,Industrials,Qatar,Equity
+FIBRAPL14,PROLOGIS PROPERTY MEXICO REIT,0.04,Real Estate,Mexico,Equity
+1080,ARAB NATIONAL BANK,0.04,Financials,Saudi Arabia,Equity
+POLYCAB,POLYCAB INDIA LTD,0.04,Industrials,India,Equity
+601288,AGRICULTURAL BANK OF CHINA LTD A,0.04,Financials,China,Equity
+BSANTANDER,BANCO SANTANDER CHILE,0.04,Financials,Chile,Equity
+BHARATFORG,BHARAT FORGE LTD,0.04,Consumer Discretionary,India,Equity
+018260,SAMSUNG SDS LTD,0.04,Information Technology,Korea (South),Equity
+CIBEST,GRUPO CIBEST SA,0.04,Financials,Colombia,Equity
+BSE,BSE LTD,0.04,Financials,India,Equity
+1772,GANFENG LITHIUM LTD H,0.04,Materials,China,Equity
+3606,FUYAO GLASS INDUSTRY GROUP LTD H,0.04,Consumer Discretionary,China,Equity
+NRP,NEPI ROCKCASTLE NV,0.04,Real Estate,South Africa,Equity
+FUNO11,FIBRA UNO ADMINISTRACION REIT,0.04,Real Estate,Mexico,Equity
+2313,SHENZHOU INTERNATIONAL GROUP LTD,0.04,Consumer Discretionary,China,Equity
+FORTIS,FORTIS HEALTHCARE LTD,0.04,Health Care,India,Equity
+3908,CHINA INTERNATIONAL CAPITAL CORP L,0.04,Financials,China,Equity
+BPCL,BHARAT PETROLEUM LTD,0.04,Energy,India,Equity
+BBSE3,BB SEGURIDADE SA,0.04,Financials,Brazil,Equity
+1919,COSCO SHIPPING HOLDINGS LTD H,0.04,Industrials,China,Equity
+IHH,IHH HEALTHCARE,0.04,Health Care,Malaysia,Equity
+PIDILITIND,PIDILITE INDUSTRIES LTD,0.04,Materials,India,Equity
+PAYTM,ONE COMMUNICATIONS LTD,0.04,Financials,India,Equity
+POWERINDIA,HITACHI ENERGY INDIA LTD,0.04,Industrials,India,Equity
+300502,EOPTOLINK TECHNOLOGY INC LTD A,0.04,Information Technology,China,Equity
+DLF,DLF LTD,0.04,Real Estate,India,Equity
+MBK,MBANK SA,0.04,Financials,Poland,Equity
+1140,BANK ALBILAD,0.04,Financials,Saudi Arabia,Equity
+RNI,REINET INVESTMENTS S.C.A.,0.04,Financials,South Africa,Equity
+PPH,PEPKOR HOLDINGS SHS LTD,0.04,Consumer Discretionary,South Africa,Equity
+1816,CGN POWER LTD H,0.04,Utilities,China,Equity
+JINDALSTEL,JINDAL STEEL LTD,0.04,Materials,India,Equity
+002594,BYD LTD A,0.04,Consumer Discretionary,China,Equity
+BDO,BDO UNIBANK INC,0.04,Financials,Philippines,Equity
+5876,SHANGHAI COMMERCIAL LTD,0.04,Financials,Taiwan,Equity
+2259,ZIJIN GOLD INTERNATIONAL LTD,0.04,Materials,China,Equity
+028300,HLB INC,0.04,Health Care,Korea (South),Equity
+2207,HOTAI MOTOR LTD,0.04,Consumer Discretionary,Taiwan,Equity
+2801,CHANG HWA COMMERCIAL BANK LTD,0.04,Financials,Taiwan,Equity
+CDR,CD PROJEKT SA,0.04,Communication,Poland,Equity
+ICICIGI,ICICI LOMBARD GENERAL INSURANCE CO,0.04,Financials,India,Equity
+GCARSOA1,GRUPO CARSO SERIES A1,0.04,Industrials,Mexico,Equity
+SOLARINDS,SOLAR INDUSTRIES INDIA LTD,0.04,Materials,India,Equity
+BVT,BIDVEST GROUP LTD,0.04,Industrials,South Africa,Equity
+TRUE.R,TRUE CORPORATION NON-VOTING DR PCL,0.04,Communication,Thailand,Equity
+1519,FORTUNE ELECTRIC LTD,0.04,Industrials,Taiwan,Equity
+TAL,TAL EDUCATION GROUP ADR REPTG,0.04,Consumer Discretionary,China,Equity
+300,MIDEA GROUP LTD CLASS H,0.04,Consumer Discretionary,China,Equity
+RECLTD,REC LTD,0.04,Financials,India,Equity
+002475,LUXSHARE PRECISION INDUSTRY LTD A,0.04,Information Technology,China,Equity
+MARICO,MARICO LTD,0.04,Consumer Staples,India,Equity
+AXIA7,CENTRAIS ELET BRAS PRF SA,0.04,Utilities,Brazil,Equity
+VIPS,VIPSHOP HOLDINGS SPONSORED ADS REP,0.04,Consumer Discretionary,China,Equity
+MUTHOOTFIN,MUTHOOT FINANCE LTD,0.04,Financials,India,Equity
+GODREJCP,GODREJ CONSUMER PRODUCTS LTD,0.04,Consumer Staples,India,Equity
+UGPA3,ULTRAPAR PARTICIPOES SA,0.04,Consumer Discretionary,Brazil,Equity
+BHEL,BHARAT HEAVY ELECTRICALS LTD,0.04,Industrials,India,Equity
+9660,HORIZON ROBOTICS,0.04,Information Technology,China,Equity
+8069,E INK HOLDINGS INC,0.04,Information Technology,Taiwan,Equity
+SRF,SRF LTD,0.04,Materials,India,Equity
+BIMBOA,GRUPO BIMBO A,0.04,Consumer Staples,Mexico,Equity
+RAIL3,RUMO SA,0.04,Industrials,Brazil,Equity
+DEWA,DUBAI ELECTRICITY AND WATER AUTHOR,0.04,Utilities,United Arab Emirates,Equity
+IOC,INDIAN OIL CORP LTD,0.03,Energy,India,Equity
+966,CHINA TAIPING INSURANCE HLDGS LTD,0.03,Financials,China,Equity
+1209,CHINA RESOURCES MIXC LIFESTYLE SER,0.03,Real Estate,China,Equity
+VEDL,VEDANTA LTD,0.03,Materials,India,Equity
+ADANIENT,ADANI ENTERPRISES LTD,0.03,Industrials,India,Equity
+7203,AL-ELM INFORMATION SECURITY COMPAN,0.03,Information Technology,Saudi Arabia,Equity
+2356,INVENTEC CORP,0.03,Information Technology,Taiwan,Equity
+EMAARDEV,EMAAR DEVELOPMENT,0.03,Real Estate,United Arab Emirates,Equity
+GFINBURO,GRUPO FINANCIERO INBURSA SRIES O,0.03,Financials,Mexico,Equity
+168,TSINGTAO BREWERY LTD H,0.03,Consumer Staples,China,Equity
+PPC,PUBLIC POWER CORPORATION SA,0.03,Utilities,Greece,Equity
+CMIG4,CIA ENERGETICA DE MINAS GERAIS PRE,0.03,Utilities,Brazil,Equity
+AUROPHARMA,AUROBINDO PHARMA LTD,0.03,Health Care,India,Equity
+SWIGGY,SWIGGY LTD,0.03,Consumer Discretionary,India,Equity
+DNP,DINO POLSKA SA,0.03,Consumer Staples,Poland,Equity
+024110,INDUSTRIAL BANK OF KOREA,0.03,Financials,Korea (South),Equity
+DIXON,DIXON TECHNOLOGIES (INDIA) LTD,0.03,Consumer Discretionary,India,Equity
+FALABELLA,FALABELLA SACI SA,0.03,Consumer Discretionary,Chile,Equity
+2912,PRESIDENT CHAIN STORE CORP,0.03,Consumer Staples,Taiwan,Equity
+005385,HYUNDAI MOTOR S1 PREF,0.03,Consumer Discretionary,Korea (South),Equity
+GAIL,GAIL INDIA LTD,0.03,Utilities,India,Equity
+TIMS3,TIM SA,0.03,Communication,Brazil,Equity
+AMBANK,AMMB HOLDINGS,0.03,Financials,Malaysia,Equity
+8210,BUPA ARABIA,0.03,Financials,Saudi Arabia,Equity
+CPN.R,CENTRAL PATTANA NON-VOTING DR PCL,0.03,Real Estate,Thailand,Equity
+ABB,ABB INDIA LTD,0.03,Industrials,India,Equity
+UNITDSPR,UNITED SPIRITS LTD,0.03,Consumer Staples,India,Equity
+HINDPETRO,HINDUSTAN PETROLEUM CORP LTD,0.03,Energy,India,Equity
+TOTS3,TOTVS SA,0.03,Information Technology,Brazil,Equity
+601398,INDUSTRIAL AND COMMERCIAL BANK OF,0.03,Financials,China,Equity
+2324,COMPAL ELECTRONICS INC,0.03,Information Technology,Taiwan,Equity
+CBQK,COMMERCIAL BANK OF QATAR,0.03,Financials,Qatar,Equity
+ZAIN,MOBILE TEL,0.03,Communication,Kuwait,Equity
+352820,HYBE LTD,0.03,Communication,Korea (South),Equity
+2018,AAC TECHNOLOGIES HOLDINGS INC,0.03,Information Technology,China,Equity
+003230,SAM YANG FOODS INC,0.03,Consumer Staples,Korea (South),Equity
+CLS,CLICKS GROUP LTD,0.03,Consumer Staples,South Africa,Equity
+OMAB,GRUPO AEROPORTUARIO DEL CENTRO NOR,0.03,Industrials,Mexico,Equity
+1787,SHANDONG GOLD MINING LTD H,0.03,Materials,China,Equity
+PHOENIXLTD,PHOENIX MILLS LTD,0.03,Real Estate,India,Equity
+6881,CHINA GALAXY SECURITIES LTD H,0.03,Financials,China,Equity
+THYAO.E,TURK HAVA YOLLARI AO A,0.03,Industrials,Turkey,Equity
+005940,NH INVESTMENT & SECURITIES LTD,0.03,Financials,Korea (South),Equity
+NAUKRI,INFO EDGE INDIA LTD,0.03,Communication,India,Equity
+5110,SAUDI ENERGY,0.03,Utilities,Saudi Arabia,Equity
+APLAPOLLO,APL APOLLO TUBES LTD,0.03,Materials,India,Equity
+MARK,MASRAF AL RAYAN,0.03,Financials,Qatar,Equity
+YESBANK,YES BANK LTD,0.03,Financials,India,Equity
+2618,JD LOGISTICS INC,0.03,Industrials,China,Equity
+BAAKOMB,KOMERCNI BANK,0.03,Financials,Czech Republic,Equity
+OUT,OUTSURANCE GROUP LTD,0.03,Financials,South Africa,Equity
+HLBANK,HONG LEONG BANK,0.03,Financials,Malaysia,Equity
+PETGAS,PETRONAS GAS,0.03,Utilities,Malaysia,Equity
+2834,TAIWAN BUSINESS BANK LTD,0.03,Financials,Taiwan,Equity
+BOUBYAN,BOUBYAN BANK,0.03,Financials,Kuwait,Equity
+KBANK.R,KASIKORNBANK PUBLIC NON-VOTING DR,0.03,Financials,Thailand,Equity
+KCHOL.E,KOC HOLDING A,0.03,Industrials,Turkey,Equity
+SIEMENS,SIEMENS LTD,0.03,Industrials,India,Equity
+2333,GREAT WALL MOTOR COMPANY LTD H,0.03,Consumer Discretionary,China,Equity
+135,KUNLUN ENERGY LTD,0.03,Utilities,China,Equity
+268,KINGDEE INT L SOFTWARE GROUP LTD,0.03,Information Technology,China,Equity
+902,HUANENG POWER INTERNATIONAL INC H,0.03,Utilities,China,Equity
+AMMN,AMMAN MINERAL INTERNASIONAL,0.03,Materials,Indonesia,Equity
+KTB.R,KRUNG THAI BANK PUBLIC NON-VOTING,0.03,Financials,Thailand,Equity
+RHBBANK,RHB BANK,0.03,Financials,Malaysia,Equity
+ISA,INTERCONEXION ELECTRICA SA,0.03,Utilities,Colombia,Equity
+UPL,UPL LTD,0.03,Materials,India,Equity
+010950,S-OIL CORP,0.03,Energy,Korea (South),Equity
+002384,SUZHOU DONGSHAN PRECISION MANUFACT,0.03,Information Technology,China,Equity
+SWB,SUNWAY BHD,0.03,Industrials,Malaysia,Equity
+SCB.R,SCB X PUBLIC COMPANY LIMITED NON-V,0.03,Financials,Thailand,Equity
+2474,CATCHER TECHNOLOGY LTD,0.03,Information Technology,Taiwan,Equity
+002371,NAURA TECHNOLOGY GROUP LTD A,0.03,Information Technology,China,Equity
+MALLPLAZA,PLAZA SA,0.03,Real Estate,Chile,Equity
+TIINDIA,TUBE INVESTMENTS OF INDIA LTD,0.03,Consumer Discretionary,India,Equity
+LTM,LTM LTD,0.03,Information Technology,India,Equity
+SIGMAFA,ALFA A,0.03,Consumer Staples,Mexico,Equity
+AXIA6,CENTRAIS ELETR BRAS-ELETROBRAS PRE,0.03,Utilities,Brazil,Equity
+KIMBERA,KIMBERLY-CLARK DE MEXICO CLASS A,0.03,Consumer Staples,Mexico,Equity
+2611,GUOTAI HAITONG SECURITIES CO LTD H,0.03,Financials,China,Equity
+3808,SINOTRUK (HONG KONG) LTD,0.03,Industrials,China,Equity
+003490,KOREAN AIR LINES LTD,0.03,Industrials,Korea (South),Equity
+3888,KINGSOFT LTD,0.03,Communication,China,Equity
+SUNDARMFIN,SUNDARAM FINANCE LTD,0.03,Financials,India,Equity
+BH.R,BUMRUNGRAD HOSPITAL NON-VOTING DR,0.03,Health Care,Thailand,Equity
+SDG,SD GUTHRIE,0.03,Consumer Staples,Malaysia,Equity
+PINFRA*,PROMOTORA Y OPERADORA DE INFRAESTR,0.03,Industrials,Mexico,Equity
+241,ALIBABA HEALTH INFORMATION TECH LT,0.03,Consumer Staples,China,Equity
+HTO,HELLENIC TELECOMMUNICATIONS ORGANI,0.03,Communication,Greece,Equity
+PCHEM,PETRONAS CHEMICALS GROUP,0.03,Materials,Malaysia,Equity
+6919,CALIWAY BIOPHARMACEUTICALS LTD,0.03,Health Care,Taiwan,Equity
+011200,HMM LTD,0.03,Industrials,Korea (South),Equity
+BBNI,BANK NEGARA INDONESIA,0.03,Financials,Indonesia,Equity
+NYKAA,FSN E-COMMERCE VENTURES LTD,0.03,Consumer Discretionary,India,Equity
+MOTV3,MOTIVA INFRAESTRUTURA DE MOBILIDAD,0.03,Industrials,Brazil,Equity
+MRF,MRF LTD,0.03,Consumer Discretionary,India,Equity
+QGTS,QATAR GAS TRANSPORT COMPANY LTD,0.03,Energy,Qatar,Equity
+SMPH,SM PRIME HOLDINGS INC,0.03,Real Estate,Philippines,Equity
+000100,YUHAN CORP,0.03,Health Care,Korea (South),Equity
+ADNOCDIST,ABU DHABI NATIONAL OIL COMPANY FOR,0.03,Consumer Discretionary,United Arab Emirates,Equity
+601166,INDUSTRIAL BANK LTD A,0.03,Financials,China,Equity
+603993,CHINA MOLYBDENUM LTD A,0.03,Materials,China,Equity
+TORNTPOWER,TORRENT POWER LTD,0.03,Utilities,India,Equity
+IDEA,VODAFONE IDEA LTD,0.03,Communication,India,Equity
+CENCOSUD,CENCOSUD SA,0.03,Consumer Staples,Chile,Equity
+ORDS,OOREDOO,0.03,Communication,Qatar,Equity
+TCELL.E,TURKCELL ILETISIM HIZMETLERI A,0.03,Communication,Turkey,Equity
+HYUNDAI,HYUNDAI MOTOR INDIA LTD,0.03,Consumer Discretionary,India,Equity
+MANKIND,MANKIND PHARMA LTD,0.03,Health Care,India,Equity
+ENGI11,ENERGISA UNITS SA,0.03,Utilities,Brazil,Equity
+1099,SINOPHARM GROUP LTD H,0.03,Health Care,China,Equity
+914,ANHUI CONCH CEMENT LTD H,0.03,Materials,China,Equity
+6862,HAIDILAO INTERNATIONAL HOLDING LTD,0.03,Consumer Discretionary,China,Equity
+YTLPOWR,YTL POWER INTERNATIONAL,0.03,Utilities,Malaysia,Equity
+LODHA,LODHA DEVELOPERS LTD,0.02,Real Estate,India,Equity
+EREGL.E,EREGLI DEMIR VE CELIK FABRIKALARI,0.02,Materials,Turkey,Equity
+9880,UBTECH ROBOTICS CORP LTD H,0.02,Industrials,China,Equity
+9863,ZHEJIANG LEAPMOTOR TECHNOLOGY LTD,0.02,Consumer Discretionary,China,Equity
+161390,HANKOOK TIRE & TECHNOLOGY LTD,0.02,Consumer Discretionary,Korea (South),Equity
+000858,WULIANGYE YIBIN LTD A,0.02,Consumer Staples,China,Equity
+601328,BANK OF COMMUNICATIONS LTD A,0.02,Financials,China,Equity
+1898,CHINA COAL ENERGY LTD H,0.02,Energy,China,Equity
+322,TINGYI (CAYMAN ISLANDS) HOLDINGS C,0.02,Consumer Staples,China,Equity
+MIL,BANK MILLENNIUM SA,0.02,Financials,Poland,Equity
+QIIK,QATAR INTERNATIONAL ISLAMIC BANK,0.02,Financials,Qatar,Equity
+2618,EVA AIRWAYS CORP,0.02,Industrials,Taiwan,Equity
+VOLTAS,VOLTAS LTD,0.02,Industrials,India,Equity
+270,GUANGDONG INVESTMENT LTD,0.02,Utilities,China,Equity
+BAJAJHLDNG,BAJAJ HOLDINGS AND INVESTMENT LTD,0.02,Financials,India,Equity
+BELA,JUMBO SA,0.02,Consumer Discretionary,Greece,Equity
+BOSCHLTD,BOSCH LTD,0.02,Consumer Discretionary,India,Equity
+GODREJPROP,GODREJ PROPERTIES LTD,0.02,Real Estate,India,Equity
+ENRIN,SIEMENS ENERGY INDIA LTD,0.02,Industrials,India,Equity
+1988,CHINA MINSHENG BANKING CORP LTD H,0.02,Financials,China,Equity
+600276,JIANGSU HENGRUI MEDICINE LTD A,0.02,Health Care,China,Equity
+MPHASIS,MPHASIS LTD,0.02,Information Technology,India,Equity
+SALIK,SALIK COMPANY P.J.S.C,0.02,Industrials,United Arab Emirates,Equity
+HAVELLS,HAVELLS INDIA LTD,0.02,Industrials,India,Equity
+WAAREEENER,WAAREE ENERGIES LTD,0.02,Information Technology,India,Equity
+NMDC,NMDC LTD,0.02,Materials,India,Equity
+1766,CRRC CORP LTD H,0.02,Industrials,China,Equity
+COLPAL,COLGATE PALMOLIVE INDIA LTD,0.02,Consumer Staples,India,Equity
+YKBNK.E,YAPI VE KREDI BANKASI A,0.02,Financials,Turkey,Equity
+780,TONGCHENG TRAVEL HOLDINGS LTD,0.02,Consumer Discretionary,China,Equity
+1519,J&T GLOBAL EXPRESS LTD,0.02,Industrials,China,Equity
+1929,CHOW TAI FOOK JEWELLERY GROUP LTD,0.02,Consumer Discretionary,China,Equity
+600030,CITIC SECURITIES LTD A,0.02,Financials,China,Equity
+KLBN11,KLABIN UNITS SA,0.02,Materials,Brazil,Equity
+BANKBARODA,BANK OF BARODA LTD,0.02,Financials,India,Equity
+AMBUJACEM,AMBUJA CEMENTS LTD,0.02,Materials,India,Equity
+ACP,ASSECO POLAND SA,0.02,Information Technology,Poland,Equity
+285,BYD ELECTRONIC (INTERNATIONAL) LTD,0.02,Information Technology,China,Equity
+300059,EAST MONEY INFORMATION LTD A,0.02,Financials,China,Equity
+DABUR,DABUR INDIA LTD,0.02,Consumer Staples,India,Equity
+ISCTR.E,TURKIYE IS BANKASI C,0.02,Financials,Turkey,Equity
+MISC,MISC,0.02,Industrials,Malaysia,Equity
+IOICORP,IOI CORPORATION,0.02,Consumer Staples,Malaysia,Equity
+3800,GCL TECHNOLOGY HOLDINGS LTD,0.02,Information Technology,China,Equity
+CDB,CELCOMDIGI,0.02,Communication,Malaysia,Equity
+ALKEM,ALKEM LABORATORIES LTD,0.02,Health Care,India,Equity
+GMRAIRPORT,GMR AIRPORTS LTD,0.02,Industrials,India,Equity
+ADNOCLS,ADNOC LOGISTICS & SERVICES PLC,0.02,Energy,United Arab Emirates,Equity
+3323,CHINA NATIONAL BUILDING MATERIAL L,0.02,Materials,China,Equity
+6990,SICHUAN KELUN-BIOTECH BIOPHARM LTD,0.02,Health Care,China,Equity
+2609,YANG MING MARINE TRANSPORT CORP,0.02,Industrials,Taiwan,Equity
+047050,POSCO INTERNATIONAL CORP,0.02,Industrials,Korea (South),Equity
+KLK,KUALA LUMPUR KEPONG,0.02,Consumer Staples,Malaysia,Equity
+VMM,VISHAL MEGA MART LTD,0.02,Consumer Discretionary,India,Equity
+8010,THE COOPERATIVE INSURANCE,0.02,Financials,Saudi Arabia,Equity
+PRESTIGE,PRESTIGE ESTATES PROJECTS LTD,0.02,Real Estate,India,Equity
+6886,HUATAI SECURITIES LTD H,0.02,Financials,China,Equity
+BRPT,BARITO PACIFIC,0.02,Materials,Indonesia,Equity
+JSWENERGY,JSW ENERGY LTD,0.02,Utilities,India,Equity
+300476,VICTORY GIANT TECHNOLOGY HUIZHOU L,0.02,Information Technology,China,Equity
+2268,WUXI XDC CAYMAN INC,0.02,Health Care,China,Equity
+COPEC,EMPRESAS COPEC SA,0.02,Consumer Discretionary,Chile,Equity
+600150,CHINA CSSC HOLDINGS LTD A,0.02,Industrials,China,Equity
+1504,TECO ELECTRIC & MACHINERY LTD,0.02,Industrials,Taiwan,Equity
+GRUMAB,GRUMA,0.02,Consumer Staples,Mexico,Equity
+IDFCFIRSTB,IDFC FIRST BANK LTD,0.02,Financials,India,Equity
+JSL,JINDAL STAINLESS LTD,0.02,Materials,India,Equity
+TPIA,CHANDRA ASRI PACIFIC,0.02,Materials,Indonesia,Equity
+BPI,BANK OF THE PHILIPPINE ISLANDS,0.02,Financials,Philippines,Equity
+ENELCHILE,ENEL CHILE SA,0.02,Utilities,Chile,Equity
+323410,KAKAOBANK CORP,0.02,Financials,Korea (South),Equity
+MER,MANILA ELECTRIC,0.02,Utilities,Philippines,Equity
+151,WANT WANT CHINA HOLDINGS LTD,0.02,Consumer Staples,China,Equity
+1402,FAR EASTERN NEW CENTURY CORP,0.02,Industrials,Taiwan,Equity
+UNIONBANK,UNION BANK OF INDIA LTD,0.02,Financials,India,Equity
+ALWN,ALLWYN AG,0.02,Consumer Discretionary,Greece,Equity
+PGE,PGE POLSKA GRUPA ENERGETYCZNA SA,0.02,Utilities,Poland,Equity
+HKD,HKD CASH,0.02,Cash and/or Derivatives,Hong Kong,Cash
+763,ZTE CORP H,0.02,Information Technology,China,Equity
+384,CHINA GAS HOLDINGS LTD,0.02,Utilities,China,Equity
+3998,BOSIDENG INTERNATIONAL LTD,0.02,Consumer Discretionary,China,Equity
+PNB,PUNJAB NATIONAL BANK,0.02,Financials,India,Equity
+GOTO,GOTO GOJEK TOKOPEDIA,0.02,Consumer Discretionary,Indonesia,Equity
+NHPC,NHPC LTD,0.02,Utilities,India,Equity
+601088,CHINA SHENHUA ENERGY LTD A,0.02,Energy,China,Equity
+ABCAPITAL,ADITYA BIRLA CAPITAL LTD,0.02,Financials,India,Equity
+0126Z0,SAMSUNG EPIS HOLDINGS LTD,0.02,Health Care,Korea (South),Equity
+PIIND,P.I. INDUSTRIES LTD,0.02,Materials,India,Equity
+532483,CANARA BANK LTD,0.02,Financials,India,Equity
+900948,INNER MONGOLIA YITAI COAL LTD B,0.02,Energy,China,Equity
+144,CHINA MERCHANTS PORT HOLDINGS LTD,0.02,Industrials,China,Equity
+1258,CHINA NONFERROUS MINING CORPORATIO,0.02,Materials,China,Equity
+000333,MIDEA GROUP LTD A,0.02,Consumer Discretionary,China,Equity
+034220,LG DISPLAY LTD,0.02,Information Technology,Korea (South),Equity
+300274,SUNGROW POWER SUPPLY LTD A,0.02,Industrials,China,Equity
+600000,SHANGHAI PUDONG DEVELOPMENT BANK L,0.02,Financials,China,Equity
+1102,ASIA CEMENT CORP,0.02,Materials,Taiwan,Equity
+SAHOL.E,HACI OMER SABANCI HOLDING A,0.02,Financials,Turkey,Equity
+090430,AMOREPACIFIC CORP,0.02,Consumer Staples,Korea (South),Equity
+SUPREMEIND,SUPREME INDUSTRIES LTD,0.02,Industrials,India,Equity
+2290,YANBU NATIONAL PETROCHEMICALS,0.02,Materials,Saudi Arabia,Equity
+SHREECEM,SHREE CEMENT LTD,0.02,Materials,India,Equity
+443060,HD HYUNDAI MARINE SOLUTION LTD,0.02,Industrials,Korea (South),Equity
+4300,DAR AL ARKAN REAL ESTATE DEVELOPME,0.02,Real Estate,Saudi Arabia,Equity
+TM,TELEKOM MALAYSIA,0.02,Communication,Malaysia,Equity
+COROMANDEL,COROMANDEL INTERNATIONAL LTD,0.02,Materials,India,Equity
+1357,MEITU INC,0.02,Communication,China,Equity
+3898,ZHUZHOU CRRC TIMES ELECTRIC LTD H,0.02,Industrials,China,Equity
+960,LONGFOR GROUP HOLDINGS LTD,0.02,Real Estate,China,Equity
+MONET,MONETA MONEY BNK,0.02,Financials,Czech Republic,Equity
+GBK,GULF BANK,0.02,Financials,Kuwait,Equity
+PAGEIND,PAGE INDUSTRIES LTD,0.02,Consumer Discretionary,India,Equity
+BRMS,BUMI RESOURCES MINERALS,0.02,Materials,Indonesia,Equity
+OIL,OIL INDIA LTD,0.02,Energy,India,Equity
+6969,SMOORE INTERNATIONAL HOLDINGS LTD,0.02,Consumer Staples,China,Equity
+9995,REMEGEN LTD H,0.02,Health Care,China,Equity
+LTF,L&T FINANCE LTD,0.02,Financials,India,Equity
+STNE,STONECO LTD CLASS A,0.02,Financials,Brazil,Equity
+ZAB,ZABKA GROUP SOCIETE ANONYME SA,0.02,Consumer Staples,Poland,Equity
+MABANEE,MABANEE COMPANY,0.02,Real Estate,Kuwait,Equity
+UNTR,UNITED TRACTORS,0.02,Energy,Indonesia,Equity
+603259,WUXI APPTEC LTD A,0.02,Health Care,China,Equity
+316,ORIENT OVERSEAS (INTERNATIONAL) LT,0.02,Industrials,China,Equity
+4190,JARIR MARKETING,0.02,Consumer Discretionary,Saudi Arabia,Equity
+PETRONET,PETRONET LNG LTD,0.02,Energy,India,Equity
+1548,GENSCRIPT BIOTECH CORP,0.02,Health Care,China,Equity
+3360,FAR EAST HORIZON LTD,0.02,Financials,China,Equity
+BDX,BUDIMEX SA,0.02,Industrials,Poland,Equity
+1776,GF SECURITIES LTD H,0.02,Financials,China,Equity
+2525,HESAI GROUP CLASS B,0.02,Consumer Discretionary,China,Equity
+SM,SM INVESTMENTS CORP,0.02,Industrials,Philippines,Equity
+OFSS,ORACLE FINANCIAL SERVICES SOFTWARE,0.02,Information Technology,India,Equity
+MBRF3,MARFRIG GLOBAL FOODS SA,0.02,Consumer Staples,Brazil,Equity
+OBEROIRLTY,OBEROI REALTY LTD,0.02,Real Estate,India,Equity
+4250,JABAL OMAR DEVELOPMENT,0.02,Consumer Discretionary,Saudi Arabia,Equity
+1193,CHINA RESOURCES GAS GROUP LTD,0.02,Utilities,China,Equity
+MAXIS,MAXIS,0.02,Communication,Malaysia,Equity
+PLN,PLN CASH,0.02,Cash and/or Derivatives,Poland,Cash
+601601,CHINA PACIFIC INSURANCE (GROUP) LT,0.02,Financials,China,Equity
+WARBABANK,WARBABANK,0.02,Financials,Kuwait,Equity
+CPF.R,CHAROEN POKPHAND FOODS NON-VOTING,0.02,Consumer Staples,Thailand,Equity
+300394,SUZHOU TFC OPTICAL COMMUNICATION L,0.02,Information Technology,China,Equity
+AIRARABIA,AIR ARABIA,0.02,Industrials,United Arab Emirates,Equity
+1030,SAUDI INVESTMENT BANK,0.02,Financials,Saudi Arabia,Equity
+600309,WANHUA CHEMICAL GROUP LTD A,0.02,Materials,China,Equity
+KRW,KRW CASH,0.02,Cash and/or Derivatives,Korea (South),Cash
+916,CHINA LONGYUAN POWER GROUP CORP LT,0.02,Utilities,China,Equity
+CPFE3,CPFL ENERGIA SA,0.02,Utilities,Brazil,Equity
+ICICIPRULI,ICICI PRUDENTIAL LIFE INSURANCE CO,0.02,Financials,India,Equity
+2588,BOC AVIATION LTD,0.02,Industrials,China,Equity
+IDR,IDR CASH,0.02,Cash and/or Derivatives,Indonesia,Cash
+688008,MONTAGE TECHNOLOGY LTD A,0.02,Information Technology,China,Equity
+MINT.R,MINOR INTERNATIONAL PUBLIC NON-VOT,0.02,Consumer Discretionary,Thailand,Equity
+6181,LAOPU GOLD LTD H,0.02,Consumer Discretionary,China,Equity
+CXSE3,CAIXA SEGURIDADE PARTICIPACOES SA,0.02,Financials,Brazil,Equity
+326030,SK BIOPHARMACEUTICALS LTD,0.02,Health Care,Korea (South),Equity
+3618,CHONGQING RURAL COMMERCIAL BANK LT,0.02,Financials,China,Equity
+ZYDUSLIFE,ZYDUS LIFESCIENCES LTD,0.02,Health Care,India,Equity
+000338,WEICHAI POWER LTD A,0.02,Industrials,China,Equity
+601816,BEIJING-SHANGHAI HIGH SPEED RAILWA,0.02,Industrials,China,Equity
+EGIE3,ENGIE BRASIL ENERGIA SA,0.02,Utilities,Brazil,Equity
+1044,HENGAN INTERNATIONAL GROUP LTD,0.02,Consumer Staples,China,Equity
+390,CHINA RAILWAY GROUP LTD H,0.02,Industrials,China,Equity
+136,CHINA RUYI HOLDINGS LTD,0.02,Communication,China,Equity
+ASTRAL,ASTRAL LTD,0.02,Industrials,India,Equity
+688012,ADVANCED MICRO-FABRICATION EQUIPME,0.02,Information Technology,China,Equity
+PSSA3,PORTO SEGURO SA,0.02,Financials,Brazil,Equity
+LEGN,LEGEND BIOTECH ADR REP CORP,0.02,Health Care,China,Equity
+601857,PETROCHINA LTD A,0.02,Energy,China,Equity
+601225,SHAANXI COAL INDUSTRY LTD A,0.02,Energy,China,Equity
+002714,MUYUAN FOODS LTD A,0.02,Consumer Staples,China,Equity
+4100,MAKKAH CONSTRUCTION AND DEVELOPMEN,0.02,Real Estate,Saudi Arabia,Equity
+392,BEIJING ENTERPRISES HOLDINGS LTD,0.02,Utilities,China,Equity
+QFLS,QATAR FUEL,0.02,Energy,Qatar,Equity
+MBT,METROPOLITAN BANK AND TRUST CO,0.02,Financials,Philippines,Equity
+AC,AYALA CORP,0.02,Industrials,Philippines,Equity
+603986,GIGADEVICE SEMICONDUCTOR INC A,0.02,Information Technology,China,Equity
+601211,GUOTAI HAITONG SECURITIES LTD A,0.02,Financials,China,Equity
+SBICARD,SBI CARDS & PAYMENT SERVICES LTD,0.02,Financials,India,Equity
+2228,XTALPI HOLDINGS LTD,0.02,Health Care,China,Equity
+JUBLFOOD,JUBILANT FOODWORKS LTD,0.02,Consumer Discretionary,India,Equity
+2883,CHINA OILFIELD SERVICES LTD H,0.02,Energy,China,Equity
+BALKRISIND,BALKRISHNA INDUSTRIES LTD,0.02,Consumer Discretionary,India,Equity
+002916,SHENNAN CIRCUITS LTD A,0.02,Information Technology,China,Equity
+TATACOMM,TATA COMMUNICATIONS LTD,0.02,Communication,India,Equity
+1020,BANK ALJAZIRA,0.02,Financials,Saudi Arabia,Equity
+1908,C D INTERNATIONAL INVESTMENT GROUP,0.02,Real Estate,China,Equity
+DUBK,DUKHAN BANK,0.02,Financials,Qatar,Equity
+MPHC,MESAIEED PETROCHEMICAL HOLDING,0.02,Materials,Qatar,Equity
+002142,BANK OF NINGBO LTD A,0.02,Financials,China,Equity
+000001,PING AN BANK LTD A,0.02,Financials,China,Equity
+1585,YADEA GROUP HOLDINGS LTD,0.02,Consumer Discretionary,China,Equity
+002463,WUS PRINTED CIRCUIT (KUNSHAN) LTD,0.02,Information Technology,China,Equity
+KALYANKJIL,KALYAN JEWELLERS INDIA LTD,0.01,Consumer Discretionary,India,Equity
+600406,NARI TECHNOLOGY LTD A,0.01,Industrials,China,Equity
+DSSA,DIAN SWASTATIKA SENTOSA,0.01,Energy,Indonesia,Equity
+180640,HANJIN KAL,0.01,Consumer Discretionary,Korea (South),Equity
+968,XINYI SOLAR HOLDINGS LTD,0.01,Information Technology,China,Equity
+CHDRAUIB,GRUPO COMERCIAL CHEDRAUI,0.01,Consumer Staples,Mexico,Equity
+BREN,BARITO RENEWABLES ENERGY,0.01,Utilities,Indonesia,Equity
+600919,BANK OF JIANGSU CORPORATION LTD A,0.01,Financials,China,Equity
+600989,NINGXIA BAOFENG ENERGY GROUP LTD A,0.01,Materials,China,Equity
+000792,QINGHAI SALT LAKE INDUSTRY LTD A,0.01,Materials,China,Equity
+TTB.R,TMBTHANACHART BANK NON-VOTING DR P,0.01,Financials,Thailand,Equity
+9896,MINISO GROUP HOLDING LTD,0.01,Consumer Discretionary,China,Equity
+CPIN,CHAROEN POKPHAND INDONESIA,0.01,Consumer Staples,Indonesia,Equity
+1882,HAITIAN INTERNATIONAL LTD,0.01,Industrials,China,Equity
+NESTLE,NESTLE MALAYSIA,0.01,Consumer Staples,Malaysia,Equity
+1111,SAUDI TADAWUL GROUP CO,0.01,Financials,Saudi Arabia,Equity
+601988,BANK OF CHINA LTD A,0.01,Financials,China,Equity
+2610,CHINA AIRLINES LTD,0.01,Industrials,Taiwan,Equity
+600111,CHINA NORTHERN RARE EARTH (GROUP),0.01,Materials,China,Equity
+-,MALCO ENERGY LIMITED,0.01,Materials,India,Equity
+2311004D,VEDANTA ALUMINIUM,0.01,Other,India,Equity
+STLTIN,TALWANDI SABO POWER LTD,0.01,Utilities,India,Equity
+STLTIN,TALWANDI SABO,0.01,Utilities,India,Equity
+QEWS,NEBRAS ENERGY,0.01,Utilities,Qatar,Equity
+601668,CHINA STATE CONSTRUCTION ENGINEERI,0.01,Industrials,China,Equity
+300760,SHENZHEN MINDRAY BIO-MEDICAL ELECT,0.01,Health Care,China,Equity
+4002,AL MOUWASAT MEDICAL SERVICES,0.01,Health Care,Saudi Arabia,Equity
+600183,SHENGYI TECHNOLOGY LTD A,0.01,Information Technology,China,Equity
+AXIATA,AXIATA GROUP,0.01,Communication,Malaysia,Equity
+2382,ADES HOLDING CO,0.01,Energy,Saudi Arabia,Equity
+2615,WAN HAI LINES LTD,0.01,Industrials,Taiwan,Equity
+600487,HENGTONG OPTIC ELECTRIC LTD A,0.01,Information Technology,China,Equity
+YTL,YTL CORPORATION,0.01,Utilities,Malaysia,Equity
+ALI,AYALA LAND INC,0.01,Real Estate,Philippines,Equity
+RVNL,RAIL VIKAS NIGAM LTD,0.01,Industrials,India,Equity
+300033,HITHINK ROYALFLUSH INFORMATION NET,0.01,Financials,China,Equity
+PETDAG,PETRONAS DAGANGAN,0.01,Consumer Discretionary,Malaysia,Equity
+2380,CHINA POWER INTERNATIONAL DEVELOPM,0.01,Utilities,China,Equity
+6186,CHINA FEIHE LTD,0.01,Consumer Staples,China,Equity
+601939,CHINA CONSTRUCTION BANK CORP A,0.01,Financials,China,Equity
+177,JIANGSU EXPRESSWAY LTD H,0.01,Industrials,China,Equity
+QL,QL RESOURCES,0.01,Consumer Staples,Malaysia,Equity
+4263,SAL SAUDI LOGISTICS SERVICE CO,0.01,Industrials,Saudi Arabia,Equity
+TEL,PLDT INC,0.01,Communication,Philippines,Equity
+2026,PONY AI INC,0.01,Information Technology,China,Equity
+002938,AVARY HOLDING (SHENZHEN) LTD A,0.01,Information Technology,China,Equity
+2633,TAIWAN HIGH SPEED RAIL CORP,0.01,Industrials,Taiwan,Equity
+THB,THB CASH,0.01,Cash and/or Derivatives,Thailand,Cash
+3311,CHINA STATE CONSTRUCTION INTERNATI,0.01,Industrials,China,Equity
+AMRT,PT SUMBER ALFARIA TRIJAYA,0.01,Consumer Staples,Indonesia,Equity
+601985,CHINA NATIONAL NUCLEAR POWER LTD A,0.01,Utilities,China,Equity
+603288,FOSHAN HAI TIAN FLAVOURING & FOOD,0.01,Consumer Staples,China,Equity
+600809,SHANXI XINGHUACUN FEN WINE FACTORY,0.01,Consumer Staples,China,Equity
+2367,GIANT BIOGENE HOLDING LTD,0.01,Consumer Staples,China,Equity
+601919,COSCO SHIPPING HOLDINGS LTD A,0.01,Industrials,China,Equity
+032640,LG UPLUS CORP,0.01,Communication,Korea (South),Equity
+002352,S.F. HOLDING LTD A,0.01,Industrials,China,Equity
+CMPC,EMPRESAS CMPC SA,0.01,Materials,Chile,Equity
+301308,SHENZHEN LONGSYS ELECTRONICS LTD A,0.01,Information Technology,China,Equity
+300408,CHAOZHOU THREE-CIRCLE (GROUP) LTD,0.01,Information Technology,China,Equity
+FROTO.E,FORD OTOMOTIV SANAYI A,0.01,Consumer Discretionary,Turkey,Equity
+772,CHINA LITERATURE LTD,0.01,Communication,China,Equity
+600887,INNER MONGOLIA YILI INDUSTRIAL GRO,0.01,Consumer Staples,China,Equity
+601688,HUATAI SECURITIES LTD A,0.01,Financials,China,Equity
+CUAN,PETRINDO JAYA KREASI,0.01,Energy,Indonesia,Equity
+600031,SANY HEAVY INDUSTRY LTD A,0.01,Industrials,China,Equity
+7202,ARABIAN INTERNET AND COMMUNICATION,0.01,Information Technology,Saudi Arabia,Equity
+9899,NETEASE CLOUD MUSIC INC,0.01,Communication,China,Equity
+600346,HENGLI PETROCHEMICAL LTD A,0.01,Materials,China,Equity
+002460,GANFENG LITHIUM GROUP LTD A,0.01,Materials,China,Equity
+PHP,PHP CASH,0.01,Cash and/or Derivatives,Philippines,Cash
+000063,ZTE CORP A,0.01,Information Technology,China,Equity
+601100,JIANGSU HENGLI HYDRAULIC LTD A,0.01,Industrials,China,Equity
+MRDIY,MR D.I.Y. GROUP (M),0.01,Consumer Discretionary,Malaysia,Equity
+002281,ACCELINK TECHNOLOGIES LTD A,0.01,Information Technology,China,Equity
+601872,CHINA MERCHANTS ENERGY SHIPPING LT,0.01,Energy,China,Equity
+000776,GF SECURITIES LTD A,0.01,Financials,China,Equity
+TMGH,TALAAT MOUSTAFA GROUP,0.01,Real Estate,Egypt,Equity
+601600,ALUMINUM CORPORATION OF CHINA LTD,0.01,Materials,China,Equity
+601658,POSTAL SAVINGS BANK OF CHINA LTD A,0.01,Financials,China,Equity
+002353,YANTAI JEREH OILFIELD SERVICES GRO,0.01,Energy,China,Equity
+600028,CHINA PETROLEUM & CHEMICAL CORP A,0.01,Energy,China,Equity
+001309,SHENZHEN TECHWINSEMI TECHNOLOGY LT,0.01,Information Technology,China,Equity
+600176,CHINA JUSHI LTD A,0.01,Materials,China,Equity
+000725,BOE TECHNOLOGY GROUP LTD A,0.01,Information Technology,China,Equity
+300014,EVE ENERGY LTD A,0.01,Industrials,China,Equity
+2799,CHINA CITIC FIN ASSET MGT LTD H,0.01,Financials,China,Equity
+601127,SERES GROUP LTD A,0.01,Consumer Discretionary,China,Equity
+600089,TBEA LTD A,0.01,Industrials,China,Equity
+JFC,JOLLIBEE FOODS CORP,0.01,Consumer Discretionary,Philippines,Equity
+000408,ZANGGE MINING LTD A,0.01,Materials,China,Equity
+300433,LENS TECHNOLOGY LTD A,0.01,Information Technology,China,Equity
+000568,LUZHOU LAO JIAO LTD A,0.01,Consumer Staples,China,Equity
+600050,CHINA UNITED NETWORK COMMUNICATION,0.01,Communication,China,Equity
+601818,CHINA EVERBRIGHT BANK LTD A,0.01,Financials,China,Equity
+688521,VERISILICON MICROELECTRONICS (SHAN,0.01,Information Technology,China,Equity
+600690,HAIER SMART HOME LTD A,0.01,Consumer Discretionary,China,Equity
+000988,HUAGONG TECH LTD A,0.01,Information Technology,China,Equity
+300857,SHARETRONIC DATA TECHNOLOGY LTD A,0.01,Information Technology,China,Equity
+601009,BANK OF NANJING LTD A,0.01,Financials,China,Equity
+601336,NEW CHINA LIFE INSURANCE LTD A,0.01,Financials,China,Equity
+300442,RANGE INTELLIGENT COMPUTING TECHNO,0.01,Information Technology,China,Equity
+600019,BAOSHAN IRON & STEEL LTD A,0.01,Materials,China,Equity
+2357,AVICHINA INDUSTRY & TECHNOLOGY LTD,0.01,Industrials,China,Equity
+688525,BIWIN STORAGE TECHNOLOGY LTD A,0.01,Information Technology,China,Equity
+600522,JIANGSU ZHONGTIAN TECHNOLOGY LTD A,0.01,Industrials,China,Equity
+601766,CRRC CORP LTD A,0.01,Industrials,China,Equity
+000657,CHINA TUNGSTEN AND HIGHTECH MATERI,0.01,Materials,China,Equity
+002493,RONGSHENG PETRO CHEMICAL LTD A,0.01,Materials,China,Equity
+688072,PIOTECH INC A,0.01,Information Technology,China,Equity
+600489,ZHONGJIN GOLD CORP LTD A,0.01,Materials,China,Equity
+605117,NINGBO DEYE TECHNOLOGY LTD A,0.01,Industrials,China,Equity
+688111,BEIJING KINGSOFT OFFICE SOFTWARE I,0.01,Information Technology,China,Equity
+600893,AECC AVIATION POWER LTD A,0.01,Industrials,China,Equity
+1066,SHANDONG WEIGAO GP MEDICAL POLYMER,0.01,Health Care,China,Equity
+600547,SHANDONG GOLD-MINING LTD A,0.01,Materials,China,Equity
+600016,CHINA MINSHENG BANKING CORP LTD A,0.01,Financials,China,Equity
+601229,BANK OF SHANGHAI LTD A,0.01,Financials,China,Equity
+688498,YUANJIE SEMICONDUCTOR TECHNOLOGY L,0.01,Information Technology,China,Equity
+600010,INNER MONGOLIA BAOTOU STEEL UNION,0.01,Materials,China,Equity
+600660,FUYAO GLASS INDUSTRY GROUP LTD A,0.01,Consumer Discretionary,China,Equity
+600905,CHINA THREE GORGES RENEWABLES(GROU,0.01,Utilities,China,Equity
+600188,YANKUANG ENERGY GROUP LTD A,0.01,Energy,China,Equity
+603799,ZHEJIANG HUAYOU COBALT LTD A,0.01,Industrials,China,Equity
+SAR,SAR CASH(COMMITTED),0.01,Cash and/or Derivatives,Saudi Arabia,Cash
+600926,BANK OF HANGZHOU LTD A,0.01,Financials,China,Equity
+601012,LONGI GREEN ENERGY TECHNOLOGY LTD,0.01,Information Technology,China,Equity
+601888,CHINA TOURISM GROUP DUTY FREE CORP,0.01,Consumer Discretionary,China,Equity
+000807,YUNNAN ALUMINIUM LTD A,0.01,Materials,China,Equity
+002709,GUANGZHOU TINCI MATERIALS TECHNOLO,0.01,Materials,China,Equity
+CLP,CLP CASH,0.01,Cash and/or Derivatives,Chile,Cash
+603501,OMNIVISION INTEGRATED CIRCUITS GRO,0.01,Information Technology,China,Equity
+000425,XCMG CONSTRUCTION MACHINERY LTD A,0.01,Industrials,China,Equity
+600875,DONGFANG ELECTRIC CORP LTD A,0.01,Industrials,China,Equity
+EAST,EASTERN CO.,0.01,Consumer Staples,Egypt,Equity
+601689,NINGBO TUOPU GROUP CLS LTD A,0.01,Consumer Discretionary,China,Equity
+300604,HANGZHOU CHANG CHUAN TECHNOLOGY LT,0.01,Information Technology,China,Equity
+002602,ZHEJIANG CENTURY HUATONG GROUP LTD,0.01,Communication,China,Equity
+601390,CHINA RAILWAY GROUP LTD A,0.01,Industrials,China,Equity
+000977,INSPUR ELECTRONIC INFORMATION INDU,0.01,Information Technology,China,Equity
+002230,IFLYTEK LTD A,0.01,Information Technology,China,Equity
+601995,CHINA INTERNATIONAL CAPITAL CORP L,0.01,Financials,China,Equity
+002466,TIANQI LITHIUM INDUSTRIES CORP A,0.01,Materials,China,Equity
+600999,CHINA MERCHANTS SECURITIES LTD A,0.01,Financials,China,Equity
+000166,SHENWAN HONGYUAN GROUP LTD A,0.01,Financials,China,Equity
+601868,CHINA ENERGY ENGINEERING CORP LTD,0.01,Industrials,China,Equity
+600673,GUANGDONG HEC TECHNOLOGY HOLDING L,0.01,Materials,China,Equity
+600418,ANHUI JIANGHUAI AUTOMOBILE CORP LT,0.01,Consumer Discretionary,China,Equity
+002600,LINGYI ITECH (GUANGDONG) A,0.01,Information Technology,China,Equity
+000651,GREE ELECTRIC APPLIANCES INC OF ZH,0.01,Consumer Discretionary,China,Equity
+601727,SHANGHAI ELECTRIC GROUP LTD A,0.01,Industrials,China,Equity
+300498,WENS FOODSTUFF GROUP LTD,0.01,Consumer Staples,China,Equity
+002080,SINOMA SCIENCE & TECHNOLOGY LTD A,0.01,Materials,China,Equity
+605499,EASTROC BEVERAGE (GROUP) LTD A,0.01,Consumer Staples,China,Equity
+601169,BANK OF BEIJING LTD A,0.01,Financials,China,Equity
+MYR,MYR CASH,0.01,Cash and/or Derivatives,Malaysia,Cash
+600886,SDIC POWER HOLDINGS LTD A,0.01,Utilities,China,Equity
+601669,POWER CONSTRUCTION CORPORATION OF,0.01,Industrials,China,Equity
+600104,SAIC MOTOR CORP LTD A,0.01,Consumer Discretionary,China,Equity
+002202,GOLDWIND SCIENCE&TECHNOLOGY LTD A,0.01,Industrials,China,Equity
+601628,CHINA LIFE INSURANCE LTD A,0.01,Financials,China,Equity
+002837,SHENZHEN ENVICOOL TECHNOLOGY LTD A,0.01,Industrials,China,Equity
+601006,DAQIN RAILWAY LTD A,0.01,Industrials,China,Equity
+300136,SHENZHEN SUNWAY COMMUNICATION LTD,0.01,Information Technology,China,Equity
+600160,ZHEJIANG JU HUA LTD A,0.01,Materials,China,Equity
+600362,JIANGXI COPPER LTD A,0.01,Materials,China,Equity
+002001,ZHEJIANG NHU LTD A,0.01,Materials,China,Equity
+300124,SHENZHEN INOVANCE TECHNOLOGY LTD A,0.01,Industrials,China,Equity
+002050,ZHEJIANG SANHUA INTELLIGENT CONTRO,0.01,Industrials,China,Equity
+300015,AIER EYE HOSPITAL GROUP LTD A,0.01,Health Care,China,Equity
+MXN,MXN CASH,0.01,Cash and/or Derivatives,Mexico,Cash
+603296,HUAQIN TECHNOLOGY LTD A,0.01,Information Technology,China,Equity
+688271,SHANGHAI UNITED IMAGING HEALTHCARE,0.01,Health Care,China,Equity
+000538,YUNNAN BAIYAO GROUP LTD A,0.01,Health Care,China,Equity
+600549,XIAMEN TUNGSTEN LTD A,0.01,Materials,China,Equity
+000938,UNISPLENDOUR CORP LTD A,0.01,Information Technology,China,Equity
+002027,FOCUS MEDIA INFORMATION TECHNOLOGY,0.01,Communication,China,Equity
+601881,CHINA GALAXY SECURITIES LTD A,0.01,Financials,China,Equity
+601066,CHINA SECURITIES LTD A,0.01,Financials,China,Equity
+000426,INNER MONGOLIA XINGYE SILVER&TIN M,0.01,Materials,China,Equity
+601998,CHINA CITIC BANK CORP LTD A,0.01,Financials,China,Equity
+601179,CHINA XD ELECTRIC LTD A,0.01,Industrials,China,Equity
+600795,GD POWER DEVELOPMENT LTD A,0.01,Utilities,China,Equity
+000895,HENAN SHUANGHUI INVESTMENT & DEVEL,0.01,Consumer Staples,China,Equity
+002648,SATELLITE CHEMICAL LTD A,0.01,Materials,China,Equity
+002625,KUANG-CHI TECHNOLOGIES LTD A,0.01,Industrials,China,Equity
+000301,JIANGSU EASTERN SHENGHONG LTD A,0.01,Materials,China,Equity
+000100,TCL TECHNOLOGY GROUP CORP A,0.01,Information Technology,China,Equity
+300475,SHANNON SEMICONDUCTOR TECHNOLOGY L,0.01,Information Technology,China,Equity
+600115,CHINA EASTERN AIRLINES CORP LTD A,0.01,Industrials,China,Equity
+000630,TONGLING NONFERROUS METALS GROUP L,0.01,Materials,China,Equity
+600584,JCET GROUP LTD A,0.01,Information Technology,China,Equity
+601360,360 SECURITY TECHNOLOGY INC A,0.01,Information Technology,China,Equity
+300757,ROBOTECHNIK INTELLIGENT TECHNOLOGY,0.01,Industrials,China,Equity
+600026,COSCO SHIPPING ENERGY TRANSPORTATI,0.01,Energy,China,Equity
+002241,GOERTEK INC A,0.01,Information Technology,China,Equity
+601825,SHANGHAI RURAL COMMERCIAL BANK LTD,0.01,Financials,China,Equity
+000975,SHANJIN INTERNATIONAL GOLD LTD A,0.01,Materials,China,Equity
+600015,HUA XIA BANK LTD A,0.01,Financials,China,Equity
+002156,TONGFU MICROELECTRONICS LTD A,0.01,Information Technology,China,Equity
+001979,CHINA MERCHANTS SHEKOU INDUSTRIAL,0.01,Real Estate,China,Equity
+600436,ZHANGZHOU PIENTZEHUANG PHARMACEUTI,0.01,Health Care,China,Equity
+601111,AIR CHINA LTD A,0.01,Industrials,China,Equity
+600066,YUTONG BUS LTD A,0.01,Industrials,China,Equity
+CNH,CNH CASH,0.01,Cash and/or Derivatives,China,Cash
+000617,CNPC CAPITAL LTD A,0.01,Financials,China,Equity
+601168,WESTERN MINING LTD A,0.01,Materials,China,Equity
+600585,ANHUI CONCH CEMENT LTD A,0.01,Materials,China,Equity
+SGAFT,CASH COLLATERAL USD SGAFT,0.01,Cash and/or Derivatives,United States,Cash Collateral and Margins
+CZK,CZK CASH,0.01,Cash and/or Derivatives,Czech Republic,Cash
+600703,SANAN OPTOELECTRONICS LTD A,0.01,Information Technology,China,Equity
+002736,GUOSEN SECURITIES LTD A,0.01,Financials,China,Equity
+600498,FIBERHOME TELECOMMUNICATION TECHNO,0.01,Information Technology,China,Equity
+TWD,TWD CASH,0.01,Cash and/or Derivatives,Taiwan,Cash
+002532,TIANSHAN ALUMINUM GROUP LTD A,0.01,Materials,China,Equity
+600438,TONGWEI LTD A,0.01,Information Technology,China,Equity
+000066,CHINA GREATWALL TECHNOLOGY GROUP L,0.01,Information Technology,China,Equity
+601231,UNIVERSAL SCIENTIFIC INDUSTRIAL (S,0.01,Information Technology,China,Equity
+002311,GUANGDONG HAID GROUP LTD A,0.01,Consumer Staples,China,Equity
+002812,YUNNAN ENERGY NEW MATERIAL (GROUP),0.01,Materials,China,Equity
+000933,HENAN SHENHUO COAL & POWER LTD A,0.01,Materials,China,Equity
+300751,SUZHOU MAXWELL TECHNOLOGIES LTD A,0.01,Information Technology,China,Equity
+688396,CHINA RESOURCES MICROELECTRONICS L,0.01,Information Technology,China,Equity
+601838,BANK OF CHENGDU LTD A,0.01,Financials,China,Equity
+600011,HUANENG POWER INTERNATIONAL INC A,0.01,Utilities,China,Equity
+603893,ROCKCHIP ELECTRONICS LTD A,0.01,Information Technology,China,Equity
+688183,SHENGYI ELECTRONICS LTD A,0.01,Information Technology,China,Equity
+688126,NATIONAL SILICON INDUSTRY GROUP LT,0.01,Information Technology,China,Equity
+600048,POLY DEVELOPMENTS AND HOLDINGS GRO,0.01,Real Estate,China,Equity
+601901,FOUNDER SECURITIES LTD A,0.01,Financials,China,Equity
+002128,INNER MONGOLIA DIAN TOU ENERGY COR,0.01,Energy,China,Equity
+688387,CICT MOBILE COMMUNICATION TECHNOLO,0.01,Information Technology,China,Equity
+688110,DOSILICON LTD A,0.01,Information Technology,China,Equity
+600674,SICHUAN CHUANTOU ENERGY LTD A,0.01,Utilities,China,Equity
+000625,CHONGQING CHANGAN AUTOMOBILE LTD A,0.01,Consumer Discretionary,China,Equity
+603228,SHENZHEN KINWONG ELECTRONIC LTD A,0.01,Information Technology,China,Equity
+600958,ORIENT SECURITIES LTD A,0.01,Financials,China,Equity
+601877,ZHEJIANG CHINT ELECTRICS LTD A,0.01,Industrials,China,Equity
+601991,DATANG INTERNATIONAL POWER GENERAT,0.01,Utilities,China,Equity
+603659,SHANGHAI PUTAILAI NEW ENERGY TECHN,0.01,Materials,China,Equity

@@ -1,0 +1,101 @@
+Ticker,Security Name,Weight (%),Sector,Country
+NVDA,NVIDIA Corp,3.97,Information Technology,United States
+AAPL,Apple Inc,3.56,Information Technology,United States
+MSFT,Microsoft Corp,2.68,Information Technology,United States
+AMZN,Amazon.com Inc,1.94,Consumer Discretionary,United States
+GOOGL,Alphabet Inc Class A,1.63,Communication Services,United States
+AVGO,Broadcom Inc,1.39,Information Technology,United States
+2330.TW,Taiwan Semiconductor Manufacturing,1.37,Information Technology,Taiwan
+GOOG,Alphabet Inc Class C,1.32,Communication Services,United States
+META,Meta Platforms Inc,1.22,Communication Services,United States
+TSLA,Tesla Inc,1.02,Consumer Discretionary,United States
+BRK-B,Berkshire Hathaway Inc Class B,0.89,Financials,United States
+LLY,Eli Lilly and Co,0.82,Health Care,United States
+JPM,JPMorgan Chase & Co,0.79,Financials,United States
+WMT,Walmart Inc,0.67,Consumer Staples,United States
+V,Visa Inc Class A,0.64,Financials,United States
+UNH,UnitedHealth Group Inc,0.62,Health Care,United States
+XOM,Exxon Mobil Corp,0.61,Energy,United States
+ORCL,Oracle Corp,0.58,Information Technology,United States
+MA,Mastercard Inc Class A,0.57,Financials,United States
+COST,Costco Wholesale Corp,0.55,Consumer Staples,United States
+NFLX,Netflix Inc,0.52,Communication Services,United States
+HD,Home Depot Inc,0.5,Consumer Discretionary,United States
+PG,Procter & Gamble Co,0.48,Consumer Staples,United States
+JNJ,Johnson & Johnson,0.46,Health Care,United States
+ABBV,AbbVie Inc,0.44,Health Care,United States
+BAC,Bank of America Corp,0.42,Financials,United States
+CRM,Salesforce Inc,0.41,Information Technology,United States
+ASML,ASML Holding NV,0.4,Information Technology,Netherlands
+NOW,ServiceNow Inc,0.39,Information Technology,United States
+AMD,Advanced Micro Devices Inc,0.38,Information Technology,United States
+NVO,Novo Nordisk A/S ADR,0.37,Health Care,Denmark
+INTU,Intuit Inc,0.36,Information Technology,United States
+GS,Goldman Sachs Group Inc,0.35,Financials,United States
+ISRG,Intuitive Surgical Inc,0.34,Health Care,United States
+TM,Toyota Motor Corp ADR,0.33,Consumer Discretionary,Japan
+BKNG,Booking Holdings Inc,0.33,Consumer Discretionary,United States
+MS,Morgan Stanley,0.32,Financials,United States
+SPGI,S&P Global Inc,0.31,Financials,United States
+T,AT&T Inc,0.3,Communication Services,United States
+RTX,RTX Corp,0.3,Industrials,United States
+PANW,Palo Alto Networks Inc,0.29,Information Technology,United States
+AMAT,Applied Materials Inc,0.29,Information Technology,United States
+PFE,Pfizer Inc,0.28,Health Care,United States
+NEE,NextEra Energy Inc,0.28,Utilities,United States
+AXP,American Express Co,0.27,Financials,United States
+UBER,Uber Technologies Inc,0.27,Industrials,United States
+HON,Honeywell International Inc,0.26,Industrials,United States
+MU,Micron Technology Inc,0.26,Information Technology,United States
+ADI,Analog Devices Inc,0.25,Information Technology,United States
+BX,Blackstone Inc,0.25,Financials,United States
+SAP,SAP SE ADR,0.24,Information Technology,Germany
+7203.T,Toyota Motor Corp,0.24,Consumer Discretionary,Japan
+LOW,Lowe's Companies Inc,0.23,Consumer Discretionary,United States
+TXN,Texas Instruments Inc,0.23,Information Technology,United States
+LRCX,Lam Research Corp,0.22,Information Technology,United States
+PLD,Prologis Inc,0.22,Real Estate,United States
+CVX,Chevron Corp,0.22,Energy,United States
+VRTX,Vertex Pharmaceuticals Inc,0.21,Health Care,United States
+KKR,KKR & Co Inc,0.21,Financials,United States
+KLAC,KLA Corp,0.2,Information Technology,United States
+005930.KS,Samsung Electronics Co Ltd,0.2,Information Technology,South Korea
+CB,Chubb Ltd,0.2,Financials,Switzerland
+DE,Deere & Co,0.19,Industrials,United States
+MRK,Merck & Co Inc,0.19,Health Care,United States
+BA,Boeing Co,0.19,Industrials,United States
+HSBA.L,HSBC Holdings PLC,0.18,Financials,United Kingdom
+UPS,United Parcel Service Inc Class B,0.18,Industrials,United States
+REGN,Regeneron Pharmaceuticals Inc,0.18,Health Care,United States
+BMY,Bristol-Myers Squibb Co,0.17,Health Care,United States
+SHW,Sherwin-Williams Co,0.17,Materials,United States
+ANET,Arista Networks Inc,0.17,Information Technology,United States
+APH,Amphenol Corp Class A,0.16,Information Technology,United States
+ADP,Automatic Data Processing Inc,0.16,Information Technology,United States
+SCHW,Charles Schwab Corp,0.16,Financials,United States
+EQIX,Equinix Inc,0.15,Real Estate,United States
+PH,Parker-Hannifin Corp,0.15,Industrials,United States
+MCO,Moody's Corp,0.15,Financials,United States
+CDNS,Cadence Design Systems Inc,0.15,Information Technology,United States
+ICE,Intercontinental Exchange Inc,0.14,Financials,United States
+SNPS,Synopsys Inc,0.14,Information Technology,United States
+7974.T,Nintendo Co Ltd,0.14,Communication Services,Japan
+9988.HK,Alibaba Group Holding Ltd,0.14,Consumer Discretionary,China
+BP.L,BP PLC,0.13,Energy,United States
+RY.TO,Royal Bank of Canada,0.13,Financials,Canada
+SHOP,Shopify Inc,0.13,Information Technology,Canada
+ETN,Eaton Corp PLC,0.13,Industrials,Ireland
+MMC,Marsh & McLennan Companies Inc,0.12,Financials,United States
+WFC,Wells Fargo & Co,0.12,Financials,United States
+FI,Fiserv Inc,0.12,Financials,United States
+GILD,Gilead Sciences Inc,0.12,Health Care,United States
+CME,CME Group Inc,0.12,Financials,United States
+NSC,Norfolk Southern Corp,0.11,Industrials,United States
+TT,Trane Technologies PLC,0.11,Industrials,Ireland
+EOG,EOG Resources Inc,0.11,Energy,United States
+WELL,Welltower Inc,0.11,Real Estate,United States
+AIZ,Assurant Inc,0.1,Financials,United States
+9984.T,SoftBank Group Corp,0.1,Communication Services,Japan
+AZN,AstraZeneca PLC ADR,0.1,Health Care,United Kingdom
+6861.T,Keyence Corp,0.1,Information Technology,Japan
+REMAINDER,VT Remaining Holdings (approx 9900 stocks),48.2,Diversified,Global

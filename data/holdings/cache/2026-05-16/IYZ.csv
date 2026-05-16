@@ -1,0 +1,104 @@
+Ticker,Security Name,Weight (%),Sector,Country,Asset Class
+BRKB,BERKSHIRE HATHAWAY INC CLASS B,13.15,Financials,United States,Equity
+JPM,JPMORGAN CHASE & CO,12.28,Financials,United States,Equity
+V,VISA INC CLASS A,8.08,Financials,United States,Equity
+MA,MASTERCARD INC CLASS A,6.08,Financials,United States,Equity
+BAC,BANK OF AMERICA CORP,5.13,Financials,United States,Equity
+GS,GOLDMAN SACHS GROUP INC,4.23,Financials,United States,Equity
+WFC,WELLS FARGO,3.53,Financials,United States,Equity
+MS,MORGAN STANLEY,3.5,Financials,United States,Equity
+C,CITIGROUP INC,3.31,Financials,United States,Equity
+AXP,AMERICAN EXPRESS,2.55,Financials,United States,Equity
+BLK,BLACKROCK INC,2.36,Financials,United States,Equity
+SCHW,CHARLES SCHWAB CORP,2.23,Financials,United States,Equity
+SPGI,S&P GLOBAL INC,1.94,Financials,United States,Equity
+COF,CAPITAL ONE FINANCIAL CORP,1.79,Financials,United States,Equity
+CME,CME GROUP INC CLASS A,1.53,Financials,United States,Equity
+BX,BLACKSTONE INC,1.4,Financials,United States,Equity
+BK,BANK OF NEW YORK MELLON CORP,1.35,Financials,United States,Equity
+ICE,INTERCONTINENTAL EXCHANGE INC,1.33,Financials,United States,Equity
+PNC,PNC FINANCIAL SERVICES GROUP INC,1.32,Financials,United States,Equity
+USB,US BANCORP,1.3,Financials,United States,Equity
+KKR,KKR AND CO INC,1.06,Financials,United States,Equity
+MCO,MOODYS CORP,1.04,Financials,United States,Equity
+TFC,TRUIST FINANCIAL CORP,0.93,Financials,United States,Equity
+APO,APOLLO GLOBAL MANAGEMENT INC,0.93,Financials,United States,Equity
+HOOD,ROBINHOOD MARKETS INC CLASS A,0.92,Financials,United States,Equity
+COIN,COINBASE GLOBAL INC CLASS A,0.68,Financials,United States,Equity
+FITB,FIFTH THIRD BANCORP,0.67,Financials,United States,Equity
+MSCI,MSCI INC,0.65,Financials,United States,Equity
+AMP,AMERIPRISE FINANCE INC,0.64,Financials,United States,Equity
+STT,STATE STREET CORP,0.63,Financials,United States,Equity
+NDAQ,NASDAQ INC,0.6,Financials,United States,Equity
+IBKR,INTERACTIVE BROKERS GROUP INC CLAS,0.57,Financials,United States,Equity
+CBOE,CBOE GLOBAL MARKETS INC,0.55,Financials,United States,Equity
+HBAN,HUNTINGTON BANCSHARES INC,0.49,Financials,United States,Equity
+MTB,M&T BANK CORP,0.49,Financials,United States,Equity
+NTRS,NORTHERN TRUST CORP,0.45,Financials,United States,Equity
+RJF,RAYMOND JAMES INC,0.41,Financials,United States,Equity
+CFG,CITIZENS FINANCIAL GROUP INC,0.41,Financials,United States,Equity
+ARES,ARES MANAGEMENT CORP CLASS A,0.39,Financials,United States,Equity
+SYF,SYNCHRONY FINANCIAL,0.38,Financials,United States,Equity
+LPLA,LPL FINANCIAL HOLDINGS INC,0.37,Financials,United States,Equity
+RF,REGIONS FINANCIAL CORP,0.36,Financials,United States,Equity
+TROW,T ROWE PRICE GROUP INC,0.35,Financials,United States,Equity
+KEY,KEYCORP,0.3,Financials,United States,Equity
+SOFI,SOFI TECHNOLOGIES INC,0.3,Financials,United States,Equity
+FCNCA,FIRST CITIZENS BANCSHARES INC CLAS,0.29,Financials,United States,Equity
+EWBC,EAST WEST BANCORP INC,0.25,Financials,United States,Equity
+RKT,ROCKET COMPANIES INC CLASS A,0.23,Financials,United States,Equity
+PNFP,PINNACLE FINANCIAL PARTNERS INC,0.22,Financials,United States,Equity
+EVR,EVERCORE INC CLASS A,0.2,Financials,United States,Equity
+CG,CARLYLE GROUP INC,0.2,Financials,United States,Equity
+TW,TRADEWEB MARKETS INC CLASS A,0.19,Financials,United States,Equity
+ALLY,ALLY FINANCIAL INC,0.19,Financials,United States,Equity
+IVZ,INVESCO LTD,0.18,Financials,United States,Equity
+FHN,FIRST HORIZON CORP,0.18,Financials,United States,Equity
+SF,STIFEL FINANCIAL CORP,0.18,Financials,United States,Equity
+WBS,WEBSTER FINANCIAL CORP,0.18,Financials,United States,Equity
+EQH,EQUITABLE HOLDINGS INC,0.17,Financials,United States,Equity
+WTFC,WINTRUST FINANCIAL CORP,0.15,Financials,United States,Equity
+BPOP,POPULAR INC,0.15,Financials,United States,Equity
+SSB,SOUTHSTATE BANK CORP,0.14,Financials,United States,Equity
+BEN,FRANKLIN RESOURCES INC,0.14,Financials,United States,Equity
+UMBF,UMB FINANCIAL CORP,0.14,Financials,United States,Equity
+ZION,ZIONS BANCORPORATION,0.14,Financials,United States,Equity
+CFR,CULLEN FROST BANKERS INC,0.13,Financials,United States,Equity
+FCFS,FIRSTCASH HOLDINGS INC,0.13,Financials,United States,Equity
+JEF,JEFFERIES FINANCIAL GROUP INC,0.13,Financials,United States,Equity
+SEIC,SEI INVESTMENTS,0.13,Financials,United States,Equity
+AMG,AFFILIATED MANAGERS GROUP INC,0.13,Financials,United States,Equity
+WAL,WESTERN ALLIANCE,0.13,Financials,United States,Equity
+FDS,FACTSET RESEARCH SYSTEMS INC,0.13,Financials,United States,Equity
+HLI,HOULIHAN LOKEY INC CLASS A,0.13,Financials,United States,Equity
+VOYA,VOYA FINANCIAL INC,0.12,Financials,United States,Equity
+CBSH,COMMERCE BANCSHARES INC,0.11,Financials,United States,Equity
+PB,PROSPERITY BANCSHARES INC,0.11,Financials,United States,Equity
+CRBG,COREBRIDGE FINANCIAL INC,0.1,Financials,United States,Equity
+USD,USD CASH,0.1,Cash and/or Derivatives,United States,Cash
+OWL,BLUE OWL CAPITAL INC CLASS A,0.1,Financials,United States,Equity
+OMF,ONEMAIN HOLDINGS INC,0.1,Financials,United States,Equity
+VLY,VALLEY NATIONAL,0.1,Financials,United States,Equity
+FNB,FNB CORP,0.1,Financials,United States,Equity
+JHG,JANUS HENDERSON GROUP PLC,0.1,Financials,United States,Equity
+GBCI,GLACIER BANCORP INC,0.09,Financials,United States,Equity
+XTSLA,BLK CSH FND TREASURY SL AGENCY,0.09,Cash and/or Derivatives,United States,Money Market
+UBSI,UNITED BANKSHARES INC,0.09,Financials,United States,Equity
+ESNT,ESSENT GROUP LTD,0.09,Financials,United States,Equity
+MTG,MGIC INVESTMENT CORP,0.09,Financials,United States,Equity
+TPG,TPG INC CLASS A,0.09,Financials,United States,Equity
+GLXY,GALAXY DIGITAL INC CLASS A,0.09,Financials,United States,Equity
+LAZ,LAZARD INC,0.08,Financials,United States,Equity
+MKTX,MARKETAXESS HOLDINGS INC,0.08,Financials,United States,Equity
+RDN,RADIAN GROUP INC,0.08,Financials,United States,Equity
+OZK,BANK OZK,0.08,Financials,United States,Equity
+HOMB,HOME BANCSHARES INC,0.07,Financials,United States,Equity
+SLM,SLM CORP,0.07,Financials,United States,Equity
+FFIN,FIRST FINANCIAL BANKSHARES INC,0.06,Financials,United States,Equity
+VIRT,VIRTU FINANCIAL INC CLASS A,0.06,Financials,United States,Equity
+MORN,MORNINGSTAR INC,0.06,Financials,United States,Equity
+HLNE,HAMILTON LANE INC CLASS A,0.06,Financials,United States,Equity
+CACC,CREDIT ACCEPTANCE CORP,0.05,Financials,United States,Equity
+BOKF,BOK FINANCIAL CORP,0.04,Financials,United States,Equity
+UWMC,UWM HOLDINGS CORP CLASS A,0.01,Financials,United States,Equity
+WFFUT,CASH COLLATERAL USD WFFUT,0.01,Cash and/or Derivatives,United States,Cash Collateral and Margins

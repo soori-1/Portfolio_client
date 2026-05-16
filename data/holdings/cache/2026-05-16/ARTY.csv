@@ -1,0 +1,53 @@
+Ticker,Security Name,Weight (%),Sector,Country,Asset Class
+AMD,ADVANCED MICRO DEVICES INC,7.26,Information Technology,United States,Equity
+MU,MICRON TECHNOLOGY INC,6.21,Information Technology,United States,Equity
+MRVL,MARVELL TECHNOLOGY INC,5.93,Information Technology,United States,Equity
+CRWV,COREWEAVE INC CLASS A,4.95,Information Technology,United States,Equity
+2330,TAIWAN SEMICONDUCTOR MANUFACTURING,4.2,Information Technology,Taiwan,Equity
+ORCL,ORACLE CORP,4.18,Information Technology,United States,Equity
+AVGO,BROADCOM INC,4.07,Information Technology,United States,Equity
+NVDA,NVIDIA CORP,3.95,Information Technology,United States,Equity
+000660,SK HYNIX INC,3.79,Information Technology,Korea (South),Equity
+3443,GLOBAL UNICHIP CORP,3.74,Information Technology,Taiwan,Equity
+035420,NAVER CORP,3.23,Communication,Korea (South),Equity
+SMCI,SUPER MICRO COMPUTER INC,3.13,Information Technology,United States,Equity
+STX,SEAGATE TECHNOLOGY HOLDINGS PLC,2.9,Information Technology,United States,Equity
+3661,ALCHIP TECHNOLOGIES LTD,2.83,Information Technology,Taiwan,Equity
+WDC,WESTERN DIGITAL CORP,2.6,Information Technology,United States,Equity
+6857,ADVANTEST CORP,2.18,Information Technology,Japan,Equity
+SU,SCHNEIDER ELECTRIC,2.09,Industrials,France,Equity
+MSFT,MICROSOFT CORP,1.94,Information Technology,United States,Equity
+ANET,ARISTA NETWORKS INC,1.91,Information Technology,United States,Equity
+IBM,INTERNATIONAL BUSINESS MACHINES CO,1.67,Information Technology,United States,Equity
+PLTR,PALANTIR TECHNOLOGIES INC CLASS A,1.63,Information Technology,United States,Equity
+BE,BLOOM ENERGY CLASS A CORP,1.53,Industrials,United States,Equity
+ACN,ACCENTURE PLC CLASS A,1.51,Information Technology,United States,Equity
+CEG,CONSTELLATION ENERGY CORP,1.5,Utilities,United States,Equity
+3711,ASE TECHNOLOGY HOLDING LTD,1.47,Information Technology,Taiwan,Equity
+CLS,CELESTICA INC,1.12,Information Technology,Canada,Equity
+LR,LEGRAND SA,1.12,Industrials,France,Equity
+CRDO,CREDO TECHNOLOGY GROUP HOLDING LTD,1.07,Information Technology,United States,Equity
+ALAB,ASTERA LABS INC,1.05,Information Technology,United States,Equity
+AMKR,AMKOR TECHNOLOGY INC,0.95,Information Technology,United States,Equity
+2382,QUANTA COMPUTER INC,0.91,Information Technology,Taiwan,Equity
+ONTO,ONTO INNOVATION INC,0.87,Information Technology,United States,Equity
+SNOW,SNOWFLAKE INC,0.87,Information Technology,United States,Equity
+ENTG,ENTEGRIS INC,0.86,Information Technology,United States,Equity
+RMBS,RAMBUS INC,0.86,Information Technology,United States,Equity
+6669,WIWYNN CORPORATION CORP,0.84,Information Technology,Taiwan,Equity
+MDB,MONGODB INC CLASS A,0.81,Information Technology,United States,Equity
+2376,GIGABYTE TECHNOLOGY LTD,0.78,Information Technology,Taiwan,Equity
+DGT,DIGICO INFRASTRUCTURE REIT STAPLED,0.74,Real Estate,Australia,Equity
+3231,WISTRON CORP,0.71,Information Technology,Taiwan,Equity
+CAMT,CAMTEK LTD,0.68,Information Technology,Israel,Equity
+WDAY,WORKDAY INC CLASS A,0.66,Information Technology,United States,Equity
+MAQ,MACQUARIE TECHNOLOGY GROUP LTD,0.62,Information Technology,Australia,Equity
+2329,ORIENT SEMICONDUCTOR ELECTRONICS L,0.62,Information Technology,Taiwan,Equity
+3324,AURAS TECHNOLOGY LTD,0.61,Information Technology,Taiwan,Equity
+PRESIGHT,PRESIGHT AI HOLDING PLC,0.6,Information Technology,United Arab Emirates,Equity
+4180,APPIER GROUP INC,0.56,Information Technology,Japan,Equity
+GIB.A,CGI INC CLASS A,0.56,Information Technology,Canada,Equity
+TEM,TEMPUS AI INC CLASS A,0.5,Health Care,United States,Equity
+CSGP,COSTAR GROUP INC,0.44,Real Estate,United States,Equity
+XTSLA,BLK CSH FND TREASURY SL AGENCY,0.34,Cash and/or Derivatives,United States,Money Market
+HBCFT,CASH COLLATERAL USD HBCFT,0.01,Cash and/or Derivatives,United Kingdom,Cash Collateral and Margins
