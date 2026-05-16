@@ -1,13 +1,23 @@
 """
 Holdings fetcher router.
 
-Cache strategy: use any cache from the CURRENT MONTH — don't re-fetch
-if we already have this month's holdings. Only fetch fresh if cache is
-from a previous month or missing entirely.
+Works entirely from portfolio_weights.xlsx — no etf_sources.xlsx needed.
+
+Adding a ticker to portfolio_weights.xlsx is sufficient.
+The router auto-detects the issuer and fetches holdings automatically.
+
+Known issuers (fast path, no network lookup):
+  iShares tickers in ISHARES_TICKERS → direct CSV download
+  GlobalX tickers in GLOBALX_TICKERS → direct CSV download
+  Vanguard tickers in VANGUARD_TICKERS → manual CSV (Vanguard blocks automation)
+  Commodity trusts in COMMODITY_TICKERS → synthetic holding (no real holdings)
+
+Unknown tickers → autodiscover (yfinance lookup → ETF.com scraper → synthetic)
 """
 from __future__ import annotations
 
 import logging
+import shutil
 from datetime import date
 from pathlib import Path
 from typing import Optional
@@ -22,53 +32,73 @@ from .autodiscover import autodiscover_and_fetch
 
 log = logging.getLogger(__name__)
 
+# ── Known ticker → issuer mapping (no network lookup needed) ─────────────────
+ISHARES_TICKERS = {
+    "EEM","ARTY","IYZ","EPOL","EWT","EWZ","EWA","MCHI","IAU","SLV",
+    "AGG","IVV","IJH","IJR","IWM","IWF","IWD","IEF","TLT","LQD",
+    "HYG","EMB","MBB","IEFA","IEMG","ACWI","IDV","IXUS",
+}
+
+GLOBALX_TICKERS = {
+    "DTCR","LIT","HYDR","COPX","AIQ","SNSR","FINX","HERO","CLOU",
+    "BOTZ","DRIV","BKCH","GNOM","CTEC","MLPA","PFFD",
+}
+
+INVESCO_TICKERS = {
+    "TAN","QQQ","RSP","SQQQ","TQQQ","PGX","PDBC","PBND",
+    "PHO","PBW","PSCI","PSCT","PSCE","PSCC","PSCF",
+}
+
+VANGUARD_TICKERS = {
+    "VT","VTI","VOO","VEA","VWO","BND","BNDX","VIG","VYM",
+    "VGT","VHT","VFH","VCR","VDC","VDE","VIS","VMO","VNQ",
+}
+
+# Commodity grantor trusts — physical assets, no stock holdings
+COMMODITY_TICKERS = {
+    "IAU","SLV","GLD","PPLT","PALL","SGOL","SIVR","BAR",
+    "CPER","DBB","DBC","DBO","DBP","DBS",
+}
+
 FETCHERS = {
-    "ishares": fetch_ishares,
+    "ishares":  fetch_ishares,
     "vanguard": fetch_vanguard,
-    "globalx": fetch_globalx,
-    "invesco": fetch_invesco,
+    "globalx":  fetch_globalx,
+    "invesco":  fetch_invesco,
 }
 
 
+def _detect_issuer(ticker: str) -> str:
+    """Detect issuer from ticker alone — no network call."""
+    t = ticker.upper()
+    if t in ISHARES_TICKERS:   return "ishares"
+    if t in GLOBALX_TICKERS:   return "globalx"
+    if t in INVESCO_TICKERS:   return "invesco"
+    if t in VANGUARD_TICKERS:  return "vanguard"
+    if t in COMMODITY_TICKERS: return "commodity"
+    return "auto"
+
+
 def fetch_all_holdings(
-    config_path: Path,
+    config_path: Path,           # points to portfolio_weights.xlsx OR etf_sources.xlsx
     cache_root: Path,
     manual_root: Path,
     as_of: Optional[date] = None,
     force_refresh: bool = False,
 ) -> dict[str, pd.DataFrame]:
-    as_of = as_of or date.today()
 
-    # Use any cache from this calendar month — iShares blocks frequent re-fetches
+    as_of = as_of or date.today()
     cache_dir = _find_or_create_cache_dir(cache_root, as_of, force_refresh)
 
-    sources = pd.read_excel(config_path)
-
-    # Also load portfolio_weights to catch ETFs not yet in etf_sources
-    weights_path = config_path.parent / "portfolio_weights.xlsx"
-    if weights_path.exists():
-        wdf = pd.read_excel(weights_path).dropna(subset=["ETF Ticker"])
-        wdf = wdf[~wdf["ETF Ticker"].astype(str).str.strip().isin(["TOTAL",""])]
-        known_tickers = set(sources["Ticker"].astype(str).str.strip().tolist())
-        for _, wr in wdf.iterrows():
-            tk = str(wr["ETF Ticker"]).strip()
-            if tk not in known_tickers:
-                new_row = pd.DataFrame([[tk, "auto", ""]], columns=["Ticker","Issuer","Product URL"])
-                sources = pd.concat([sources, new_row], ignore_index=True)
-                print(f"       {tk}: not in etf_sources, using auto-discovery")
+    # Load ticker list from portfolio_weights.xlsx (primary) or etf_sources (legacy)
+    tickers = _load_tickers(config_path)
 
     results: dict[str, pd.DataFrame] = {}
     errors:  dict[str, str] = {}
 
-    for _, row in sources.iterrows():
-        ticker      = str(row["Ticker"]).strip()
-        issuer      = str(row["Issuer"]).strip().lower()
-        product_url = row.get("Product URL")
-        if pd.isna(product_url):
-            product_url = None
-
+    for ticker in tickers:
         try:
-            df = _fetch_one(ticker, issuer, product_url, cache_dir, manual_root)
+            df = _fetch_one(ticker, cache_dir, manual_root)
             results[ticker] = df
             print(f"  OK  {ticker:6s}  {len(df):4d} holdings")
         except Exception as e:
@@ -85,70 +115,68 @@ def fetch_all_holdings(
     return results
 
 
-def _find_or_create_cache_dir(cache_root: Path, as_of: date, force_refresh: bool) -> Path:
-    """
-    Return the best cache directory for this run.
+def _load_tickers(config_path: Path) -> list[str]:
+    """Load ticker list — works with portfolio_weights.xlsx or etf_sources.xlsx."""
+    if not config_path.exists():
+        raise FileNotFoundError(f"Config file not found: {config_path}")
 
-    Priority:
-      1. Today's cache dir (if it has files)
-      2. Any other cache dir from the same calendar month
-      3. Create today's cache dir fresh (will trigger fetches)
-    """
-    today_dir = cache_root / as_of.isoformat()
+    df = pd.read_excel(config_path)
+    df.columns = [c.strip() for c in df.columns]
 
-    if force_refresh:
-        import shutil
-        if today_dir.exists():
-            shutil.rmtree(today_dir)
-        today_dir.mkdir(parents=True, exist_ok=True)
-        return today_dir
+    # portfolio_weights.xlsx has "ETF Ticker" column
+    if "ETF Ticker" in df.columns:
+        df = df.dropna(subset=["ETF Ticker"])
+        tickers = df["ETF Ticker"].astype(str).str.strip().tolist()
+        return [t for t in tickers if t and t.upper() not in ("TOTAL","NAN","")]
 
-    # Check today's dir
-    if today_dir.exists() and any(today_dir.glob("*.csv")):
-        return today_dir
+    # etf_sources.xlsx has "Ticker" column (legacy support)
+    if "Ticker" in df.columns:
+        return df["Ticker"].astype(str).str.strip().dropna().tolist()
 
-    # Look for any cache from same month (e.g. 2026-05-11 when today is 2026-05-16)
-    month_prefix = as_of.strftime("%Y-%m")
-    if cache_root.exists():
-        candidates = sorted(
-            [d for d in cache_root.iterdir()
-             if d.is_dir() and d.name.startswith(month_prefix) and any(d.glob("*.csv"))],
-            reverse=True  # most recent first
-        )
-        if candidates:
-            best = candidates[0]
-            print(f"  (using cached holdings from {best.name})")
-            # Symlink or copy to today's dir so future runs find it quickly
-            today_dir.mkdir(parents=True, exist_ok=True)
-            import shutil
-            for f in best.glob("*.csv"):
-                dst = today_dir / f.name
-                if not dst.exists():
-                    shutil.copy2(f, dst)
-            return today_dir
-
-    today_dir.mkdir(parents=True, exist_ok=True)
-    return today_dir
+    raise ValueError(f"Cannot find ticker column in {config_path}")
 
 
-def _fetch_one(ticker, issuer, product_url, cache_dir, manual_root):
+def _fetch_one(ticker: str, cache_dir: Path, manual_root: Path) -> pd.DataFrame:
+    """Fetch holdings for a single ETF."""
     cached = cache_dir / f"{ticker}.csv"
     if cached.exists():
+        print(f"       (cached)")
         return _load_standardized(cached)
 
     manual = manual_root / f"{ticker}.csv"
+    issuer = _detect_issuer(ticker)
 
-    if issuer == "manual":
+    print(f"       fetching [{issuer}]...")
+
+    # Manual-only ETFs
+    if issuer == "vanguard":
         if manual.exists():
             df = _load_standardized(manual)
             df.to_csv(cached, index=False)
             return df
-        raise RuntimeError(f"manual upload needed at {manual}")
+        # Try fetcher anyway — sometimes works
+        try:
+            df = fetch_vanguard(ticker=ticker)
+            df = _standardize(df)
+            df.to_csv(cached, index=False)
+            return df
+        except Exception:
+            raise RuntimeError(
+                f"{ticker} (Vanguard): place manual CSV at {manual}"
+            )
 
+    # Commodity trusts — synthetic
+    if issuer == "commodity":
+        from .autodiscover import _commodity_synthetic
+        df = _commodity_synthetic(ticker)
+        df = _standardize(df)
+        df.to_csv(cached, index=False)
+        return df
+
+    # Known issuers — direct fetcher
     if issuer in FETCHERS:
         try:
-            print(f"       fetching from {issuer}...")
-            df = FETCHERS[issuer](ticker=ticker, product_url=product_url)
+            df = FETCHERS[issuer](ticker=ticker)
             df = _standardize(df)
             df.to_csv(cached, index=False)
             return df
@@ -159,35 +187,61 @@ def _fetch_one(ticker, issuer, product_url, cache_dir, manual_root):
                 df = _load_standardized(manual)
                 df.to_csv(cached, index=False)
                 return df
-            # Try auto-discovery before giving up
             print(f"       trying auto-discovery...")
-            try:
-                df = autodiscover_and_fetch(ticker)
-                df = _standardize(df)
-                df.to_csv(cached, index=False)
-                return df
-            except Exception as e2:
-                raise RuntimeError(f"fetch error: {e} | autodiscover: {e2}") from e
 
-    if manual.exists():
-        return _load_standardized(manual)
-
-    # Unknown issuer — try auto-discovery
-    print(f"       unknown issuer '{issuer}', trying auto-discovery...")
+    # Auto-discovery for unknown tickers
     try:
         df = autodiscover_and_fetch(ticker)
         df = _standardize(df)
         df.to_csv(cached, index=False)
         return df
     except Exception as e:
-        raise RuntimeError(f"auto-discovery failed for {ticker}: {e}") from e
+        if manual.exists():
+            df = _load_standardized(manual)
+            df.to_csv(cached, index=False)
+            return df
+        raise RuntimeError(f"all fetch methods failed: {e}")
+
+
+def _find_or_create_cache_dir(cache_root: Path, as_of: date, force_refresh: bool) -> Path:
+    today_dir = cache_root / as_of.isoformat()
+
+    if force_refresh:
+        if today_dir.exists():
+            shutil.rmtree(today_dir)
+        today_dir.mkdir(parents=True, exist_ok=True)
+        return today_dir
+
+    if today_dir.exists() and any(today_dir.glob("*.csv")):
+        return today_dir
+
+    month_prefix = as_of.strftime("%Y-%m")
+    if cache_root.exists():
+        candidates = sorted(
+            [d for d in cache_root.iterdir()
+             if d.is_dir() and d.name.startswith(month_prefix)
+             and any(d.glob("*.csv"))],
+            reverse=True
+        )
+        if candidates:
+            best = candidates[0]
+            print(f"  (using cached holdings from {best.name})")
+            today_dir.mkdir(parents=True, exist_ok=True)
+            for f in best.glob("*.csv"):
+                dst = today_dir / f.name
+                if not dst.exists():
+                    shutil.copy2(f, dst)
+            return today_dir
+
+    today_dir.mkdir(parents=True, exist_ok=True)
+    return today_dir
 
 
 REQUIRED_COLS = ["Ticker", "Security Name", "Weight (%)"]
 OPTIONAL_COLS = ["Sector", "Country", "Asset Class"]
 
 
-def _standardize(df):
+def _standardize(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df.columns = [c.strip() for c in df.columns]
     missing = [c for c in REQUIRED_COLS if c not in df.columns]
@@ -203,5 +257,5 @@ def _standardize(df):
     return df.reset_index(drop=True)
 
 
-def _load_standardized(path):
+def _load_standardized(path: Path) -> pd.DataFrame:
     return _standardize(pd.read_csv(path))
