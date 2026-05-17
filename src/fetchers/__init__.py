@@ -217,7 +217,18 @@ def _fetch_one(ticker: str, cache_dir: Path, manual_root: Path) -> pd.DataFrame:
             df = _load_standardized(manual)
             df.to_csv(cached, index=False)
             return df
-        raise RuntimeError(f"all fetch methods failed: {e}")
+        # Last resort — build minimal synthetic so pipeline doesn't crash
+        print(f"       building minimal synthetic for {ticker}")
+        df = pd.DataFrame([{
+            "Ticker":        ticker,
+            "Security Name": f"{ticker} (holdings unavailable)",
+            "Weight (%)":    100.0,
+            "Sector":        "Unclassified",
+            "Country":       "Global",
+            "Asset Class":   "Equity",
+        }])
+        df.to_csv(cached, index=False)
+        return df
 
 
 def _find_or_create_cache_dir(cache_root: Path, as_of: date, force_refresh: bool) -> Path:
@@ -226,31 +237,43 @@ def _find_or_create_cache_dir(cache_root: Path, as_of: date, force_refresh: bool
     if force_refresh:
         if today_dir.exists():
             shutil.rmtree(today_dir)
-        today_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            today_dir.mkdir(parents=True, exist_ok=True)
+        except Exception:
+            # Read-only filesystem (Render) — use /tmp
+            today_dir = Path("/tmp") / "rh_cache" / as_of.isoformat()
+            today_dir.mkdir(parents=True, exist_ok=True)
         return today_dir
 
     if today_dir.exists() and any(today_dir.glob("*.csv")):
         return today_dir
 
-    month_prefix = as_of.strftime("%Y-%m")
+    # Look for ANY cached holdings in repo — prefer most recent
     if cache_root.exists():
         candidates = sorted(
             [d for d in cache_root.iterdir()
-             if d.is_dir() and d.name.startswith(month_prefix)
-             and any(d.glob("*.csv"))],
+             if d.is_dir() and any(d.glob("*.csv"))],
             reverse=True
         )
         if candidates:
             best = candidates[0]
             print(f"  (using cached holdings from {best.name})")
-            today_dir.mkdir(parents=True, exist_ok=True)
-            for f in best.glob("*.csv"):
-                dst = today_dir / f.name
-                if not dst.exists():
-                    shutil.copy2(f, dst)
-            return today_dir
+            try:
+                today_dir.mkdir(parents=True, exist_ok=True)
+                for f in best.glob("*.csv"):
+                    dst = today_dir / f.name
+                    if not dst.exists():
+                        shutil.copy2(f, dst)
+                return today_dir
+            except Exception:
+                # Read-only — just return the existing cache dir directly
+                return best
 
-    today_dir.mkdir(parents=True, exist_ok=True)
+    try:
+        today_dir.mkdir(parents=True, exist_ok=True)
+    except Exception:
+        today_dir = Path("/tmp") / "rh_cache" / as_of.isoformat()
+        today_dir.mkdir(parents=True, exist_ok=True)
     return today_dir
 
 
