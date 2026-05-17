@@ -319,9 +319,15 @@ def _load_standardized(path: Path) -> pd.DataFrame:
     header_idx = 0
     for i, line in enumerate(lines):
         cols = [c.strip().strip('"').lower() for c in line.split(',')]
-        # Header row has both a name-like and a weight-like column
-        has_name   = any('name' in c or 'security' in c or 'holding' in c for c in cols)
-        has_weight = any('weight' in c for c in cols)
+        # Header row has a name-like or ticker column plus a weight-like column
+        has_name   = any('name' in c or 'security' in c or 'holding' in c or 'company' in c for c in cols)
+        # Weight: iShares 'Weight (%)', GlobalX '% of Net Assets', Invesco '% TNA'
+        has_weight = any(
+            'weight' in c or '% tna' in c or '% of net' in c
+            or '% net' in c or c == '%' or 'percent' in c
+            or '% of fund' in c or '% assets' in c
+            for c in cols
+        )
         has_ticker = any('ticker' in c or 'symbol' in c for c in cols)
         if (has_name or has_ticker) and has_weight and len(cols) >= 3:
             header_idx = i
