@@ -39,6 +39,46 @@ MANUAL  = ROOT / "data" / "holdings" / "manual"
 RETURNS = ROOT / "data" / "returns"
 OUTPUTS = ROOT / "outputs" / "snapshots"
 
+def push_to_github(json_path: Path) -> bool:
+    """Push dashboard_data.json directly to GitHub repo via API."""
+    import os, base64, json as json_lib
+    try:
+        import requests as req
+    except ImportError:
+        return False
+
+    token  = os.environ.get('GITHUB_TOKEN') or ''
+    repo   = os.environ.get('GITHUB_REPO', 'soori-1/Portfolio_client')
+    branch = os.environ.get('GITHUB_BRANCH', 'main')
+
+    if not token:
+        return False
+
+    headers = {
+        'Authorization': f'token {token}',
+        'Accept': 'application/vnd.github.v3+json',
+    }
+    api_url = f'https://api.github.com/repos/{repo}/contents/dashboard_data.json'
+
+    # Get current file SHA (needed for update)
+    r = req.get(api_url, headers=headers, params={'ref': branch})
+    sha = r.json().get('sha') if r.status_code == 200 else None
+
+    # Encode content
+    content_b64 = base64.b64encode(json_path.read_bytes()).decode()
+
+    payload = {
+        'message': f'Update dashboard_data.json',
+        'content': content_b64,
+        'branch':  branch,
+    }
+    if sha:
+        payload['sha'] = sha
+
+    r = req.put(api_url, headers=headers, json=payload)
+    return r.status_code in (200, 201)
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--month", default=None,
