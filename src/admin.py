@@ -483,14 +483,7 @@ def main():
         with c1:
             generate = st.button("⚡  Generate Report", key="gen_btn")
 
-        if generate and is_streamlit_cloud():
-            st.markdown('''<div class="status-info">
-                <strong>⚠ Running on Streamlit Cloud — run locally instead</strong><br><br>
-                <code>cd rh-portfolio-reporting-phase1</code><br>
-                <code>python -m src.generate_report --skip-fetch</code><br><br>
-                Then upload <code>dashboard_data.json</code> to GitHub via the Publish tab.
-            </div>''', unsafe_allow_html=True)
-        elif generate:
+        if generate:
             with st.spinner("Running pipeline... this takes 2-4 minutes"):
                 code, stdout, stderr = run_generate(skip_fetch=skip)
 
@@ -568,32 +561,41 @@ def main():
         st.markdown('<div class="sh">Publish to GitHub Pages</div>',
                     unsafe_allow_html=True)
 
+        # Check repo root first, then /tmp (Streamlit Cloud writes there)
         json_root = ROOT / "dashboard_data.json"
+        if not json_root.exists():
+            tmp_json = Path('/tmp') / 'dashboard_data.json'
+            if tmp_json.exists():
+                json_root = tmp_json
 
         if json_root.exists():
+            import os
             data = json.loads(json_root.read_text())
             col1, col2, col3 = st.columns(3)
             col1.metric("Month", data.get("month","—"))
             col2.metric("YTD Return", f"{data.get('ytd_port',0):+.2f}%")
             col3.metric("Alpha", f"{data.get('alpha',0):+.2f}%")
 
-            st.markdown("""
-            <div class="status-info" style="margin-top:16px">
-                <strong>To publish the updated dashboard:</strong><br><br>
-                1. Download <code>dashboard_data.json</code> below<br>
-                2. Go to your GitHub repo:
-                   <a href="https://github.com/soori-1/Portfolio_client"
-                      target="_blank" style="color:#8B1A1A">
-                      github.com/soori-1/Portfolio_client</a><br>
-                3. Click <code>dashboard_data.json</code> → Edit (pencil icon) →
-                   paste the new content → Commit changes<br>
-                4. GitHub Pages updates automatically in ~60 seconds<br><br>
-                <strong>Live dashboard:</strong>
-                <a href="https://soori-1.github.io/Portfolio_client"
-                   target="_blank" style="color:#8B1A1A">
-                   soori-1.github.io/Portfolio_client</a>
-            </div>
-            """, unsafe_allow_html=True)
+            has_token = bool(os.environ.get("GITHUB_TOKEN"))
+            if has_token:
+                st.markdown('''<div class="status-ok" style="margin-top:16px">
+                    ✓ <strong>Auto-publish enabled</strong> — GitHub token detected.<br>
+                    After Generate Report, <code>dashboard_data.json</code> is pushed
+                    to GitHub automatically. The live dashboard updates in ~60 seconds.
+                    <br><br>
+                    <strong>Live dashboard:</strong>
+                    <a href="https://soori-1.github.io/Portfolio_client"
+                       target="_blank" style="color:#1B5E20">
+                       soori-1.github.io/Portfolio_client</a>
+                </div>''', unsafe_allow_html=True)
+            else:
+                st.markdown('''<div class="status-info" style="margin-top:16px">
+                    <strong>To enable auto-publish:</strong> add your GitHub token to
+                    Streamlit Cloud secrets:<br>
+                    <code>GITHUB_TOKEN = "ghp_xxxx"</code><br>
+                    <code>GITHUB_REPO = "soori-1/Portfolio_client"</code><br><br>
+                    <strong>Or publish manually:</strong> download below and upload to GitHub.
+                </div>''', unsafe_allow_html=True)
 
             st.markdown("<div style='height:16px'></div>", unsafe_allow_html=True)
             st.download_button(
