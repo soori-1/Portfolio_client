@@ -146,34 +146,14 @@ def main():
         etf_classification_path = CONFIG  / "etf_classification.xlsx",
         portfolio_weights_path  = CONFIG  / "portfolio_weights.xlsx",
     )
-
-    # Step 4 — Generate PDF
-    print("Step 4/4 — Generating PDF factsheet...\n")
+# Step 4 — Export dashboard data (PDF disabled for now)
     out_dir = OUTPUTS / month
     out_dir.mkdir(parents=True, exist_ok=True)
-    pdf_path = out_dir / f"RH_MomentumGlobal_{month}.pdf"
+    pdf_path = None
 
-    commentary_path = ROOT / "data" / "commentary" / f"{month}.md"
-    disclaimer_path = CONFIG / "disclaimer.txt"
-
-    generate_factsheet(
-        output_path    = pdf_path,
-        performance    = performance,
-        lookthrough_sheets = lookthrough_sheets,
-        report_month   = month_label,
-        reference_date = ref_date,
-        n_holdings     = n_holdings,
-        portfolio_name = portfolio_name,
-        benchmark_name = benchmark_name,
-        company_name   = company_name,
-        tagline        = tagline,
-        commentary_path = commentary_path,
-        disclaimer_path = disclaimer_path,
-    )
 
     print(f"\n{'='*60}")
     print(f"Report generated successfully!")
-    print(f"  PDF:  {pdf_path}")
     print(f"{'='*60}\n")
 
 def _load_opt(path):
