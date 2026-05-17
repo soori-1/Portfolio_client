@@ -156,8 +156,16 @@ def _fetch_one(ticker: str, cache_dir: Path, manual_root: Path) -> pd.DataFrame:
     """Fetch holdings for a single ETF."""
     cached = cache_dir / f"{ticker}.csv"
     if cached.exists():
-        print(f"       (cached)")
-        return _load_standardized(cached)
+        try:
+            df = _load_standardized(cached)
+            print(f"       (cached, {len(df)} holdings)")
+            return df
+        except Exception as e:
+            print(f"       cached file corrupt ({e}), refetching")
+            try:
+                cached.unlink()
+            except Exception:
+                pass
 
     manual = manual_root / f"{ticker}.csv"
     issuer = _detect_issuer(ticker)
@@ -300,4 +308,51 @@ def _standardize(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def _load_standardized(path: Path) -> pd.DataFrame:
-    return _standardize(pd.read_csv(path))
+    """
+    Load a manual CSV, handling iShares/GlobalX/Invesco multi-line metadata headers.
+    Scans for the actual data header row before parsing.
+    """
+    # Read raw lines to find the actual header
+    with open(path, 'r', encoding='utf-8', errors='replace') as f:
+        lines = f.readlines()
+
+    header_idx = 0
+    for i, line in enumerate(lines):
+        cols = [c.strip().strip('"').lower() for c in line.split(',')]
+        # Header row has both a name-like and a weight-like column
+        has_name   = any('name' in c or 'security' in c or 'holding' in c for c in cols)
+        has_weight = any('weight' in c for c in cols)
+        has_ticker = any('ticker' in c or 'symbol' in c for c in cols)
+        if (has_name or has_ticker) and has_weight and len(cols) >= 3:
+            header_idx = i
+            break
+
+    # Re-read from the header row
+    df = pd.read_csv(path, skiprows=header_idx, on_bad_lines='skip')
+    df.columns = [c.strip() for c in df.columns]
+
+    # Normalise common column variations
+    rename_map = {}
+    for c in df.columns:
+        cl = c.lower()
+        if 'security name' in cl or 'name' == cl or 'holding name' in cl:
+            rename_map[c] = 'Security Name'
+        elif 'weight' in cl and '%' in cl:
+            rename_map[c] = 'Weight (%)'
+        elif cl == 'weight':
+            rename_map[c] = 'Weight (%)'
+        elif cl in ('ticker', 'symbol', 'ticker symbol'):
+            rename_map[c] = 'Ticker'
+        elif cl == 'sector':
+            rename_map[c] = 'Sector'
+        elif cl in ('country', 'location', 'market'):
+            rename_map[c] = 'Country'
+        elif 'asset' in cl and 'class' in cl:
+            rename_map[c] = 'Asset Class'
+    df = df.rename(columns=rename_map)
+
+    # Ticker fallback — synthesize from name if missing
+    if 'Ticker' not in df.columns and 'Security Name' in df.columns:
+        df['Ticker'] = df['Security Name'].astype(str).str[:10]
+
+    return _standardize(df)
