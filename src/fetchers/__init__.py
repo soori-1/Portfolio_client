@@ -24,11 +24,18 @@ from typing import Optional
 
 import pandas as pd
 
-from .ishares import fetch_ishares
-from .vanguard import fetch_vanguard
-from .globalx import fetch_globalx
-from .invesco import fetch_invesco
 from .autodiscover import autodiscover_and_fetch
+
+# Lazy imports — only loaded when actually needed
+def _lazy_ishares(): from .ishares import fetch_ishares; return fetch_ishares
+def _lazy_vanguard(): from .vanguard import fetch_vanguard; return fetch_vanguard
+def _lazy_globalx(): from .globalx import fetch_globalx; return fetch_globalx
+def _lazy_invesco():
+    try:
+        from .invesco import fetch_invesco
+        return fetch_invesco
+    except ImportError:
+        return None
 
 log = logging.getLogger(__name__)
 
@@ -60,12 +67,21 @@ COMMODITY_TICKERS = {
     "CPER","DBB","DBC","DBO","DBP","DBS",
 }
 
-FETCHERS = {
-    "ishares":  fetch_ishares,
-    "vanguard": fetch_vanguard,
-    "globalx":  fetch_globalx,
-    "invesco":  fetch_invesco,
-}
+def get_fetcher(issuer):
+    """Get fetcher function lazily — survives missing modules."""
+    loaders = {
+        "ishares":  _lazy_ishares,
+        "vanguard": _lazy_vanguard,
+        "globalx":  _lazy_globalx,
+        "invesco":  _lazy_invesco,
+    }
+    loader = loaders.get(issuer)
+    if loader:
+        try:
+            return loader()
+        except ImportError:
+            return None
+    return None
 
 
 def _detect_issuer(ticker: str) -> str:
@@ -174,9 +190,10 @@ def _fetch_one(ticker: str, cache_dir: Path, manual_root: Path) -> pd.DataFrame:
         return df
 
     # Known issuers — direct fetcher
-    if issuer in FETCHERS:
+    fetcher = get_fetcher(issuer)
+    if fetcher is not None:
         try:
-            df = FETCHERS[issuer](ticker=ticker)
+            df = fetcher(ticker=ticker)
             df = _standardize(df)
             df.to_csv(cached, index=False)
             return df
