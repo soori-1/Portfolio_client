@@ -283,3 +283,22 @@ def _guess_country(meta: dict) -> str:
         if any(kw in text for kw in keywords):
             return country
     return "Global"
+
+def _commodity_synthetic(ticker: str) -> pd.DataFrame:
+    """Synthetic single-row holding for commodity grantor trusts."""
+    names = {
+        "IAU": "Physical Gold",
+        "SLV": "Physical Silver", 
+        "GLD": "Physical Gold",
+        "CPER": "Copper Futures",
+        "PPLT": "Physical Platinum",
+        "PALL": "Physical Palladium",
+    }
+    return pd.DataFrame([{
+        "Ticker":        ticker,
+        "Security Name": names.get(ticker, f"{ticker} Holdings"),
+        "Weight (%)":    100.0,
+        "Sector":        "Commodities",
+        "Country":       "United States",
+        "Asset Class":   "Commodity",
+    }])
