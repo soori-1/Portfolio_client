@@ -331,25 +331,34 @@ def _load_standardized(path: Path) -> pd.DataFrame:
     df = pd.read_csv(path, skiprows=header_idx, on_bad_lines='skip')
     df.columns = [c.strip() for c in df.columns]
 
-    # Normalise common column variations
+    # Normalise column variations across issuers (iShares, GlobalX, Invesco, etc.)
     rename_map = {}
     for c in df.columns:
-        cl = c.lower()
-        if 'security name' in cl or 'name' == cl or 'holding name' in cl:
+        cl = c.lower().strip()
+        # Security name variations
+        if cl in ('security name', 'name', 'holding name', 'company', 'company name', 'description'):
             rename_map[c] = 'Security Name'
-        elif 'weight' in cl and '%' in cl:
+        # Weight variations — covers '% TNA' (Invesco), '% of Net Assets' (GlobalX), 'Weight (%)' (iShares)
+        elif 'weight' in cl or '% tna' in cl or '% of net assets' in cl or cl == '%' or cl == 'percent':
             rename_map[c] = 'Weight (%)'
-        elif cl == 'weight':
-            rename_map[c] = 'Weight (%)'
-        elif cl in ('ticker', 'symbol', 'ticker symbol'):
+        # Ticker variations
+        elif cl in ('ticker', 'symbol', 'ticker symbol', 'stock ticker'):
             rename_map[c] = 'Ticker'
-        elif cl == 'sector':
+        # Sector
+        elif cl in ('sector', 'gics sector', 'industry sector'):
             rename_map[c] = 'Sector'
-        elif cl in ('country', 'location', 'market'):
+        # Country
+        elif cl in ('country', 'location', 'market', 'geography', 'domicile'):
             rename_map[c] = 'Country'
+        # Asset class
         elif 'asset' in cl and 'class' in cl:
             rename_map[c] = 'Asset Class'
     df = df.rename(columns=rename_map)
+
+    # Drop rows with negative or zero weights (cash, FX, payables)
+    if 'Weight (%)' in df.columns:
+        df['Weight (%)'] = pd.to_numeric(df['Weight (%)'], errors='coerce')
+        df = df[df['Weight (%)'] > 0]
 
     # Ticker fallback — synthesize from name if missing
     if 'Ticker' not in df.columns and 'Security Name' in df.columns:
