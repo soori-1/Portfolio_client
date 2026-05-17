@@ -6,8 +6,8 @@ __pycache__/
 venv/
 .env
 
-# Cached holdings — re-fetchable, no point versioning
-data/holdings/cache/
+# Cached holdings — commit these so Render uses them instead of fetching
+# data/holdings/cache/
 
 # Secrets
 auth/*.yaml
