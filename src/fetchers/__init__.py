@@ -189,7 +189,14 @@ def _fetch_one(ticker: str, cache_dir: Path, manual_root: Path) -> pd.DataFrame:
         df.to_csv(cached, index=False)
         return df
 
-    # Known issuers — direct fetcher
+    # Manual CSV takes precedence — most reliable, especially when issuers block
+    if manual.exists():
+        print(f"       using manual CSV")
+        df = _load_standardized(manual)
+        df.to_csv(cached, index=False)
+        return df
+
+    # Known issuers — direct fetcher (may fail if issuer blocks)
     fetcher = get_fetcher(issuer)
     if fetcher is not None:
         try:
@@ -199,11 +206,6 @@ def _fetch_one(ticker: str, cache_dir: Path, manual_root: Path) -> pd.DataFrame:
             return df
         except Exception as e:
             print(f"       fetch error: {e}")
-            if manual.exists():
-                print(f"       using manual fallback")
-                df = _load_standardized(manual)
-                df.to_csv(cached, index=False)
-                return df
             print(f"       trying auto-discovery...")
 
     # Auto-discovery for unknown tickers
