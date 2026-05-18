@@ -127,6 +127,17 @@ body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:15px
 .bar-fill.gd{background:var(--g)}
 .at .aw{text-align:right;font-family:var(--mono);font-weight:500;font-size:13px;width:18%}
 
+/* Pie chart layout */
+.pie-section{display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-top:48px}
+.pie-block{}
+.pie-chart-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:16px}
+.pie-legend{width:100%;margin-top:4px}
+.pie-legend-row{display:flex;align-items:center;gap:8px;padding:5px 0;border-bottom:1px solid rgba(139,26,26,.06);font-size:13px}
+.pie-legend-row:last-child{border-bottom:none}
+.pie-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.pie-leg-name{flex:1;color:var(--tx)}
+.pie-leg-val{font-family:var(--mono);font-weight:500;font-size:13px;color:var(--mu)}
+
 /* Best/worst */
 .bw-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
 .bw-lbl{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--mu);padding-bottom:9px;border-bottom:1px solid var(--bd);margin-bottom:4px}
@@ -253,10 +264,23 @@ body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:15px
 <div id="portfolio" class="pane">
   <div class="sh">Top 10 Holdings</div>
   <table class="ht"><thead><tr><th style="width:28px">#</th><th>Ticker</th><th>Security Name</th><th>Sector</th><th>Country</th><th style="text-align:right">Weight</th></tr></thead><tbody id="hold-tbody"></tbody></table>
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:48px;margin-top:48px">
-    <div><div class="sh">Sector Allocation</div><table class="at" id="sec-tbl"></table></div>
-    <div><div class="sh">Country Allocation</div><table class="at" id="cty-tbl"></table></div>
-    <div><div class="sh">Market Classification</div><table class="at" id="mkt-tbl"></table></div>
+
+  <div class="pie-section">
+    <div class="pie-block">
+      <div class="sh">Sector Allocation</div>
+      <div class="pie-chart-wrap"><svg id="pie-sec" width="160" height="160" viewBox="0 0 160 160"></svg></div>
+      <div class="pie-legend" id="leg-sec"></div>
+    </div>
+    <div class="pie-block">
+      <div class="sh">Country Allocation</div>
+      <div class="pie-chart-wrap"><svg id="pie-cty" width="160" height="160" viewBox="0 0 160 160"></svg></div>
+      <div class="pie-legend" id="leg-cty"></div>
+    </div>
+    <div class="pie-block">
+      <div class="sh">Market Classification</div>
+      <div class="pie-chart-wrap"><svg id="pie-mkt" width="160" height="160" viewBox="0 0 160 160"></svg></div>
+      <div class="pie-legend" id="leg-mkt"></div>
+    </div>
   </div>
 </div>
 
@@ -339,40 +363,51 @@ function sfmt(v) {
   return `<span class="${cls}">${s}${v.toFixed(2)}%</span>`;
 }
 
+// ── Derive ETF count dynamically from portfolio_weights ──────────────────
+function getEtfCount() {
+  if (D.portfolio_weights && D.portfolio_weights.length) return D.portfolio_weights.length;
+  return '—';
+}
+
 function render() {
   const m = D.month || '—', bn = D.benchmark_name || 'MSCI ACWI';
   const yp = D.ytd_port || 0, yb = D.ytd_bench || 0, al = D.alpha || 0;
+  const nEtf = getEtfCount();
 
-  // Header
+  // Header — ETF count from data, not hardcoded
   document.getElementById('h-name').textContent = D.portfolio_name || 'Momentum Global ETF Portfolio';
-  document.getElementById('h-sub').textContent = `Monthly Report · ${m} · 13 ETF Holdings · Benchmark: ${bn}`;
+  document.getElementById('h-sub').textContent = `Monthly Report · ${m} · ${nEtf} ETF Holdings · Benchmark: ${bn}`;
   const ytdEl = document.getElementById('h-ytd');
   ytdEl.textContent = (yp>=0?'+':'') + yp.toFixed(2) + '%';
   ytdEl.style.color = yp>=0?'var(--gr)':'var(--rd)';
   document.getElementById('h-bench-line').textContent = `vs ${bn} ${yb>=0?'+':''}${yb.toFixed(2)}% · Alpha ${al>=0?'+':''}${al.toFixed(2)}%`;
 
-  // KPI strip
+  // KPI strip — ETF count dynamic
   const kpis = [
     {l:'YTD Return', v:(yp>=0?'+':'')+yp.toFixed(2)+'%', cls:yp>=0?'pos':'neg', m:`As of ${m}`},
     {l:`${bn} YTD`, v:(yb>=0?'+':'')+yb.toFixed(2)+'%', cls:yb>=0?'pos':'neg', m:'Benchmark'},
     {l:'Alpha', v:(al>=0?'+':'')+al.toFixed(2)+'%', cls:al>=0?'pos':'neg', m:`vs ${bn}`},
-    {l:'Holdings', v:'13 ETFs', cls:'', m:'Global Equity'},
-    {l:'Emerging Mkts', v:(D.market_exposure?.by_market?.find(x=>x.name.includes('Emerging'))?.weight||41)+'%', cls:'', m:'Allocation'},
-    {l:'Developed Mkts', v:(D.market_exposure?.by_market?.find(x=>x.name.includes('Developed'))?.weight||54)+'%', cls:'', m:'Allocation'},
+    {l:'Holdings', v:`${nEtf} ETFs`, cls:'', m:'Global Equity'},
+    {l:'Emerging Mkts', v:(D.market_exposure?.by_market?.find(x=>x.name.includes('Emerging'))?.weight||'—')+'%', cls:'', m:'Allocation'},
+    {l:'Developed Mkts', v:(D.market_exposure?.by_market?.find(x=>x.name.includes('Developed'))?.weight||'—')+'%', cls:'', m:'Allocation'},
   ];
   document.getElementById('kpi-strip').innerHTML = kpis.map(k=>
     `<div class="kpi"><div class="kpi-lbl">${k.l}</div><div class="kpi-v ${k.cls}">${k.v}</div><div class="kpi-m">${k.m}</div></div>`
   ).join('');
 
-  // Key facts
+  // Key facts — ETF count dynamic
   const em = D.market_exposure?.by_market?.find(x=>x.name.includes('Emerging'))?.weight||'—';
   const dm = D.market_exposure?.by_market?.find(x=>x.name.includes('Developed'))?.weight||'—';
   const cm = D.market_exposure?.by_market?.find(x=>x.name.includes('Commodity'))?.weight||'—';
   const eq = D.market_exposure?.by_type?.find(x=>x.name.includes('Equity'))?.weight||'—';
   const rows = [
-    ['Reference Date', m],['Number of Holdings','13 ETFs'],['Benchmark',bn],
-    ['Emerging Markets',em+'%'],['Developed Markets',dm+'%'],['Commodity',cm+'%'],
-    ['Equity ETFs',eq+'%'],
+    ['Reference Date', m],
+    ['Number of Holdings', `${nEtf} ETFs`],
+    ['Benchmark', bn],
+    ['Emerging Markets', em+'%'],
+    ['Developed Markets', dm+'%'],
+    ['Commodity', cm+'%'],
+    ['Equity ETFs', eq+'%'],
   ];
   if (D.sector_allocation?.[0]) rows.push(['Top Sector', D.sector_allocation[0].name+' '+D.sector_allocation[0].weight+'%']);
   if (D.country_allocation?.[0]) rows.push(['Top Country', D.country_allocation[0].name+' '+D.country_allocation[0].weight+'%']);
@@ -395,15 +430,79 @@ function render() {
   buildBars();
   buildPerfTable();
   buildHoldings();
-  buildAllocTable('sec-tbl', D.sector_allocation||[], 'Sector');
-  buildAllocTable('cty-tbl', D.country_allocation||[], 'Country');
-  buildAllocTable('mkt-tbl', (D.market_exposure?.by_market||[]).concat(D.market_exposure?.by_type||[]), 'Classification', true);
+  buildPieChart('pie-sec', 'leg-sec', D.sector_allocation||[], PIE_COLORS_MAROON);
+  buildPieChart('pie-cty', 'leg-cty', D.country_allocation||[], PIE_COLORS_GOLD);
+  const mktData = (D.market_exposure?.by_market||[]).concat(D.market_exposure?.by_type||[]);
+  buildPieChart('pie-mkt', 'leg-mkt', mktData, PIE_COLORS_MIXED);
   buildETFAlloc();
   buildBW();
 
   // Documents
   document.getElementById('doc-name').textContent = `${D.portfolio_name} — Monthly Factsheet`;
   document.getElementById('doc-meta').textContent = `${m} · PDF · 4 pages · ${D.company_name}`;
+}
+
+// ── Pie chart colour palettes ────────────────────────────────────────────
+const PIE_COLORS_MAROON = [
+  '#8B1A1A','#B03030','#C8604A','#D4845A','#C8922A',
+  '#A0732A','#7A5520','#5A3D18','#D4A870','#E8C97A',
+];
+const PIE_COLORS_GOLD = [
+  '#C8922A','#A0732A','#8B1A1A','#B03030','#D4A870',
+  '#7A5520','#E8C97A','#C8604A','#5A3D18','#D4845A',
+];
+const PIE_COLORS_MIXED = [
+  '#8B1A1A','#C8922A','#5A3D18','#B03030','#D4A870',
+  '#C8604A','#A0732A','#E8C97A','#7A5520','#D4845A',
+];
+
+// ── SVG donut pie chart ──────────────────────────────────────────────────
+function buildPieChart(svgId, legId, data, colors) {
+  if (!data || !data.length) {
+    document.getElementById(svgId).innerHTML = '';
+    document.getElementById(legId).innerHTML = '<div style="color:var(--mu);font-size:13px;padding:8px 0">No data</div>';
+    return;
+  }
+
+  const total = data.reduce((s, d) => s + (d.weight || 0), 0);
+  if (total === 0) return;
+
+  const cx = 80, cy = 80, R = 68, r = 40; // outer/inner radius for donut
+  let startAngle = -Math.PI / 2; // start from top
+  let paths = '';
+
+  data.forEach((item, i) => {
+    const frac = item.weight / total;
+    const angle = frac * 2 * Math.PI;
+    const endAngle = startAngle + angle;
+    const x1 = cx + R * Math.cos(startAngle);
+    const y1 = cy + R * Math.sin(startAngle);
+    const x2 = cx + R * Math.cos(endAngle);
+    const y2 = cy + R * Math.sin(endAngle);
+    const ix1 = cx + r * Math.cos(endAngle);
+    const iy1 = cy + r * Math.sin(endAngle);
+    const ix2 = cx + r * Math.cos(startAngle);
+    const iy2 = cy + r * Math.sin(startAngle);
+    const large = angle > Math.PI ? 1 : 0;
+    const color = colors[i % colors.length];
+
+    paths += `<path d="M${x1},${y1} A${R},${R} 0 ${large},1 ${x2},${y2} L${ix1},${iy1} A${r},${r} 0 ${large},0 ${ix2},${iy2} Z"
+      fill="${color}" stroke="var(--bg)" stroke-width="2">
+      <title>${item.name}: ${item.weight.toFixed(1)}%</title>
+    </path>`;
+    startAngle = endAngle;
+  });
+
+  document.getElementById(svgId).innerHTML = paths;
+
+  // Legend
+  document.getElementById(legId).innerHTML = data.map((item, i) =>
+    `<div class="pie-legend-row">
+      <div class="pie-dot" style="background:${colors[i % colors.length]}"></div>
+      <span class="pie-leg-name">${item.name}</span>
+      <span class="pie-leg-val">${item.weight.toFixed(1)}%</span>
+    </div>`
+  ).join('');
 }
 
 function buildYTD() {
@@ -481,15 +580,6 @@ function buildHoldings() {
     `<tr class="tot"><td colspan="5" style="text-align:right;font-size:12px;color:var(--mu)">Top 10 Total</td><td class="wt">${total.toFixed(2)}%</td></tr>`;
 }
 
-function buildAllocTable(id, data, col, useGold=false) {
-  if (!data.length) { document.getElementById(id).innerHTML=`<tbody><tr><td style="color:var(--mu);padding:20px 0;font-size:13px">No data available.</td></tr></tbody>`; return; }
-  const maxW=Math.max(...data.map(d=>d.weight));
-  document.getElementById(id).innerHTML =
-    `<thead><tr><th>${col}</th><th></th><th style="text-align:right">Weight</th></tr></thead><tbody>` +
-    data.map(d=>{const pct=(d.weight/maxW*100).toFixed(1); return `<tr><td class="an">${d.name}</td><td class="ab"><div class="bar-bg"><div class="bar-fill${useGold?' gd':''}" style="width:${pct}%"></div></div></td><td class="aw">${d.weight.toFixed(1)}%</td></tr>`;}).join('') +
-    '</tbody>';
-}
-
 function buildETFAlloc() {
   const data = D.portfolio_weights||[];
   if (!data.length) return;
@@ -530,32 +620,61 @@ function getSampleData() {
       {ticker:"MCHI",name:"iShares MSCI China ETF",ret:2.47},
       {ticker:"IAU",name:"iShares Gold Trust",ret:-1.49},
     ],
-    top_holdings:[],sector_allocation:[],country_allocation:[],
+    top_holdings:[
+      {rank:1,ticker:"2330",name:"Taiwan Semiconductor Mfg",sector:"Information Technology",country:"Taiwan",weight:4.03},
+      {rank:2,ticker:"SLV",name:"iShares Silver Trust",sector:"Materials",country:"Global",weight:2.88},
+      {rank:3,ticker:"CPER",name:"Copper Futures",sector:"Commodities",country:"United States",weight:2.86},
+      {rank:4,ticker:"NVDA",name:"NVIDIA Corp",sector:"Information Technology",country:"United States",weight:1.40},
+      {rank:5,ticker:"700",name:"Tencent Holdings Ltd",sector:"Communication Services",country:"China",weight:1.12},
+    ],
+    sector_allocation:[
+      {name:"Information Technology",weight:25.6},
+      {name:"Financials",weight:16.7},
+      {name:"Materials",weight:7.8},
+      {name:"Consumer Discretionary",weight:4.5},
+      {name:"Industrials",weight:4.5},
+    ],
+    country_allocation:[
+      {name:"United States",weight:31.1},
+      {name:"Taiwan",weight:12.4},
+      {name:"China",weight:8.3},
+      {name:"Australia",weight:5.1},
+      {name:"Brazil",weight:4.7},
+    ],
     market_exposure:{
-      by_market:[{name:"Developed Markets",weight:54},{name:"Emerging Markets",weight:41},{name:"Commodity",weight:5}],
-      by_type:[{name:"Equity ETFs",weight:95},{name:"Commodity ETFs",weight:5}]
+      by_market:[
+        {name:"Developed Markets",weight:48.7},
+        {name:"Emerging Markets",weight:37.4},
+        {name:"Commodity",weight:9.9},
+      ],
+      by_type:[
+        {name:"Equity ETFs",weight:90.1},
+        {name:"Commodity ETFs",weight:9.9},
+      ]
     },
     portfolio_weights:[
-      {ticker:"EEM",name:"iShares MSCI Emerging Markets ETF",weight:15},
-      {ticker:"VT",name:"Vanguard Total World Stock ETF",weight:15},
-      {ticker:"ARTY",name:"iShares Future AI & Tech ETF",weight:10},
-      {ticker:"IYZ",name:"iShares U.S. Telecommunications ETF",weight:7},
-      {ticker:"EPOL",name:"iShares MSCI Poland ETF",weight:7},
-      {ticker:"EWT",name:"iShares MSCI Taiwan ETF",weight:7},
-      {ticker:"EWZ",name:"iShares MSCI Brazil ETF",weight:7},
-      {ticker:"EWA",name:"iShares MSCI Australia ETF",weight:7},
-      {ticker:"MCHI",name:"iShares MSCI China ETF",weight:5},
-      {ticker:"DTCR",name:"Global X Data Center ETF",weight:5},
-      {ticker:"LIT",name:"Global X Lithium & Battery Tech ETF",weight:5},
-      {ticker:"HYDR",name:"Global X Hydrogen ETF",weight:5},
-      {ticker:"IAU",name:"iShares Gold Trust",weight:5},
+      {ticker:"EEM",name:"iShares MSCI Emerging Markets ETF",weight:15.4},
+      {ticker:"VT",name:"Vanguard Total World Stock ETF",weight:14.2},
+      {ticker:"ARTY",name:"iShares Future AI & Tech ETF",weight:9.1},
+      {ticker:"IYZ",name:"iShares U.S. Telecommunications ETF",weight:7.3},
+      {ticker:"EWT",name:"iShares MSCI Taiwan ETF",weight:7.0},
+      {ticker:"EPOL",name:"iShares MSCI Poland ETF",weight:6.2},
+      {ticker:"DTCR",name:"Global X Data Center ETF",weight:5.1},
+      {ticker:"LIT",name:"Global X Lithium & Battery Tech ETF",weight:4.9},
+      {ticker:"MCHI",name:"iShares MSCI China ETF",weight:4.7},
+      {ticker:"HYDR",name:"Global X Hydrogen ETF",weight:4.2},
+      {ticker:"IAU",name:"iShares Gold Trust",weight:4.2},
+      {ticker:"EWZ",name:"iShares MSCI Brazil ETF",weight:4.1},
+      {ticker:"TAN",name:"Invesco Solar ETF",weight:4.0},
+      {ticker:"EWA",name:"iShares MSCI Australia ETF",weight:3.9},
+      {ticker:"SLV",name:"iShares Silver Trust",weight:2.9},
+      {ticker:"CPER",name:"US Copper Index Fund",weight:2.9},
     ],
     commentary:[
-      "The Strait of Hormuz crisis defined market direction, producing a sharp drawdown followed by an equally sharp recovery to near-record highs.",
-      "Emerging markets outperformed developed markets globally. The portfolio's EM allocation (EEM, EWZ, EWT, MCHI) captured this rotation effectively.",
-      "Polish equities (EPOL) were the single largest contributor, supported by EU defence spending, NATO commitment uplift, and EUR strength.",
-      "Brazil (EWZ) and Taiwan (EWT) added further alpha through Selic rate cuts and TSMC-driven semiconductor demand respectively.",
-      "European exposure remained the principal area of weakness, reflecting energy vulnerability and limited technology participation.",
+      "The Strait of Hormuz crisis defined market direction, producing a sharp drawdown followed by an equally sharp recovery.",
+      "Emerging markets outperformed developed markets globally. The portfolio's EM allocation captured this rotation effectively.",
+      "Polish equities (EPOL) were the single largest contributor, supported by EU defence spending and EUR strength.",
+      "Brazil (EWZ) and Taiwan (EWT) added further alpha through Selic rate cuts and TSMC-driven semiconductor demand.",
     ]
   };
 }
