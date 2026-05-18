@@ -28,15 +28,25 @@ import requests
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from src.fetch_holdings import fetch_all_holdings
+# fetch_all_holdings lives in src.fetchers (the package __init__),
+# NOT in src.fetch_holdings (that file is a CLI wrapper).
+from src.fetchers import fetch_all_holdings
 from src.lookthrough import run_lookthrough
 from src.performance import run_performance
 from src.export_dashboard_data import export as export_dashboard
 
 
-CONFIG  = ROOT / "data" / "config"
-RETURNS = ROOT / "data" / "returns"
-OUTPUTS = ROOT / "outputs" / "snapshots"
+# Match paths used by src/fetch_holdings.py
+CONFIG_DIR     = ROOT / "data" / "config"
+RETURNS_DIR    = ROOT / "data" / "returns"
+OUTPUTS_DIR    = ROOT / "outputs" / "snapshots"
+HOLDINGS_CACHE = ROOT / "data" / "holdings" / "cache"
+HOLDINGS_MANUAL = ROOT / "data" / "holdings" / "manual"
+
+PORTFOLIO_WEIGHTS_XLSX = CONFIG_DIR / "portfolio_weights.xlsx"
+ETF_CLASSIFICATION_XLSX = CONFIG_DIR / "etf_classification.xlsx"
+MONTHLY_RETURNS_XLSX = RETURNS_DIR / "monthly_returns.xlsx"
+ETF_PERFORMANCE_XLSX = RETURNS_DIR / "etf_monthly_performance.xlsx"
 
 
 def log(msg: str) -> None:
@@ -51,7 +61,7 @@ def _current_month_key() -> str:
 
 def _write_lookthrough_xlsx(sheets: dict, out_path: Path) -> None:
     """
-    run_lookthrough() returns a dict of {sheet_name: DataFrame or tuple}.
+    run_lookthrough() returns {sheet_name: DataFrame or tuple}.
     'Concentration' is a (summary_df, top10_df) tuple - stack them.
     """
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -86,7 +96,7 @@ def _push_to_github(local_file: Path, repo_path: str = "dashboard_data.json") ->
         "X-GitHub-Api-Version": "2022-11-28",
     }
 
-    # Need current SHA to update (404 = new file, no SHA needed)
+    # Need current SHA to update existing file (404 = new file, no SHA needed)
     sha = None
     r = requests.get(api, headers=headers, params={"ref": branch}, timeout=30)
     if r.status_code == 200:
@@ -112,14 +122,19 @@ def main() -> int:
     log("=" * 60)
 
     month_key = _current_month_key()
-    snapshot_dir = OUTPUTS / month_key
+    snapshot_dir = OUTPUTS_DIR / month_key
     snapshot_dir.mkdir(parents=True, exist_ok=True)
     log(f"Snapshot dir: {snapshot_dir}")
 
     # ── Step 1: Fetch holdings ────────────────────────────────────
     log("STEP 1/4 - Fetching holdings for all ETFs")
     try:
-        holdings = fetch_all_holdings()
+        holdings = fetch_all_holdings(
+            config_path = PORTFOLIO_WEIGHTS_XLSX,
+            cache_root  = HOLDINGS_CACHE,
+            manual_root = HOLDINGS_MANUAL,
+            as_of       = date.today(),
+        )
         if not holdings:
             log("ERROR: No holdings returned")
             return 1
@@ -132,7 +147,7 @@ def main() -> int:
     # ── Step 2: Look-through aggregation ──────────────────────────
     log("STEP 2/4 - Building look-through (stocks, sectors, countries)")
     try:
-        portfolio_weights = pd.read_excel(CONFIG / "portfolio_weights.xlsx").dropna(subset=["ETF Ticker"])
+        portfolio_weights = pd.read_excel(PORTFOLIO_WEIGHTS_XLSX).dropna(subset=["ETF Ticker"])
 
         def _optional(p: Path):
             return pd.read_excel(p) if p.exists() else None
@@ -140,14 +155,14 @@ def main() -> int:
         sheets = run_lookthrough(
             holdings          = holdings,
             portfolio_weights = portfolio_weights,
-            ticker_aliases    = _optional(CONFIG / "ticker_aliases.xlsx"),
-            sector_overrides  = _optional(CONFIG / "sector_overrides.xlsx"),
-            country_overrides = _optional(CONFIG / "country_overrides.xlsx"),
+            ticker_aliases    = _optional(CONFIG_DIR / "ticker_aliases.xlsx"),
+            sector_overrides  = _optional(CONFIG_DIR / "sector_overrides.xlsx"),
+            country_overrides = _optional(CONFIG_DIR / "country_overrides.xlsx"),
         )
 
         lt_path = snapshot_dir / "lookthrough.xlsx"
         _write_lookthrough_xlsx(sheets, lt_path)
-        log(f"  OK - lookthrough.xlsx -> {lt_path.name}")
+        log(f"  OK - lookthrough.xlsx written")
     except Exception as e:
         log(f"ERROR in lookthrough: {e}")
         traceback.print_exc()
@@ -157,10 +172,10 @@ def main() -> int:
     log("STEP 3/4 - Computing performance metrics")
     try:
         perf = run_performance(
-            monthly_returns_path    = RETURNS / "monthly_returns.xlsx",
-            etf_performance_path    = RETURNS / "etf_monthly_performance.xlsx",
-            etf_classification_path = CONFIG  / "etf_classification.xlsx",
-            portfolio_weights_path  = CONFIG  / "portfolio_weights.xlsx",
+            monthly_returns_path    = MONTHLY_RETURNS_XLSX,
+            etf_performance_path    = ETF_PERFORMANCE_XLSX,
+            etf_classification_path = ETF_CLASSIFICATION_XLSX,
+            portfolio_weights_path  = PORTFOLIO_WEIGHTS_XLSX,
         )
         mt = perf.get("monthly_table")
         if mt is not None and len(mt):
@@ -177,7 +192,7 @@ def main() -> int:
     # ── Step 4: Export dashboard data + push to GitHub ────────────
     log("STEP 4/4 - Exporting dashboard_data.json")
     try:
-        # export() picks the latest snapshot automatically
+        # export() picks the latest snapshot dir automatically
         snap_json = export_dashboard()
 
         # Copy to repo root (GitHub Pages serves from /)
