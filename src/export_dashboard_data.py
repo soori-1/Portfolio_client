@@ -4,6 +4,8 @@ Export dashboard_data.json for the GitHub Pages HTML dashboard.
 Called automatically at the end of generate_report.py.
 Can also be run standalone:
     python -m src.export_dashboard_data
+
+Classification source: src/classification.py (single source of truth).
 """
 from __future__ import annotations
 
@@ -12,6 +14,8 @@ from datetime import date
 from pathlib import Path
 
 import pandas as pd
+
+from .classification import get_classification_df, classify_etf
 
 ROOT    = Path(__file__).resolve().parent.parent
 CONFIG  = ROOT / "data" / "config"
@@ -104,7 +108,14 @@ def export(out_path: Path | None = None) -> Path:
                 hdr = i; break
         stocks = pd.read_excel(lt, sheet_name="Stock Look-Through", header=hdr)
         tc = next((c for c in stocks.columns if c.lower() in ("ticker","canonical ticker")), stocks.columns[0])
-        top10 = stocks.dropna(subset=[tc]).head(10)
+
+        # Filter out REMAINDER / synthetic placeholders before taking top 10
+        stocks_clean = stocks.dropna(subset=[tc]).copy()
+        stocks_clean = stocks_clean[
+            ~stocks_clean[tc].astype(str).str.upper().isin(["REMAINDER", "OTHER", "UNCLASSIFIED"])
+        ]
+        top10 = stocks_clean.head(10)
+
         data["top_holdings"] = [
             {
                 "rank":    i+1,
@@ -133,23 +144,37 @@ def export(out_path: Path | None = None) -> Path:
             for _, r in cty_clean.iterrows()
         ]
 
-    # ── Market classification ──
-    cls_p = CONFIG / "etf_classification.xlsx"
-    wt_p  = CONFIG / "portfolio_weights.xlsx"
-    if cls_p.exists() and wt_p.exists():
-        cls = pd.read_excel(cls_p)
+    # ── Market classification (from src/classification.py — NOT xlsx) ──
+    wt_p = CONFIG / "portfolio_weights.xlsx"
+    if wt_p.exists():
+        cls = get_classification_df()
         wts = pd.read_excel(wt_p).dropna(subset=["ETF Ticker"])
-        mg  = wts.merge(cls, left_on="ETF Ticker", right_on="Ticker", how="left")
+        wts = wts[~wts["ETF Ticker"].astype(str).str.strip().isin(["TOTAL", ""])]
+
+        # Merge — if any ticker missing from cls, classify_etf() fallback fills it
+        mg = wts.merge(cls, left_on="ETF Ticker", right_on="Ticker", how="left")
+
         bm, bt = {}, {}
         for _, r in mg.iterrows():
-            w  = float(r.get("Portfolio Weight (%)", 0) or 0)
-            mt = str(r.get("Market Type","Unknown")).strip()
-            et = "Commodity ETFs" if str(r.get("ETF Type","")).lower()=="commodity" else "Equity ETFs"
-            bm[mt] = bm.get(mt,0)+w
-            bt[et] = bt.get(et,0)+w
+            ticker = str(r["ETF Ticker"]).strip()
+            w = float(r.get("Portfolio Weight (%)", 0) or 0)
+
+            # Use classify_etf as fallback for any blank rows (belt + braces)
+            if pd.isna(r.get("Market Type")) or pd.isna(r.get("ETF Type")):
+                c = classify_etf(ticker)
+                mt = c["market_type"]
+                et = c["etf_type"]
+            else:
+                mt = str(r["Market Type"]).strip()
+                et = str(r["ETF Type"]).strip()
+
+            et_label = "Commodity ETFs" if et.lower() == "commodity" else "Equity ETFs"
+            bm[mt]       = bm.get(mt, 0) + w
+            bt[et_label] = bt.get(et_label, 0) + w
+
         data["market_exposure"] = {
-            "by_market": [{"name":k,"weight":round(v,1)} for k,v in sorted(bm.items(),key=lambda x:-x[1])],
-            "by_type":   [{"name":k,"weight":round(v,1)} for k,v in sorted(bt.items(),key=lambda x:-x[1])],
+            "by_market": [{"name": k, "weight": round(v, 1)} for k, v in sorted(bm.items(), key=lambda x: -x[1])],
+            "by_type":   [{"name": k, "weight": round(v, 1)} for k, v in sorted(bt.items(), key=lambda x: -x[1])],
         }
 
     # ── ETF weights ──
