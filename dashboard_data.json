@@ -42,45 +42,20 @@
     {
       "month": "2026-05",
       "label": "May 2026",
-      "port": 4.0,
-      "bench": 0.5,
-      "cum_port": 22.37,
-      "cum_bench": 7.64
+      "port": 2.48,
+      "bench": 2.4,
+      "cum_port": 20.58,
+      "cum_bench": 9.67
     }
   ],
-  "ytd_port": 22.37,
-  "ytd_bench": 7.64,
-  "alpha": 14.73,
+  "ytd_port": 20.58,
+  "ytd_bench": 9.67,
+  "alpha": 10.91,
   "etf_performance": [
-    {
-      "ticker": "EEM",
-      "name": "iShares MSCI Emerging Markets ETF",
-      "ret": 2.0
-    },
-    {
-      "ticker": "VT",
-      "name": "Vanguard Total World Stock ETF",
-      "ret": 2.0
-    },
-    {
-      "ticker": "ARTY",
-      "name": "iShares Future AI & Tech ETF",
-      "ret": 2.0
-    },
-    {
-      "ticker": "IYZ",
-      "name": "iShares U.S. Telecommunications ETF",
-      "ret": 1.0
-    },
     {
       "ticker": "EWT",
       "name": "iShares MSCI Taiwan ETF",
       "ret": 26.73
-    },
-    {
-      "ticker": "EPOL",
-      "name": "iShares MSCI Poland ETF",
-      "ret": 4.0
     },
     {
       "ticker": "DTCR",
@@ -126,14 +101,6 @@
   "top_holdings": [
     {
       "rank": 1,
-      "ticker": "REMAINDER",
-      "name": "VT Remaining Holdings (approx 9900 stocks)",
-      "sector": "Unclassified",
-      "country": "Global",
-      "weight": 6.84
-    },
-    {
-      "rank": 2,
       "ticker": "2330",
       "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
       "sector": "Information Technology",
@@ -141,7 +108,7 @@
       "weight": 4.03
     },
     {
-      "rank": 3,
+      "rank": 2,
       "ticker": "SLV",
       "name": "iShares Silver Trust",
       "sector": "Materials",
@@ -149,7 +116,7 @@
       "weight": 2.88
     },
     {
-      "rank": 4,
+      "rank": 3,
       "ticker": "CPER",
       "name": "Copper Futures",
       "sector": "Commodities",
@@ -157,7 +124,7 @@
       "weight": 2.86
     },
     {
-      "rank": 5,
+      "rank": 4,
       "ticker": "NVDA",
       "name": "NVIDIA Corp",
       "sector": "Information Technology",
@@ -165,7 +132,7 @@
       "weight": 1.4
     },
     {
-      "rank": 6,
+      "rank": 5,
       "ticker": "700",
       "name": "TENCENT HOLDINGS LTD",
       "sector": "Communication Services",
@@ -173,7 +140,7 @@
       "weight": 1.12
     },
     {
-      "rank": 7,
+      "rank": 6,
       "ticker": "000660",
       "name": "SK HYNIX INC",
       "sector": "Information Technology",
@@ -181,7 +148,7 @@
       "weight": 1.11
     },
     {
-      "rank": 8,
+      "rank": 7,
       "ticker": "RIO",
       "name": "RIO TINTO PLC",
       "sector": "Materials",
@@ -189,7 +156,7 @@
       "weight": 1.11
     },
     {
-      "rank": 9,
+      "rank": 8,
       "ticker": "JPM",
       "name": "JPMorgan Chase & Co",
       "sector": "Financials",
@@ -197,12 +164,20 @@
       "weight": 1.06
     },
     {
-      "rank": 10,
+      "rank": 9,
       "ticker": "005930",
       "name": "SAMSUNG ELECTRONICS LTD",
       "sector": "Information Technology",
       "country": "Korea (South)",
       "weight": 1.06
+    },
+    {
+      "rank": 10,
+      "ticker": "BRKB",
+      "name": "BERKSHIRE HATHAWAY INC CLASS B",
+      "sector": "Financials",
+      "country": "United States",
+      "weight": 1.0
     }
   ],
   "sector_allocation": [
@@ -293,29 +268,25 @@
     "by_market": [
       {
         "name": "Developed Markets",
-        "weight": 48.7
+        "weight": 52.7
       },
       {
         "name": "Emerging Markets",
         "weight": 37.4
       },
       {
-        "name": "nan",
-        "weight": 9.8
-      },
-      {
         "name": "Commodity",
-        "weight": 4.2
+        "weight": 9.9
       }
     ],
     "by_type": [
       {
         "name": "Equity ETFs",
-        "weight": 95.8
+        "weight": 90.1
       },
       {
         "name": "Commodity ETFs",
-        "weight": 4.2
+        "weight": 9.9
       }
     ]
   },
@@ -402,6 +373,6 @@
     }
   ],
   "commentary": [
-    "blaj"
+    "wewe"
   ]
 }
