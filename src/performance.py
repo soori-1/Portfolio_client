@@ -9,6 +9,10 @@ all metrics needed for PDF pages 2 and 3:
   - Monthly bar chart data
   - Best & worst ETF performers
   - Market exposure breakdown (for donut charts on page 2)
+
+Classification source: src/classification.py (single source of truth).
+The `etf_classification_path` argument is kept for backward compatibility
+but is IGNORED — pass any path (or None).
 """
 from __future__ import annotations
 
@@ -17,11 +21,13 @@ from typing import Optional
 
 import pandas as pd
 
+from .classification import get_classification_df
+
 
 def run_performance(
     monthly_returns_path: Path,
     etf_performance_path: Path,
-    etf_classification_path: Path,
+    etf_classification_path: Optional[Path],   # kept for backward compat — ignored
     portfolio_weights_path: Path,
 ) -> dict:
     """
@@ -30,19 +36,19 @@ def run_performance(
     """
     monthly   = _load_monthly_returns(monthly_returns_path)
     etf_perf  = _load_etf_performance(etf_performance_path)
-    classify  = pd.read_excel(etf_classification_path)
+    classify  = get_classification_df()                                # ← was pd.read_excel
     weights   = pd.read_excel(portfolio_weights_path).dropna(subset=["ETF Ticker"])
 
-    monthly   = _compute_cumulative(monthly)
-    table     = _monthly_table(monthly)
+    monthly    = _compute_cumulative(monthly)
+    table      = _monthly_table(monthly)
     best_worst = _best_worst(etf_perf)
     market_exp = _market_exposure(weights, classify)
 
     return {
-        "monthly_table":   table,        # DataFrame: Month, Portfolio%, ACWI%, Outperformance%, Cum_Port%, Cum_ACWI%
-        "cumulative":      monthly,      # Full series with cumulative columns
-        "best_worst":      best_worst,   # dict: gainers=[], laggards=[]
-        "market_exposure": market_exp,   # dict: by_market={}, by_type={}
+        "monthly_table":   table,
+        "cumulative":      monthly,
+        "best_worst":      best_worst,
+        "market_exposure": market_exp,
     }
 
 
@@ -52,7 +58,6 @@ def _load_monthly_returns(path: Path) -> pd.DataFrame:
     df = pd.read_excel(path)
     df.columns = [c.strip() for c in df.columns]
 
-    # Normalise column names
     rename = {}
     for c in df.columns:
         cl = c.lower()
@@ -100,7 +105,6 @@ def _load_etf_performance(path: Path) -> pd.DataFrame:
 def _compute_cumulative(df: pd.DataFrame) -> pd.DataFrame:
     """Add cumulative YTD return columns."""
     df = df.copy()
-    # Cumulative = product of (1 + r/100) − 1, expressed as %
     df["Cum_Portfolio (%)"] = (
         (1 + df["Portfolio (%)"] / 100).cumprod() - 1
     ) * 100
@@ -117,7 +121,6 @@ def _monthly_table(df: pd.DataFrame) -> pd.DataFrame:
     out["Portfolio (%)"]  = out["Portfolio (%)"].round(2)
     out["Benchmark (%)"]  = out["Benchmark (%)"].round(2)
 
-    # Format month label: "2026-01" → "January 2026"
     def fmt_month(m):
         try:
             return pd.to_datetime(str(m) + "-01").strftime("%B %Y")
@@ -126,7 +129,6 @@ def _monthly_table(df: pd.DataFrame) -> pd.DataFrame:
 
     out["Month Label"] = out["Month"].apply(fmt_month)
 
-    # YTD summary row
     ytd_port  = out["Cum_Portfolio (%)"].iloc[-1]
     ytd_bench = out["Cum_Benchmark (%)"].iloc[-1]
     ytd_row = pd.DataFrame([{
@@ -181,13 +183,11 @@ def _market_exposure(weights: pd.DataFrame, classify: pd.DataFrame) -> dict:
         market = str(row.get("Market Type", "Unknown")).strip()
         etype  = str(row.get("ETF Type",    "Unknown")).strip()
 
-        # Label ETF Type for display
         etype_label = "Commodity ETFs" if etype.lower() == "commodity" else "Equity ETFs"
 
         by_market[market]      = by_market.get(market, 0) + w
         by_type[etype_label]   = by_type.get(etype_label, 0) + w
 
-    # Round
     by_market = {k: round(v, 1) for k, v in sorted(by_market.items(), key=lambda x: -x[1])}
     by_type   = {k: round(v, 1) for k, v in sorted(by_type.items(),   key=lambda x: -x[1])}
 
