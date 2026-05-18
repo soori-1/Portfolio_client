@@ -1,0 +1,407 @@
+{
+  "portfolio_name": "Momentum Global ETF Portfolio",
+  "benchmark_name": "MSCI ACWI",
+  "company_name": "Right Horizons Wealth Management",
+  "tagline": "Guiding you in achieving your goals",
+  "month_key": "2026-05",
+  "month": "May 2026",
+  "reference_date": "18 May 2026",
+  "monthly_returns": [
+    {
+      "month": "2026-01",
+      "label": "Jan 2026",
+      "port": 8.79,
+      "bench": 2.83,
+      "cum_port": 8.79,
+      "cum_bench": 2.83
+    },
+    {
+      "month": "2026-02",
+      "label": "Feb 2026",
+      "port": 6.14,
+      "bench": 1.29,
+      "cum_port": 15.47,
+      "cum_bench": 4.16
+    },
+    {
+      "month": "2026-03",
+      "label": "Mar 2026",
+      "port": -2.58,
+      "bench": -6.11,
+      "cum_port": 12.49,
+      "cum_bench": -2.21
+    },
+    {
+      "month": "2026-04",
+      "label": "Apr 2026",
+      "port": 4.6,
+      "bench": 9.52,
+      "cum_port": 17.67,
+      "cum_bench": 7.1
+    },
+    {
+      "month": "2026-05",
+      "label": "May 2026",
+      "port": 4.0,
+      "bench": 0.5,
+      "cum_port": 22.37,
+      "cum_bench": 7.64
+    }
+  ],
+  "ytd_port": 22.37,
+  "ytd_bench": 7.64,
+  "alpha": 14.73,
+  "etf_performance": [
+    {
+      "ticker": "EEM",
+      "name": "iShares MSCI Emerging Markets ETF",
+      "ret": 2.0
+    },
+    {
+      "ticker": "VT",
+      "name": "Vanguard Total World Stock ETF",
+      "ret": 2.0
+    },
+    {
+      "ticker": "ARTY",
+      "name": "iShares Future AI & Tech ETF",
+      "ret": 2.0
+    },
+    {
+      "ticker": "IYZ",
+      "name": "iShares U.S. Telecommunications ETF",
+      "ret": 1.0
+    },
+    {
+      "ticker": "EWT",
+      "name": "iShares MSCI Taiwan ETF",
+      "ret": 26.73
+    },
+    {
+      "ticker": "EPOL",
+      "name": "iShares MSCI Poland ETF",
+      "ret": 4.0
+    },
+    {
+      "ticker": "DTCR",
+      "name": "Global X Data Center & Digital Infrastructure ETF",
+      "ret": 20.37
+    },
+    {
+      "ticker": "MCHI",
+      "name": "iShares MSCI China ETF",
+      "ret": 2.47
+    },
+    {
+      "ticker": "HYDR",
+      "name": "Global X Hydrogen ETF",
+      "ret": 21.67
+    },
+    {
+      "ticker": "IAU",
+      "name": "iShares Gold Trust",
+      "ret": -1.49
+    },
+    {
+      "ticker": "EWZ",
+      "name": "iShares MSCI Brazil ETF",
+      "ret": 3.41
+    },
+    {
+      "ticker": "TAN",
+      "name": "Invesco Solar ETF",
+      "ret": 0.0
+    },
+    {
+      "ticker": "SLV",
+      "name": "iShares Silver Trust",
+      "ret": 0.0
+    },
+    {
+      "ticker": "CPER",
+      "name": "United States Copper Index Fund",
+      "ret": 0.0
+    }
+  ],
+  "top_holdings": [
+    {
+      "rank": 1,
+      "ticker": "REMAINDER",
+      "name": "VT Remaining Holdings (approx 9900 stocks)",
+      "sector": "Unclassified",
+      "country": "Global",
+      "weight": 6.84
+    },
+    {
+      "rank": 2,
+      "ticker": "2330",
+      "name": "TAIWAN SEMICONDUCTOR MANUFACTURING",
+      "sector": "Information Technology",
+      "country": "Taiwan",
+      "weight": 4.03
+    },
+    {
+      "rank": 3,
+      "ticker": "SLV",
+      "name": "iShares Silver Trust",
+      "sector": "Materials",
+      "country": "Global",
+      "weight": 2.88
+    },
+    {
+      "rank": 4,
+      "ticker": "CPER",
+      "name": "Copper Futures",
+      "sector": "Commodities",
+      "country": "United States",
+      "weight": 2.86
+    },
+    {
+      "rank": 5,
+      "ticker": "NVDA",
+      "name": "NVIDIA Corp",
+      "sector": "Information Technology",
+      "country": "United States",
+      "weight": 1.4
+    },
+    {
+      "rank": 6,
+      "ticker": "700",
+      "name": "TENCENT HOLDINGS LTD",
+      "sector": "Communication Services",
+      "country": "China",
+      "weight": 1.12
+    },
+    {
+      "rank": 7,
+      "ticker": "000660",
+      "name": "SK HYNIX INC",
+      "sector": "Information Technology",
+      "country": "Korea (South)",
+      "weight": 1.11
+    },
+    {
+      "rank": 8,
+      "ticker": "RIO",
+      "name": "RIO TINTO PLC",
+      "sector": "Materials",
+      "country": "Australia",
+      "weight": 1.11
+    },
+    {
+      "rank": 9,
+      "ticker": "JPM",
+      "name": "JPMorgan Chase & Co",
+      "sector": "Financials",
+      "country": "United States",
+      "weight": 1.06
+    },
+    {
+      "rank": 10,
+      "ticker": "005930",
+      "name": "SAMSUNG ELECTRONICS LTD",
+      "sector": "Information Technology",
+      "country": "Korea (South)",
+      "weight": 1.06
+    }
+  ],
+  "sector_allocation": [
+    {
+      "name": "Information Technology",
+      "weight": 25.6
+    },
+    {
+      "name": "Financials",
+      "weight": 16.7
+    },
+    {
+      "name": "Materials",
+      "weight": 7.8
+    },
+    {
+      "name": "Consumer Discretionary",
+      "weight": 4.5
+    },
+    {
+      "name": "Industrials",
+      "weight": 4.5
+    },
+    {
+      "name": "Communication Services",
+      "weight": 3.9
+    },
+    {
+      "name": "Real Estate",
+      "weight": 3.2
+    },
+    {
+      "name": "Health Care",
+      "weight": 2.1
+    },
+    {
+      "name": "Energy",
+      "weight": 2.1
+    },
+    {
+      "name": "Consumer Staples",
+      "weight": 1.6
+    }
+  ],
+  "country_allocation": [
+    {
+      "name": "United States",
+      "weight": 31.1
+    },
+    {
+      "name": "Taiwan",
+      "weight": 12.4
+    },
+    {
+      "name": "China",
+      "weight": 8.3
+    },
+    {
+      "name": "Australia",
+      "weight": 5.1
+    },
+    {
+      "name": "Brazil",
+      "weight": 4.7
+    },
+    {
+      "name": "Korea (South)",
+      "weight": 3.8
+    },
+    {
+      "name": "India",
+      "weight": 1.8
+    },
+    {
+      "name": "France",
+      "weight": 0.5
+    },
+    {
+      "name": "South Africa",
+      "weight": 0.5
+    },
+    {
+      "name": "Canada",
+      "weight": 0.4
+    }
+  ],
+  "market_exposure": {
+    "by_market": [
+      {
+        "name": "Developed Markets",
+        "weight": 48.7
+      },
+      {
+        "name": "Emerging Markets",
+        "weight": 37.4
+      },
+      {
+        "name": "nan",
+        "weight": 9.8
+      },
+      {
+        "name": "Commodity",
+        "weight": 4.2
+      }
+    ],
+    "by_type": [
+      {
+        "name": "Equity ETFs",
+        "weight": 95.8
+      },
+      {
+        "name": "Commodity ETFs",
+        "weight": 4.2
+      }
+    ]
+  },
+  "portfolio_weights": [
+    {
+      "ticker": "EEM",
+      "name": "iShares MSCI Emerging Markets ETF",
+      "weight": 15.4
+    },
+    {
+      "ticker": "VT",
+      "name": "Vanguard Total World Stock ETF",
+      "weight": 14.2
+    },
+    {
+      "ticker": "ARTY",
+      "name": "iShares Future AI & Tech ETF",
+      "weight": 9.1
+    },
+    {
+      "ticker": "IYZ",
+      "name": "iShares U.S. Telecommunications ETF",
+      "weight": 7.3
+    },
+    {
+      "ticker": "EWT",
+      "name": "iShares MSCI Taiwan ETF",
+      "weight": 7.0
+    },
+    {
+      "ticker": "EPOL",
+      "name": "iShares MSCI Poland ETF",
+      "weight": 6.2
+    },
+    {
+      "ticker": "DTCR",
+      "name": "Global X Data Center & Digital Infrastructure ETF",
+      "weight": 5.1
+    },
+    {
+      "ticker": "LIT",
+      "name": "Global X Lithium & Battery Tech ETF",
+      "weight": 4.9
+    },
+    {
+      "ticker": "MCHI",
+      "name": "iShares MSCI China ETF",
+      "weight": 4.7
+    },
+    {
+      "ticker": "HYDR",
+      "name": "Global X Hydrogen ETF",
+      "weight": 4.2
+    },
+    {
+      "ticker": "IAU",
+      "name": "iShares Gold Trust",
+      "weight": 4.2
+    },
+    {
+      "ticker": "EWZ",
+      "name": "iShares MSCI Brazil ETF",
+      "weight": 4.1
+    },
+    {
+      "ticker": "TAN",
+      "name": "Invesco Solar ETF",
+      "weight": 4.0
+    },
+    {
+      "ticker": "EWA",
+      "name": "iShares MSCI Australia ETF",
+      "weight": 3.9
+    },
+    {
+      "ticker": "SLV",
+      "name": "iShares Silver Trust",
+      "weight": 2.9
+    },
+    {
+      "ticker": "CPER",
+      "name": "United States Copper Index Fund",
+      "weight": 2.9
+    }
+  ],
+  "commentary": [
+    "blaj"
+  ]
+}
