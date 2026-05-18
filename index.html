@@ -262,9 +262,6 @@ body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:15px
 </div>
 
 <div id="portfolio" class="pane">
-  <div class="sh">Top 10 Holdings</div>
-  <table class="ht"><thead><tr><th style="width:28px">#</th><th>Ticker</th><th>Security Name</th><th>Sector</th><th>Country</th><th style="text-align:right">Weight</th></tr></thead><tbody id="hold-tbody"></tbody></table>
-
   <div class="pie-section">
     <div class="pie-block">
       <div class="sh">Sector Allocation</div>
@@ -277,11 +274,19 @@ body{background:var(--bg);color:var(--tx);font-family:var(--sans);font-size:15px
       <div class="pie-legend" id="leg-cty"></div>
     </div>
     <div class="pie-block">
-      <div class="sh">Market Classification</div>
+      <div class="sh">Market vs ETF Type</div>
       <div class="pie-chart-wrap"><svg id="pie-mkt" width="160" height="160" viewBox="0 0 160 160"></svg></div>
       <div class="pie-legend" id="leg-mkt"></div>
+      <div style="margin-top:24px">
+        <div class="sh" style="margin-top:0">By ETF Type</div>
+        <div class="pie-chart-wrap"><svg id="pie-type" width="160" height="160" viewBox="0 0 160 160"></svg></div>
+        <div class="pie-legend" id="leg-type"></div>
+      </div>
     </div>
   </div>
+
+  <div class="sh">Top 10 Holdings</div>
+  <table class="ht"><thead><tr><th style="width:28px">#</th><th>Ticker</th><th>Security Name</th><th>Sector</th><th>Country</th><th style="text-align:right">Weight</th></tr></thead><tbody id="hold-tbody"></tbody></table>
 </div>
 
 <div id="strategy" class="pane">
@@ -430,10 +435,10 @@ function render() {
   buildBars();
   buildPerfTable();
   buildHoldings();
-  buildPieChart('pie-sec', 'leg-sec', D.sector_allocation||[], PIE_COLORS_MAROON);
-  buildPieChart('pie-cty', 'leg-cty', D.country_allocation||[], PIE_COLORS_GOLD);
-  const mktData = (D.market_exposure?.by_market||[]).concat(D.market_exposure?.by_type||[]);
-  buildPieChart('pie-mkt', 'leg-mkt', mktData, PIE_COLORS_MIXED);
+  buildPieChart('pie-sec',  'leg-sec',  D.sector_allocation||[], PIE_COLORS_MAROON);
+  buildPieChart('pie-cty',  'leg-cty',  D.country_allocation||[], PIE_COLORS_GOLD);
+  buildPieChart('pie-mkt',  'leg-mkt',  D.market_exposure?.by_market||[], PIE_COLORS_MIXED);
+  buildPieChart('pie-type', 'leg-type', D.market_exposure?.by_type||[], PIE_COLORS_MAROON);
   buildETFAlloc();
   buildBW();
 
